@@ -365,7 +365,7 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(2, 280px);
+            grid-template-rows: repeat(2, 320px);
             gap: 20px;
             margin: 40px 0;
         }
@@ -410,12 +410,19 @@
             height: 100%;
         }
 
+        .feature-window .window-pane {
+            height: calc(100% - 30px);
+            /* 减去title-bar和separator的高度 */
+            overflow: hidden;
+        }
+
         .feature-content {
             padding: 20px;
             line-height: 1.4;
             height: 100%;
             display: flex;
             flex-direction: column;
+            overflow-y: auto;
         }
 
         .feature-title {
