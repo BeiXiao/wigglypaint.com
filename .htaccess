@@ -1,0 +1,55 @@
+# WigglyPaint Multi-language Support
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Force HTTPS (if available)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Language-based redirects (optional, for better UX)
+# Redirect based on Accept-Language header if no language specified
+RewriteCond %{HTTP:Accept-Language} ^zh [NC]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ /zh/ [R=302,L]
+
+RewriteCond %{HTTP:Accept-Language} ^ja [NC]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ /ja/ [R=302,L]
+
+RewriteCond %{HTTP:Accept-Language} ^ko [NC]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ /ko/ [R=302,L]
+
+# Compress assets for better performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Cache static assets
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options DENY
+    Header always set X-Content-Type-Options nosniff
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule> 

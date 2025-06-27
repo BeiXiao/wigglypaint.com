@@ -1,0 +1,42 @@
+User-agent: *
+Allow: /
+
+# 网站地图
+Sitemap: https://wigglypaint.com/sitemap.xml
+
+# 主要页面
+Allow: /
+Allow: /zh/
+Allow: /ja/
+Allow: /ko/
+
+# 静态资源
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+
+# WigglyPaint 绘画工具
+Allow: /wiggly.html
+
+# 爬取频率限制（可选）
+Crawl-delay: 1
+
+# 针对特定搜索引擎的优化
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2 
