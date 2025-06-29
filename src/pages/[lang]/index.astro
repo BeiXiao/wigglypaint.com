@@ -1,0 +1,232 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+// 获取当前语言
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// 为静态生成定义路径
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'ko' } },
+  ];
+}
+
+// SEO 数据
+const title = lang === 'en' 
+  ? 'WigglyPaint - Free Online Drawing Tool with Animated Wiggly Lines'
+  : lang === 'zh'
+  ? 'WigglyPaint - 免费在线摇摆线条绘画工具'
+  : lang === 'ja'
+  ? 'WigglyPaint - アニメーションぐねぐね線描画ツール'
+  : 'WigglyPaint - 애니메이션 구불구불 선 그리기 도구';
+
+const description = t('hero.description');
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <!-- Menu Bar -->
+    <ul role="menu-bar">
+        <li role="menu-item" tabindex="0" aria-haspopup="true">
+            <span>{t('nav.file')}</span>
+            <ul role="menu">
+                <li role="menu-item"><a href="#hero">{t('nav.tryOnline')}</a></li>
+                <li role="menu-item"><a href="#download">{t('nav.download')}</a></li>
+                <li role="menu-item" class="divider"><a href="#features">{t('nav.features')}</a></li>
+                <li role="menu-item"><a href="#faq">{t('nav.faq')}</a></li>
+            </ul>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="true">
+            <span>{t('nav.help')}</span>
+            <ul role="menu">
+                <li role="menu-item"><a href="#how-to-use">User Guide</a></li>
+                <li role="menu-item"><a href="#faq">{t('nav.faq')}</a></li>
+                <li role="menu-item" class="divider"><a href="https://github.com/JohnEarnest/Decker" target="_blank">Decker Project</a></li>
+                <li role="menu-item"><a href="mailto:support@wigglypaint.com">Contact Us</a></li>
+            </ul>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="false">
+            <a href="https://github.com/JohnEarnest/Decker" target="_blank">{t('nav.about')}</a>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="true" style="margin-left: auto;">
+            <span>{t('nav.language')}</span>
+            <ul role="menu">
+                <li role="menu-item"><a href={getRelativeLocaleUrl('en', '')}>English</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl('zh', '')}>中文</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl('ja', '')}>日本語</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl('ko', '')}>한국어</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="main-container">
+        <!-- Hero & Demo Section -->
+        <div id="hero" class="hero-section">
+            <div class="window">
+                <div class="title-bar">
+                    <button aria-label="Close" class="close"></button>
+                    <h1 class="title">{t('hero.title')}</h1>
+                    <button aria-label="Resize" class="resize"></button>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane">
+                    <div class="hero-demo-container">
+                        <!-- Hero Content -->
+                        <div class="hero-content">
+                            <p class="hero-subtitle">{t('hero.subtitle')}</p>
+                            <p>{t('hero.description')}</p>
+                        </div>
+
+                        <!-- Demo Content -->
+                        <div id="demo" class="demo-content">
+                            <iframe id="demo-iframe" src="/wiggly.html" class="demo-iframe"
+                                title="WigglyPaint Online Demo"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div id="features" class="features-grid">
+            <div class="window feature-window">
+                <div class="title-bar">
+                    <h1 class="title">{t('feature.whatIs.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane feature-content">
+                    <p>{t('feature.whatIs.content')}</p>
+                </div>
+            </div>
+
+            <div class="window feature-window">
+                <div class="title-bar">
+                    <h1 class="title">{t('feature.howTo.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane feature-content">
+                    <p>{t('feature.howTo.content')}</p>
+                </div>
+            </div>
+
+            <div class="window feature-window">
+                <div class="title-bar">
+                    <h1 class="title">{t('feature.why.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane feature-content">
+                    <p>{t('feature.why.content')}</p>
+                </div>
+            </div>
+
+            <div class="window feature-window">
+                <div class="title-bar">
+                    <h1 class="title">{t('feature.privacy.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane feature-content">
+                    <p>{t('feature.privacy.content')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div id="download" class="download-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('download.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px; text-align: center;">
+                    <p>{t('download.description')}</p>
+                    <div class="platform-buttons">
+                        <button class="btn platform-btn" onclick="document.getElementById('hero').scrollIntoView()">
+                            <span>{t('download.web')}</span>
+                        </button>
+                        <button class="btn platform-btn" onclick="window.open('#', '_blank')">
+                            <span>{t('download.ipad')}</span>
+                        </button>
+                        <button class="btn platform-btn"
+                            onclick="window.open('https://github.com/JohnEarnest/Decker', '_blank')">
+                            <span>{t('download.decker')}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div id="faq" class="faq-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('faq.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <div class="faq-item">
+                        <div class="faq-question">Q: How was WigglyPaint developed?</div>
+                        <div class="faq-answer">A: WigglyPaint is a lively drawing program developed by Internet Janitor
+                            using Decker technology. It shares notable similarities with Shake Art and KidPix.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Q: What devices can I use WigglyPaint on?</div>
+                        <div class="faq-answer">A: WigglyPaint is a web-based application, so you can use it on PC,
+                            mobile, or tablet—just visit the link to get started. We also provide a dedicated iPad app.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Q: How many times can I use WigglyPaint for free?</div>
+                        <div class="faq-answer">A: WigglyPaint is free to use with no limits on usage or GIF exports.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Q: How does WigglyPaint protect my privacy?</div>
+                        <div class="faq-answer">A: All your drawings and doodles in WigglyPaint are never uploaded to
+                            any server. You don't need to log in, and no personal data is collected during use.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Q: What export formats are supported?</div>
+                        <div class="faq-answer">A: Export as high-quality GIF animations that preserve all the wiggly
+                            effects, perfect for sharing as memes, stickers, or social media content.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('footer.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane footer-content">
+                    <div class="footer-main">
+                        <div class="footer-info">
+                            <p class="footer-description">{t('footer.description')}</p>
+                            <p class="footer-tech">{t('footer.deckerProject')}</p>
+                        </div>
+                        <div class="footer-links">
+                            <a href={`/${lang}/privacy`} class="footer-link">{t('footer.privacyPolicy')}</a>
+                            <a href={`/${lang}/changelog`} class="footer-link">{t('footer.changelog')}</a>
+                            <a href="mailto:support@wigglypaint.com" class="footer-link">{t('footer.contact')}</a>
+                            <a href="https://github.com/JohnEarnest/Decker" target="_blank" class="footer-link">{t('footer.github')}</a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p class="footer-copyright">{t('footer.copyright')}</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</Layout> 

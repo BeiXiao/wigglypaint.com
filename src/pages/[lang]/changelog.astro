@@ -1,0 +1,282 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+// 为静态生成定义路径
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'ko' } },
+  ];
+}
+
+// 获取当前语言
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// SEO 数据
+const title = `${t('changelog.title')} - WigglyPaint`;
+const description = lang === 'en' 
+  ? 'See the latest updates and feature releases for WigglyPaint. Discover new animated brushes, drawing tools, bug fixes, and enhancements to make your digital art creation even better.'
+  : lang === 'zh'
+  ? '查看 WigglyPaint 的最新更新和功能发布。发现新的动画画笔、绘画工具、错误修复和功能增强，让你的数字艺术创作体验更加出色。'
+  : lang === 'ja'
+  ? 'WigglyPaintの最新アップデートと機能リリースをご覧ください。新しいアニメーションブラシ、描画ツール、バグ修正、機能強化を発見して、デジタルアート制作をさらに向上させましょう。'
+  : 'WigglyPaint의 최신 업데이트와 기능 릴리스를 확인하세요. 새로운 애니메이션 브러시, 그리기 도구, 버그 수정 및 향상된 기능을 발견하여 디지털 아트 제작을 더욱 향상시키세요.';
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <div class="main-container">
+        <a href={`/${lang === 'en' ? '' : lang}`} class="back-link">{t('changelog.backToHome')}</a>
+
+        <div class="window changelog-window">
+            <div class="title-bar">
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">{t('changelog.title')}</h1>
+                <button aria-label="Resize" class="resize"></button>
+            </div>
+            <div class="separator"></div>
+            <div class="window-pane content-section">
+                <p class="subtitle">{t('changelog.subtitle')}</p>
+                
+                <div class="changelog-table">
+                    <div class="changelog-header">
+                        <div class="col-version">{t('changelog.version')}</div>
+                        <div class="col-date">{t('changelog.date')}</div>
+                        <div class="col-changes">{t('changelog.changes')}</div>
+                    </div>
+
+                    <div class="changelog-entry">
+                        <div class="col-version">
+                            <span class="version-badge">v1.3</span>
+                        </div>
+                        <div class="col-date">2025-06-29</div>
+                        <div class="col-changes">
+                            <ul>
+                                <li><strong>🌍 Multi-Language Website:</strong> Launched multilingual website support with English, 中文, 日本語, and 한국어 versions for global accessibility.</li>
+                                <li><strong>📝 Changelog Page:</strong> Added dedicated changelog page to keep users informed about the latest updates and improvements to the drawing experience.</li>
+                                <li><strong>🔗 Improved Navigation:</strong> Enhanced site navigation with better footer links and breadcrumb navigation for easier access to privacy policy and updates.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="changelog-entry">
+                        <div class="col-version">
+                            <span class="version-badge">v1.2</span>
+                        </div>
+                        <div class="col-date">2025-06-28</div>
+                        <div class="col-changes">
+                            <ul>
+                                <li><strong>📱 Mobile Browser Fix:</strong> Improved touch drawing experience on mobile browsers, fixing issues with brush selection and drawing responsiveness on smartphone screens.</li>
+                                <li><strong>🎨 Brush Stability:</strong> Enhanced the stability of all 8 wiggly brush types, reducing occasional lag when switching between different drawing tools.</li>
+                                <li><strong>💾 Better GIF Export:</strong> Optimized GIF animation export process to maintain smooth wiggle effects while ensuring compatibility across different browsers.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="changelog-entry">
+                        <div class="col-version">
+                            <span class="version-badge">v1.1</span>
+                        </div>
+                        <div class="col-date">2025-06-27</div>
+                        <div class="col-changes">
+                            <ul>
+                                <li><strong>🎮 Canvas Fullscreen:</strong> Added fullscreen mode for the drawing canvas, allowing artists to work with maximum screen space and minimize distractions.</li>
+                                <li><strong>🔒 Privacy Policy:</strong> Published comprehensive privacy policy emphasizing local-only processing and zero data collection for user peace of mind.</li>
+                                <li><strong>⚡ Loading Speed:</strong> Improved initial page load time by optimizing the Decker engine integration and reducing unnecessary resource loading.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="coming-soon">
+                    <h3>🔮 Coming Soon in v1.4</h3>
+                    <ul>
+                        <li>🎨 Additional brush variations and wiggle patterns for more creative freedom</li>
+                        <li>📐 Canvas size options (square, portrait, landscape) for different use cases</li>
+                        <li>🌈 Expanded color palette with more vibrant drawing colors</li>
+                        <li>💾 Improved local storage for automatically saving your work progress</li>
+                        <li>🔧 Better browser compatibility and performance optimizations</li>
+                    </ul>
+                    <p><strong>Stay tuned!</strong> Follow the <a href="https://github.com/JohnEarnest/Decker" target="_blank">Decker project</a> for the latest updates and development progress.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .back-link {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
+
+    .changelog-window {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .content-section {
+        padding: 30px;
+        line-height: 1.6;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        color: #666;
+        margin: 0 0 30px 0;
+        line-height: 1.6;
+    }
+
+    .changelog-table {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .changelog-header {
+        display: grid;
+        grid-template-columns: 100px 120px 1fr;
+        gap: 20px;
+        padding: 15px 0;
+        border-bottom: 2px solid #ccc;
+        font-weight: bold;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .changelog-entry {
+        display: grid;
+        grid-template-columns: 100px 120px 1fr;
+        gap: 20px;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+        align-items: start;
+    }
+
+    .changelog-entry:last-child {
+        border-bottom: none;
+    }
+
+    .version-badge {
+        background: white;
+        color: black;
+        padding: 4px 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 12px;
+        display: inline-block;
+        font-family: 'ChicagoFLF', system-ui, -apple-system, sans-serif;
+    }
+
+    .col-date {
+        color: #666;
+        font-weight: normal;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    .col-changes ul {
+        margin: 0;
+        padding-left: 20px;
+        list-style: disc;
+    }
+
+    .col-changes li {
+        margin-bottom: 15px;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+    .col-changes li:last-child {
+        margin-bottom: 0;
+    }
+
+    .col-changes strong {
+        color: #333;
+        font-weight: bold;
+    }
+
+    .coming-soon {
+        background: #f0f0f0;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .coming-soon h3 {
+        color: #333;
+        margin: 0 0 15px 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .coming-soon ul {
+        margin: 0 0 15px 0;
+        padding-left: 20px;
+    }
+
+    .coming-soon li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+    .coming-soon a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .coming-soon a:hover {
+        text-decoration: underline;
+    }
+
+    .coming-soon p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .main-container {
+            padding: 10px;
+        }
+
+        .content-section {
+            padding: 20px;
+            max-height: none;
+        }
+
+        .changelog-header,
+        .changelog-entry {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .version-badge {
+            margin-bottom: 5px;
+        }
+
+        .col-date {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    }
+</style> 

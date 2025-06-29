@@ -1,0 +1,378 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+// 获取当前语言
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// 为静态生成定义路径
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'ko' } },
+  ];
+}
+
+// SEO 数据
+const title = `${t('privacy.title')} - WigglyPaint`;
+const description = lang === 'en' 
+  ? 'WigglyPaint Privacy Policy - Learn how we protect your privacy and data when using our free online drawing tool.'
+  : lang === 'zh'
+  ? 'WigglyPaint 隐私政策 - 了解我们如何在使用免费在线绘画工具时保护你的隐私和数据。'
+  : lang === 'ja'
+  ? 'WigglyPaint プライバシーポリシー - 無料オンライン描画ツールを使用する際のプライバシーとデータの保護について。'
+  : 'WigglyPaint 개인정보 보호정책 - 무료 온라인 그리기 도구 사용 시 개인정보와 데이터 보호 방법.';
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <div class="main-container">
+        <a href={getRelativeLocaleUrl(lang, '')} class="back-link">{t('privacy.backToHome')}</a>
+
+        <div class="window privacy-window">
+            <div class="title-bar">
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">{t('privacy.title')}</h1>
+                <button aria-label="Resize" class="resize"></button>
+            </div>
+            <div class="separator"></div>
+            <div class="window-pane content-section">
+                {lang === 'en' && (
+                    <>
+                        <p><strong>WigglyPaint - Free Online Drawing Tool</strong></p>
+
+                        <div class="highlight-box">
+                            <strong>TL;DR:</strong> WigglyPaint respects your privacy. We don't collect personal data, don't use
+                            cookies for tracking, and all your drawings are processed locally on your device. Your art stays
+                            private unless you choose to share it.
+                        </div>
+
+                        <h2>1. Introduction</h2>
+                        <p>Welcome to WigglyPaint. This Privacy Policy explains how we collect, use,
+                            disclose, and safeguard your information when you visit our website wigglypaint.com or use our
+                            mobile application.</p>
+                        <p>WigglyPaint is a free online drawing tool that creates animated wiggly lines. We are committed to
+                            protecting your privacy and ensuring you have a positive experience on our platform.</p>
+
+                        <h2>2. Information We Don't Collect</h2>
+                        <p>WigglyPaint is designed with privacy in mind. We <strong>DO NOT</strong> collect:</p>
+                        <ul>
+                            <li>Personal identification information (name, email, phone number)</li>
+                            <li>Account registration data (no accounts required)</li>
+                            <li>Payment information (the service is completely free)</li>
+                            <li>Your drawings or artwork (all processing is local)</li>
+                            <li>Location data or GPS coordinates</li>
+                            <li>Device identifiers or fingerprinting data</li>
+                            <li>Social media profiles or connections</li>
+                        </ul>
+
+                        <h2>3. Information We May Collect</h2>
+                        <p>We may collect minimal, non-personal information for basic functionality:</p>
+
+                        <h3>3.1 Technical Information</h3>
+                        <ul>
+                            <li><strong>Browser type and version</strong> - To ensure compatibility</li>
+                            <li><strong>Operating system</strong> - To optimize performance</li>
+                            <li><strong>Screen resolution</strong> - To provide the best user experience</li>
+                            <li><strong>General location (country/region)</strong> - For language preferences only</li>
+                        </ul>
+
+                        <h3>3.2 Usage Analytics</h3>
+                        <ul>
+                            <li>Number of visitors (aggregated, anonymous)</li>
+                            <li>Popular features and tools usage</li>
+                            <li>Performance metrics (loading times, errors)</li>
+                            <li>Referral sources (which websites link to us)</li>
+                        </ul>
+                        <p><em>Note: All analytics data is anonymized and cannot be traced back to individual users.</em></p>
+
+                        <h2>4. How Your Art is Processed</h2>
+                        <div class="highlight-box">
+                            <strong>Local Processing:</strong> All your drawings, animations, and creative work are
+                            processed entirely on your device. Your artwork never leaves your device unless you explicitly
+                            choose to download or share it.
+                        </div>
+
+                        <h2>5. Contact Us</h2>
+                        <p>If you have any questions about this Privacy Policy:</p>
+                        <div class="contact-box">
+                            <p><strong>Website:</strong> wigglypaint.com</p>
+                            <p><strong>Email:</strong> support@wigglypaint.com</p>
+                        </div>
+                    </>
+                )}
+
+                {lang === 'zh' && (
+                    <>
+                        <p><strong>WigglyPaint - 免费在线绘画工具</strong></p>
+
+                        <div class="highlight-box">
+                            <strong>简单来说：</strong> WigglyPaint 尊重你的隐私。我们不收集个人数据，不使用跟踪cookies，所有绘画都在你的设备本地处理。除非你选择分享，否则你的作品保持私密。
+                        </div>
+
+                        <h2>1. 介绍</h2>
+                        <p>欢迎使用 WigglyPaint。本隐私政策解释了当你访问我们的网站 wigglypaint.com 或使用我们的移动应用程序时，我们如何收集、使用、披露和保护你的信息。</p>
+                        <p>WigglyPaint 是一个创建动画摇摆线条的免费在线绘画工具。我们致力于保护你的隐私，确保你在我们的平台上有良好的体验。</p>
+
+                        <h2>2. 我们不收集的信息</h2>
+                        <p>WigglyPaint 设计时考虑了隐私保护。我们 <strong>不</strong> 收集：</p>
+                        <ul>
+                            <li>个人身份信息（姓名、邮箱、电话号码）</li>
+                            <li>账户注册数据（无需注册账户）</li>
+                            <li>付款信息（服务完全免费）</li>
+                            <li>你的绘画或艺术作品（所有处理都在本地）</li>
+                            <li>位置数据或GPS坐标</li>
+                            <li>设备标识符或指纹数据</li>
+                            <li>社交媒体档案或连接</li>
+                        </ul>
+
+                        <h2>3. 我们可能收集的信息</h2>
+                        <p>我们可能为基本功能收集最少的非个人信息：</p>
+
+                        <h3>3.1 技术信息</h3>
+                        <ul>
+                            <li><strong>浏览器类型和版本</strong> - 确保兼容性</li>
+                            <li><strong>操作系统</strong> - 优化性能</li>
+                            <li><strong>屏幕分辨率</strong> - 提供最佳用户体验</li>
+                            <li><strong>一般位置（国家/地区）</strong> - 仅用于语言偏好</li>
+                        </ul>
+
+                        <h3>3.2 使用分析</h3>
+                        <ul>
+                            <li>访问者数量（聚合的、匿名的）</li>
+                            <li>热门功能和工具使用情况</li>
+                            <li>性能指标（加载时间、错误）</li>
+                            <li>推荐来源（链接到我们的网站）</li>
+                        </ul>
+                        <p><em>注意：所有分析数据都是匿名的，无法追溯到个人用户。</em></p>
+
+                        <h2>4. 你的艺术作品如何处理</h2>
+                        <div class="highlight-box">
+                            <strong>本地处理：</strong> 你的所有绘画、动画和创意作品都完全在你的设备上处理。除非你明确选择下载或分享，否则你的艺术作品永远不会离开你的设备。
+                        </div>
+
+                        <h2>5. 联系我们</h2>
+                        <p>如果你对本隐私政策有任何疑问：</p>
+                        <div class="contact-box">
+                            <p><strong>网站：</strong> wigglypaint.com</p>
+                            <p><strong>邮箱：</strong> support@wigglypaint.com</p>
+                        </div>
+                    </>
+                )}
+
+                {lang === 'ja' && (
+                    <>
+                        <p><strong>WigglyPaint - 無料オンライン描画ツール</strong></p>
+
+                        <div class="highlight-box">
+                            <strong>要約：</strong> WigglyPaintはあなたのプライバシーを尊重します。個人データは収集せず、追跡用Cookieは使用せず、すべての描画はお使いのデバイスでローカル処理されます。共有を選択しない限り、あなたのアートはプライベートに保たれます。
+                        </div>
+
+                        <h2>1. はじめに</h2>
+                        <p>WigglyPaintへようこそ。このプライバシーポリシーは、当サイト wigglypaint.com を訪問またはモバイルアプリケーションを使用する際の情報の収集、使用、開示、保護方法について説明します。</p>
+                        <p>WigglyPaintはアニメーションぐねぐね線を作成する無料オンライン描画ツールです。お客様のプライバシー保護とプラットフォームでの良好な体験をお約束します。</p>
+
+                        <h2>2. 収集しない情報</h2>
+                        <p>WigglyPaintはプライバシーを考慮して設計されています。以下は <strong>収集しません</strong>：</p>
+                        <ul>
+                            <li>個人識別情報（氏名、メール、電話番号）</li>
+                            <li>アカウント登録データ（アカウント不要）</li>
+                            <li>支払い情報（サービスは完全無料）</li>
+                            <li>お客様の描画やアートワーク（すべてローカル処理）</li>
+                            <li>位置データやGPS座標</li>
+                            <li>デバイス識別子やフィンガープリントデータ</li>
+                            <li>ソーシャルメディアプロファイルや接続</li>
+                        </ul>
+
+                        <h2>3. 収集する可能性のある情報</h2>
+                        <p>基本機能のため最小限の非個人情報を収集する場合があります：</p>
+
+                        <h3>3.1 技術情報</h3>
+                        <ul>
+                            <li><strong>ブラウザの種類とバージョン</strong> - 互換性確保のため</li>
+                            <li><strong>オペレーティングシステム</strong> - パフォーマンス最適化のため</li>
+                            <li><strong>画面解像度</strong> - 最適なユーザー体験提供のため</li>
+                            <li><strong>一般的な位置（国/地域）</strong> - 言語設定のみ</li>
+                        </ul>
+
+                        <h3>3.2 使用分析</h3>
+                        <ul>
+                            <li>訪問者数（集計済み、匿名）</li>
+                            <li>人気機能とツールの使用状況</li>
+                            <li>パフォーマンス指標（読み込み時間、エラー）</li>
+                            <li>参照元（当サイトへのリンク元ウェブサイト）</li>
+                        </ul>
+                        <p><em>注：すべての分析データは匿名化され、個々のユーザーに追跡できません。</em></p>
+
+                        <h2>4. アートワークの処理方法</h2>
+                        <div class="highlight-box">
+                            <strong>ローカル処理：</strong> すべての描画、アニメーション、創作物はお使いのデバイスで完全に処理されます。明示的にダウンロードや共有を選択しない限り、アートワークがデバイスから離れることはありません。
+                        </div>
+
+                        <h2>5. お問い合わせ</h2>
+                        <p>このプライバシーポリシーについてご質問がある場合：</p>
+                        <div class="contact-box">
+                            <p><strong>ウェブサイト：</strong> wigglypaint.com</p>
+                            <p><strong>メール：</strong> support@wigglypaint.com</p>
+                        </div>
+                    </>
+                )}
+
+                {lang === 'ko' && (
+                    <>
+                        <p><strong>WigglyPaint - 무료 온라인 그리기 도구</strong></p>
+
+                        <div class="highlight-box">
+                            <strong>요약:</strong> WigglyPaint는 귀하의 개인정보를 존중합니다. 개인 데이터를 수집하지 않고, 추적용 쿠키를 사용하지 않으며, 모든 그림은 귀하의 기기에서 로컬로 처리됩니다. 공유를 선택하지 않는 한 귀하의 작품은 비공개로 유지됩니다.
+                        </div>
+
+                        <h2>1. 소개</h2>
+                        <p>WigglyPaint에 오신 것을 환영합니다. 이 개인정보 보호정책은 귀하가 당사 웹사이트 wigglypaint.com을 방문하거나 모바일 애플리케이션을 사용할 때 정보를 수집, 사용, 공개, 보호하는 방법을 설명합니다.</p>
+                        <p>WigglyPaint는 애니메이션 구불구불한 선을 만드는 무료 온라인 그리기 도구입니다. 귀하의 개인정보를 보호하고 플랫폼에서 긍정적인 경험을 보장하는 데 전념하고 있습니다.</p>
+
+                        <h2>2. 수집하지 않는 정보</h2>
+                        <p>WigglyPaint는 개인정보 보호를 염두에 두고 설계되었습니다. 다음은 <strong>수집하지 않습니다</strong>:</p>
+                        <ul>
+                            <li>개인 식별 정보 (이름, 이메일, 전화번호)</li>
+                            <li>계정 등록 데이터 (계정 등록 불필요)</li>
+                            <li>결제 정보 (서비스는 완전 무료)</li>
+                            <li>귀하의 그림이나 아트워크 (모든 처리는 로컬)</li>
+                            <li>위치 데이터나 GPS 좌표</li>
+                            <li>기기 식별자나 지문 데이터</li>
+                            <li>소셜 미디어 프로필이나 연결</li>
+                        </ul>
+
+                        <h2>3. 수집할 수 있는 정보</h2>
+                        <p>기본 기능을 위해 최소한의 비개인 정보를 수집할 수 있습니다:</p>
+
+                        <h3>3.1 기술 정보</h3>
+                        <ul>
+                            <li><strong>브라우저 유형 및 버전</strong> - 호환성 보장</li>
+                            <li><strong>운영 체제</strong> - 성능 최적화</li>
+                            <li><strong>화면 해상도</strong> - 최상의 사용자 경험 제공</li>
+                            <li><strong>일반 위치 (국가/지역)</strong> - 언어 설정만을 위해</li>
+                        </ul>
+
+                        <h3>3.2 사용 분석</h3>
+                        <ul>
+                            <li>방문자 수 (집계된, 익명의)</li>
+                            <li>인기 기능 및 도구 사용량</li>
+                            <li>성능 지표 (로딩 시간, 오류)</li>
+                            <li>참조 소스 (당사로 링크하는 웹사이트)</li>
+                        </ul>
+                        <p><em>참고: 모든 분석 데이터는 익명화되어 개별 사용자에게 추적할 수 없습니다.</em></p>
+
+                        <h2>4. 아트워크 처리 방법</h2>
+                        <div class="highlight-box">
+                            <strong>로컬 처리:</strong> 모든 그림, 애니메이션, 창작물은 귀하의 기기에서 완전히 처리됩니다. 명시적으로 다운로드나 공유를 선택하지 않는 한 아트워크가 기기를 떠나지 않습니다.
+                        </div>
+
+                        <h2>5. 문의하기</h2>
+                        <p>이 개인정보 보호정책에 대한 질문이 있으시면:</p>
+                        <div class="contact-box">
+                            <p><strong>웹사이트:</strong> wigglypaint.com</p>
+                            <p><strong>이메일:</strong> support@wigglypaint.com</p>
+                        </div>
+                    </>
+                )}
+
+                <div class="date-info">
+                    <p><strong>{t('privacy.lastUpdated')}</strong></p>
+                    <p><strong>{t('privacy.effectiveDate')}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .privacy-window {
+            margin-bottom: 40px;
+        }
+
+        .content-section {
+            padding: 20px;
+            line-height: 1.4;
+        }
+
+        .content-section h2 {
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            font-size: 14px;
+        }
+
+        .content-section h3 {
+            font-weight: bold;
+            margin: 15px 0 8px 0;
+            font-size: 13px;
+        }
+
+        .content-section p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .content-section ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+
+        .content-section li {
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .highlight-box {
+            background-color: #f0f0f0;
+            border: 1px solid #808080;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+
+        .contact-box {
+            background-color: #f8f8f8;
+            border: 1px solid #808080;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+
+        .date-info {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #808080;
+            font-size: 11px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</Layout> 
