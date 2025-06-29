@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects
+# SEO-friendly 301 redirect from root to English version
+/ /en/ 301
+
+# Optional: also redirect common variations
+/index.html /en/ 301
+/home /en/ 301 
