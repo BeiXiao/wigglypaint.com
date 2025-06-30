@@ -11,70 +11,70 @@ export const ui = {
     en: {
         // Hero
         'hero.title': 'WigglyPaint',
-        'hero.subtitle': 'Create Animated Pixel Art, Comics & Doodles with Wiggly Lines',
-        'hero.description': 'Draw with 8 unique animated brushes and watch your lines wiggle to life! Perfect for making GIF animations, memes, comics, and pixel art. No signup required.',
+        'hero.subtitle': 'WigglyPaint: Create Animated Pixel Art, Comics & Doodles with Wiggly Lines',
+        'hero.description': 'WigglyPaint lets you draw with 8 unique animated brushes and watch your lines wiggle to life! Perfect for making GIF animations, memes, comics, and pixel art with WigglyPaint\'s signature wiggly effects. No signup required.',
 
         // Navigation
         'nav.file': 'File',
         'nav.help': 'Help',
         'nav.about': 'About',
         'nav.language': 'Language',
-        'nav.tryOnline': 'Try Online',
-        'nav.download': 'Download',
+        'nav.tryOnline': 'Try WigglyPaint Online',
+        'nav.download': 'Download WigglyPaint',
         'nav.features': 'Features',
         'nav.faq': 'FAQ',
 
         // Features
         'feature.whatIs.title': '✨ What is WigglyPaint?',
-        'feature.whatIs.content': 'WigglyPaint is a free online pixel art and drawing tool that brings your creativity to life with animated wiggly lines. Perfect for creating pixel art, comics, manga, hand-drawn sketches, and doodles.',
+        'feature.whatIs.content': 'WigglyPaint is a revolutionary free online pixel art and drawing tool that brings your creativity to life with animated wiggly lines. WigglyPaint is perfect for creating pixel art, comics, manga, hand-drawn sketches, and doodles with unique wiggle animations.',
 
-        'feature.howTo.title': '🎯 How to Use?',
-        'feature.howTo.content': 'Select different brushes on the right side of the drawing tool. Click to select and start drawing on the whiteboard. Try out each brush to see the various effects they offer.',
+        'feature.howTo.title': '🎯 How to Use WigglyPaint?',
+        'feature.howTo.content': 'Using WigglyPaint is simple! Select different brushes on the right side of the WigglyPaint drawing tool. Click to select and start drawing on the whiteboard. Try out each WigglyPaint brush to see the various wiggle effects they offer.',
 
-        'feature.why.title': '🌟 Why Use WigglyPaint?',
-        'feature.why.content': 'Unlike static drawing tools, every stroke in WigglyPaint creates living, breathing lines that wiggle and move with personality. Perfect for creating viral memes, animated stickers, and social media content.',
+        'feature.why.title': '🌟 Why Choose WigglyPaint?',
+        'feature.why.content': 'Unlike static drawing tools, every stroke in WigglyPaint creates living, breathing lines that wiggle and move with personality. WigglyPaint is perfect for creating viral memes, animated stickers, and social media content that stands out.',
 
-        'feature.privacy.title': '🔒 Privacy Protection',
-        'feature.privacy.content': 'All your drawings and doodles are never uploaded to any server. No login required, no personal information collected.',
+        'feature.privacy.title': '🔒 WigglyPaint Privacy Protection',
+        'feature.privacy.content': 'All your WigglyPaint drawings and doodles are never uploaded to any server. WigglyPaint requires no login and collects no personal information - your creativity stays private.',
 
         // Download
-        'download.title': '📱 Download Apps',
-        'download.description': 'Create animated pixel art anywhere! Use WigglyPaint in your browser or download our optimized iPad app.',
-        'download.web': '🌐 Web Version',
-        'download.ipad': '📱 iPad Version',
-        'download.decker': '🛠️ Decker Platform',
+        'download.title': '📱 Download WigglyPaint Apps',
+        'download.description': 'Create animated pixel art anywhere with WigglyPaint! Use WigglyPaint in your browser or download our optimized WigglyPaint iPad app for touch-based drawing.',
+        'download.web': '🌐 WigglyPaint Web Version',
+        'download.ipad': '📱 WigglyPaint for iPad',
+        'download.decker': '🛠️ WigglyPaint on Decker Platform',
 
         // FAQ
-        'faq.title': '❓ Frequently Asked Questions',
+        'faq.title': '❓ WigglyPaint Frequently Asked Questions',
 
         // Footer
         'footer.title': 'WigglyPaint',
-        'footer.description': 'Free animated drawing tool. Create, animate, share.',
-        'footer.about': 'About',
-        'footer.privacyPolicy': 'Privacy Policy',
-        'footer.changelog': 'Changelog',
-        'footer.contact': 'Contact Us',
-        'footer.github': 'GitHub Project',
+        'footer.description': 'WigglyPaint - Free animated drawing tool. Create, animate, share.',
+        'footer.about': 'About WigglyPaint',
+        'footer.privacyPolicy': 'WigglyPaint Privacy Policy',
+        'footer.changelog': 'WigglyPaint Changelog',
+        'footer.contact': 'Contact WigglyPaint Team',
+        'footer.github': 'WigglyPaint GitHub Project',
         'footer.copyright': '© 2024 WigglyPaint. Made with ❤️ by Internet Janitor.',
-        'footer.deckerProject': 'Built with Decker technology.',
+        'footer.deckerProject': 'WigglyPaint is built with Decker technology.',
 
         // Privacy Page
-        'privacy.title': 'Privacy Policy',
+        'privacy.title': 'WigglyPaint Privacy Policy',
         'privacy.backToHome': '← Back to WigglyPaint',
         'privacy.lastUpdated': 'Last Updated: December 19, 2024',
         'privacy.effectiveDate': 'Effective Date: December 19, 2024',
 
         // Changelog Page
-        'changelog.title': 'Changelog - WigglyPaint Updates',
-        'changelog.subtitle': 'See the latest updates and feature releases for WigglyPaint. Discover new animated brushes, drawing tools, bug fixes, and enhancements to make your digital art creation even better.',
+        'changelog.title': 'WigglyPaint Changelog - Updates & New Features',
+        'changelog.subtitle': 'See the latest WigglyPaint updates and feature releases. Discover new animated brushes, drawing tools, bug fixes, and enhancements to make your WigglyPaint digital art creation even better.',
         'changelog.backToHome': '← Back to WigglyPaint',
         'changelog.version': 'Version',
         'changelog.date': 'Date',
         'changelog.changes': 'Changes',
 
         // About Page
-        'about.title': 'About WigglyPaint',
-        'about.subtitle': 'Bringing your digital art to life with animated wiggly lines',
+        'about.title': 'About WigglyPaint - Animated Drawing Tool',
+        'about.subtitle': 'Bringing your digital art to life with WigglyPaint\'s animated wiggly lines',
         'about.backToHome': '← Back to WigglyPaint',
         'about.what.title': '🎨 What is WigglyPaint?',
         'about.what.content': 'WigglyPaint is a free, browser-based drawing tool that transforms your artwork with signature wiggle animations. Built on the innovative Decker platform, it makes digital art creation accessible, fun, and engaging for creators of all skill levels.',
@@ -103,16 +103,16 @@ export const ui = {
     zh: {
         // Hero
         'hero.title': 'WigglyPaint',
-        'hero.subtitle': '让你的画作摇摆起来的免费在线绘画工具！',
-        'hero.description': '用8种独特的动画画笔绘制像素艺术、漫画和涂鸦，看着你的线条生动摇摆！制作GIF动画、表情包和像素艺术的完美工具。无需注册。',
+        'hero.subtitle': 'WigglyPaint：让你的画作摇摆起来的免费在线绘画工具！',
+        'hero.description': 'WigglyPaint 让你用8种独特的动画画笔绘制像素艺术、漫画和涂鸦，看着你的线条生动摇摆！使用 WigglyPaint 制作GIF动画、表情包和像素艺术的完美工具。无需注册。',
 
         // Navigation  
         'nav.file': '文件',
         'nav.help': '帮助',
         'nav.about': '关于',
         'nav.language': '语言',
-        'nav.tryOnline': '在线试用',
-        'nav.download': '下载',
+        'nav.tryOnline': '在线试用 WigglyPaint',
+        'nav.download': '下载 WigglyPaint',
         'nav.features': '功能特点',
         'nav.faq': '常见问题',
 

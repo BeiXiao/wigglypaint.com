@@ -17,7 +17,7 @@ const { title, description, lang = 'en' } = Astro.props;
     <!-- SEO 基础标签 -->
     <title>{title}</title>
     <meta name="description" content={description}>
-    <meta name="keywords" content="WigglyPaint,wiggly paint,pixel art,pixel drawing,retro art tool,online drawing tool,animated lines,GIF maker,GIF animation tool,meme maker,emoji creator,animation tool,free drawing app,digital art,brush tool,animation creator,doodle tool,pixel style,retro graphics,animated stickers,comic maker,cartoon creator,hand-drawn art,sketch tool,doodle creator,manga drawing,graffiti art">
+    <meta name="keywords" content="WigglyPaint,wigglypaint,wiggly paint,WigglyPaint drawing tool,WigglyPaint animation,WigglyPaint GIF maker,pixel art,pixel drawing,retro art tool,online drawing tool,animated lines,wiggly lines,GIF maker,GIF animation tool,meme maker,emoji creator,animation tool,free drawing app,digital art,brush tool,animation creator,doodle tool,pixel style,retro graphics,animated stickers,comic maker,cartoon creator,hand-drawn art,sketch tool,doodle creator,manga drawing,graffiti art,WigglyPaint online,WigglyPaint web app,WigglyPaint iPad,WigglyPaint mobile,wiggle animation,animated pixel art">
     <meta name="author" content="Internet Janitor">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
@@ -65,6 +65,42 @@ const { title, description, lang = 'en' } = Astro.props;
     <!-- 预连接优化 -->
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- JSON-LD 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "WigglyPaint",
+        "description": "Free online animated drawing tool for creating pixel art, comics, and doodles with unique wiggly line effects",
+        "url": "https://wigglypaint.com",
+        "applicationCategory": "DrawingApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Person",
+            "name": "Internet Janitor"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "WigglyPaint",
+            "url": "https://wigglypaint.com"
+        },
+        "keywords": "WigglyPaint, pixel art, animated drawing, GIF maker, online drawing tool, wiggly lines",
+        "screenshot": "https://wigglypaint.com/images/screenshot.png",
+        "featureList": [
+            "8 unique animated brushes",
+            "GIF export functionality", 
+            "No signup required",
+            "Works on all devices",
+            "Privacy focused - no data collection"
+        ]
+    }
+    </script>
 
     <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
 </head>
