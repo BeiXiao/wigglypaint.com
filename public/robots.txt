@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# 网站地图
+# Astro 自动生成的网站地图
 Sitemap: https://wigglypaint.com/sitemap-index.xml
 
 # 主要页面
@@ -25,7 +25,12 @@ Allow: /*.ico
 # WigglyPaint 绘画工具
 Allow: /wiggly.html
 
-# 爬取频率限制（可选）
+# WigglyPaint 关键页面
+Allow: /about
+Allow: /privacy
+Allow: /changelog
+
+# 爬取频率限制
 Crawl-delay: 1
 
 # 针对特定搜索引擎的优化
@@ -39,4 +44,4 @@ Crawl-delay: 1
 
 User-agent: Baiduspider
 Allow: /
-Crawl-delay: 2 
+Crawl-delay: 2
