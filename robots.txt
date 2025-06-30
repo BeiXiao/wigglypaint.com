@@ -2,10 +2,10 @@ User-agent: *
 Allow: /
 
 # 网站地图
-Sitemap: https://wigglypaint.com/sitemap.xml
+Sitemap: https://wigglypaint.com/sitemap-index.xml
 
 # 主要页面
-Allow: /
+Allow: /en/
 Allow: /zh/
 Allow: /ja/
 Allow: /ko/

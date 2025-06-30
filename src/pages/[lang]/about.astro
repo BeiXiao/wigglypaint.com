@@ -1,0 +1,327 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+// 获取当前语言
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// 为静态生成定义路径
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'ko' } },
+  ];
+}
+
+// SEO 数据
+const title = lang === 'en' 
+  ? 'About WigglyPaint - Bringing Art to Life with Animated Lines'
+  : lang === 'zh'
+  ? '关于 WigglyPaint - 用动画线条让艺术栩栩如生'
+  : lang === 'ja'
+  ? 'WigglyPaintについて - アニメーション線でアートに命を吹き込む'
+  : 'WigglyPaint 소개 - 애니메이션 선으로 아트에 생명을 불어넣기';
+
+const description = t('about.subtitle');
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <!-- Menu Bar -->
+    <ul role="menu-bar">
+        <li role="menu-item" tabindex="0" aria-haspopup="true">
+            <span>{t('nav.file')}</span>
+            <ul role="menu">
+                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '')}>{t('nav.tryOnline')}</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '') + '#download'}>{t('nav.download')}</a></li>
+                <li role="menu-item" class="divider"><a href={getRelativeLocaleUrl(lang, '') + '#features'}>{t('nav.features')}</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '') + '#faq'}>{t('nav.faq')}</a></li>
+            </ul>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="true">
+            <span>{t('nav.help')}</span>
+            <ul role="menu">
+                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '') + '#how-to-use'}>User Guide</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '') + '#faq'}>{t('nav.faq')}</a></li>
+                <li role="menu-item" class="divider"><a href="https://github.com/JohnEarnest/Decker" target="_blank">Decker Project</a></li>
+                <li role="menu-item"><a href="mailto:support@wigglypaint.com">Contact Us</a></li>
+            </ul>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="false">
+            <a href={getRelativeLocaleUrl(lang, 'about')} class="active">{t('nav.about')}</a>
+        </li>
+        <li role="menu-item" tabindex="0" aria-haspopup="true" style="margin-left: auto;">
+            <span>{t('nav.language')}</span>
+            <ul role="menu">
+                <li role="menu-item"><a href={getRelativeLocaleUrl('en', 'about')}>English</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl('zh', 'about')}>中文</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl('ja', 'about')}>日本語</a></li>
+                <li role="menu-item"><a href={getRelativeLocaleUrl('ko', 'about')}>한국어</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="main-container">
+        <!-- Header -->
+        <div class="about-header">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('about.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px; text-align: center;">
+                    <p class="subtitle">{t('about.subtitle')}</p>
+                    <a href={getRelativeLocaleUrl(lang, '')} class="back-link">{t('about.backToHome')}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- What is WigglyPaint -->
+        <div class="about-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h2 class="title">{t('about.what.title')}</h2>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <p>{t('about.what.content')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission -->
+        <div class="about-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h2 class="title">{t('about.mission.title')}</h2>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <div class="mission-quote">
+                        <p class="quote">{t('about.mission.quote')}</p>
+                    </div>
+                    <p>{t('about.mission.content')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Features -->
+        <div class="about-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h2 class="title">{t('about.features.title')}</h2>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <p><strong>{t('about.features.wiggle')}</strong></p>
+                        </div>
+                        <div class="feature-item">
+                            <p><strong>{t('about.features.export')}</strong></p>
+                        </div>
+                        <div class="feature-item">
+                            <p><strong>{t('about.features.decker')}</strong></p>
+                        </div>
+                        <div class="feature-item">
+                            <p><strong>{t('about.features.friendly')}</strong></p>
+                        </div>
+                        <div class="feature-item">
+                            <p><strong>{t('about.features.professional')}</strong></p>
+                        </div>
+                        <div class="feature-item">
+                            <p><strong>{t('about.features.universal')}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology -->
+        <div class="about-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h2 class="title">{t('about.technology.title')}</h2>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <p>{t('about.technology.content')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy & Safety -->
+        <div class="about-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h2 class="title">{t('about.privacy.title')}</h2>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <div class="privacy-content">
+                        <h3 class="privacy-subtitle">{t('about.privacy.subtitle')}</h3>
+                        <ul class="privacy-list">
+                            <li>{t('about.privacy.local')}</li>
+                            <li>{t('about.privacy.noCollection')}</li>
+                            <li>{t('about.privacy.noAccount')}</li>
+                            <li>{t('about.privacy.family')}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Getting Started -->
+        <div class="about-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h2 class="title">{t('about.start.title')}</h2>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <p>{t('about.start.content')}</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href={getRelativeLocaleUrl(lang, '')} class="btn start-btn">
+                            {t('nav.tryOnline')}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .main-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .about-header {
+        margin-bottom: 30px;
+    }
+
+    .about-section {
+        margin-bottom: 30px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin: 0 0 15px 0;
+    }
+
+    .back-link {
+        color: #0066cc;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
+
+    .mission-quote {
+        text-align: center;
+        margin: 20px 0;
+        padding: 20px;
+        background: #f0f0f0;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+    }
+
+    .quote {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: bold;
+        color: #444;
+        margin: 0;
+    }
+
+    .features-list {
+        display: grid;
+        gap: 15px;
+    }
+
+    .feature-item {
+        margin: 0;
+    }
+
+    .feature-item strong {
+        color: #333;
+    }
+
+    .privacy-content {
+        text-align: left;
+    }
+
+    .privacy-subtitle {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+
+    .privacy-list {
+        list-style-type: disc;
+        padding-left: 30px;
+        margin: 0;
+    }
+
+    .privacy-list li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .start-btn {
+        background: #fff;
+        color: black;
+        border: 2px solid #010101;
+        padding: 12px 24px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'ChicagoFLF', system-ui, -apple-system, sans-serif;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .start-btn:hover {
+        background: #010101;
+        color: white;
+    }
+
+    .active {
+        font-weight: bold;
+        background: #e0e0e0;
+    }
+
+    /* 移动端响应式 */
+    @media (max-width: 768px) {
+        .main-container {
+            padding: 10px;
+        }
+
+        .about-section {
+            margin-bottom: 20px;
+        }
+
+        .window-pane {
+            padding: 20px !important;
+        }
+
+        .quote {
+            font-size: 18px;
+        }
+
+        .features-list {
+            gap: 10px;
+        }
+    }
+</style> 

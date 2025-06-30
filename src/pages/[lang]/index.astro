@@ -51,7 +51,7 @@ const description = t('hero.description');
             </ul>
         </li>
         <li role="menu-item" tabindex="0" aria-haspopup="false">
-            <a href="https://github.com/JohnEarnest/Decker" target="_blank">{t('nav.about')}</a>
+            <a href={getRelativeLocaleUrl(lang, 'about')}>{t('nav.about')}</a>
         </li>
         <li role="menu-item" tabindex="0" aria-haspopup="true" style="margin-left: auto;">
             <span>{t('nav.language')}</span>
@@ -215,12 +215,13 @@ const description = t('hero.description');
                             <p class="footer-description">{t('footer.description')}</p>
                             <p class="footer-tech">{t('footer.deckerProject')}</p>
                         </div>
-                        <div class="footer-links">
-                            <a href={`/${lang}/privacy`} class="footer-link">{t('footer.privacyPolicy')}</a>
-                            <a href={`/${lang}/changelog`} class="footer-link">{t('footer.changelog')}</a>
-                            <a href="mailto:support@wigglypaint.com" class="footer-link">{t('footer.contact')}</a>
-                            <a href="https://github.com/JohnEarnest/Decker" target="_blank" class="footer-link">{t('footer.github')}</a>
-                        </div>
+                                        <div class="footer-links">
+                    <a href={getRelativeLocaleUrl(lang, 'about')} class="footer-link">{t('footer.about')}</a>
+                    <a href={`/${lang}/privacy`} class="footer-link">{t('footer.privacyPolicy')}</a>
+                    <a href={`/${lang}/changelog`} class="footer-link">{t('footer.changelog')}</a>
+                    <a href="mailto:support@wigglypaint.com" class="footer-link">{t('footer.contact')}</a>
+                    <a href="https://github.com/JohnEarnest/Decker" target="_blank" class="footer-link">{t('footer.github')}</a>
+                </div>
                     </div>
                     <div class="footer-bottom">
                         <p class="footer-copyright">{t('footer.copyright')}</p>
