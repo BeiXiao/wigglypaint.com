@@ -30,20 +30,28 @@ const { title, description, lang = 'en' } = Astro.props;
     <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
     <meta property="og:image" content="https://wigglypaint.com/og-img.png">
+    <meta property="og:image:alt" content="WigglyPaint - Free Online Animated Drawing Tool">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://wigglypaint.com">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:url" content={`https://wigglypaint.com/${lang === 'en' ? '' : lang + '/'}`}>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WigglyPaint">
     <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang === 'zh' ? 'zh_CN' : lang === 'ja' ? 'ja_JP' : 'ko_KR'}>
+    
+    <!-- 添加额外的 Open Graph 标签 -->
+    <meta property="article:author" content="Internet Janitor">
+    <meta property="og:updated_time" content="2024-12-19T00:00:00+00:00">
 
     <!-- Twitter Card 标签 -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content={title}>
     <meta name="twitter:description" content={description}>
     <meta name="twitter:image" content="https://wigglypaint.com/og-img.png">
+    <meta name="twitter:image:alt" content="WigglyPaint - Free Online Animated Drawing Tool">
     <meta name="twitter:creator" content="@InternetJanitor">
     <meta name="twitter:site" content="@WigglyPaint">
+    <meta name="twitter:domain" content="wigglypaint.com">
 
     <!-- 网站图标 -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
