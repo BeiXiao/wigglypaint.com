@@ -19,20 +19,20 @@ export async function getStaticPaths() {
 
 // SEO 数据
 const title = lang === 'en' 
-  ? 'WigglyPaint - Free Shake Art & KidPix Style Online Drawing Tool | Animated Wiggly Lines'
+  ? 'WigglyPaint - Free Online Drawing Tool with Animated Wiggly Lines | Create Pixel Art & GIFs'
   : lang === 'zh'
-  ? 'WigglyPaint - 免费在线摇摆线条绘画工具 | 类似 Shake Art 和 KidPix 的创作体验'
+  ? 'WigglyPaint - 免费在线摇摆线条绘画工具 | 创作像素艺术和GIF动画'
   : lang === 'ja'
-  ? 'WigglyPaint - Shake Art & KidPix スタイルのアニメーション描画ツール | ピクセルアート'
-  : 'WigglyPaint - Shake Art & KidPix 스타일 애니메이션 그리기 도구 | 픽셀아트';
+  ? 'WigglyPaint - アニメーションぐねぐね線描画ツール | ピクセルアート＆GIF作成'
+  : 'WigglyPaint - 애니메이션 구불구불 선 그리기 도구 | 픽셀아트 & GIF 제작';
 
 const description = lang === 'en'
-  ? 'Experience the nostalgia of Shake Art and KidPix with WigglyPaint! Free online drawing tool featuring animated wiggly lines, perfect for creating pixel art, comics, and GIFs. Like the classic Shake Art and KidPix but with modern web technology.'
+  ? 'WigglyPaint is a free online drawing tool for creating animated pixel art, comics, and doodles with unique wiggly line effects. Start drawing today - no signup required!'
   : lang === 'zh' 
-  ? '体验 Shake Art 和 KidPix 的怀旧感！WigglyPaint 是免费在线绘画工具，具有动画摇摆线条效果，完美创作像素艺术、漫画和GIF。如同经典的 Shake Art 和 KidPix，但采用现代网络技术。'
+  ? 'WigglyPaint 是免费在线绘画工具，用独特的摇摆线条效果创作动画像素艺术、漫画和涂鸦。立即开始绘画 - 无需注册！'
   : lang === 'ja'
-  ? 'Shake ArtとKidPixの懐かしさを体験！WigglyPaintは、アニメーションぐねぐね線を特徴とする無料オンライン描画ツールで、ピクセルアート、漫画、GIFの作成に最適です。クラシックなShake ArtとKidPixのような体験を現代のウェブ技術で。'
-  : 'Shake Art와 KidPix의 향수를 경험하세요! WigglyPaint는 애니메이션 구불구불한 선을 특징으로 하는 무료 온라인 그리기 도구로, 픽셀 아트, 만화, GIF 제작에 완벽합니다. 클래식한 Shake Art와 KidPix와 같은 경험을 현대 웹 기술로 제공합니다.';
+  ? 'WigglyPaintは、ユニークなぐねぐね線効果でアニメーションピクセルアート、漫画、落書きを作成する無料オンライン描画ツールです。今すぐ描画開始 - 登録不要！'
+  : 'WigglyPaint는 독특한 구불구불 선 효과로 애니메이션 픽셀 아트, 만화, 낙서를 만드는 무료 온라인 그리기 도구입니다. 지금 그리기 시작 - 가입 불필요!';
 ---
 
 <Layout title={title} description={description} lang={lang}>
@@ -175,35 +175,28 @@ const description = lang === 'en'
                 <div class="separator"></div>
                 <div class="window-pane" style="padding: 30px;">
                     <div class="faq-item">
-                        <div class="faq-question">Q: How is WigglyPaint similar to Shake Art and KidPix?</div>
-                        <div class="faq-answer">A: WigglyPaint is a modern revival of beloved drawing tools like Shake Art and KidPix. Like these classic programs, WigglyPaint features animated drawing effects, colorful interfaces, and instant creative gratification. However, WigglyPaint adds contemporary web features like GIF export and cross-platform compatibility that Shake Art and KidPix never had.</div>
-                    </div>
-
-                    <div class="faq-item">
                         <div class="faq-question">Q: How was WigglyPaint developed?</div>
-                        <div class="faq-answer">A: WigglyPaint is a lively drawing program developed by Internet Janitor using Decker technology. WigglyPaint shares notable similarities with Shake Art and KidPix, but with unique wiggle animation features and modern web capabilities that make it perfect for today's digital artists.</div>
+                        <div class="faq-answer">A: WigglyPaint is a lively drawing program developed by Internet Janitor using Decker technology. WigglyPaint shares notable similarities with Shake Art and KidPix, but with unique wiggle animation features and modern web capabilities.</div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-question">Q: What devices can I use WigglyPaint on?</div>
-                        <div class="faq-answer">A: Unlike the original Shake Art and KidPix which were limited to specific platforms, WigglyPaint is a web-based application that works on PC, mobile, or tablet—just visit the WigglyPaint website to get started. We also provide a dedicated WigglyPaint iPad app for the ultimate Shake Art and KidPix nostalgic experience.
-                        </div>
+                        <div class="faq-answer">A: WigglyPaint is a web-based application, so you can use WigglyPaint on PC, mobile, or tablet—just visit the WigglyPaint website to get started. We also provide a dedicated WigglyPaint iPad app.</div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-question">Q: How many times can I use WigglyPaint for free?</div>
-                        <div class="faq-answer">A: Just like the original Shake Art and KidPix were full-featured programs, WigglyPaint is completely free to use with no limits on usage or GIF exports. Enjoy unlimited WigglyPaint drawing sessions with all the nostalgic charm of Shake Art and KidPix!
-                        </div>
+                        <div class="faq-answer">A: WigglyPaint is completely free to use with no limits on usage or GIF exports. Enjoy unlimited WigglyPaint drawing sessions!</div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-question">Q: How does WigglyPaint protect my privacy?</div>
-                        <div class="faq-answer">A: Following the philosophy of classic tools like Shake Art and KidPix, all your drawings and doodles in WigglyPaint are never uploaded to any server. WigglyPaint doesn't require login, and no personal data is collected during use - your WigglyPaint creations stay private, just like they did with Shake Art and KidPix.</div>
+                        <div class="faq-answer">A: All your drawings and doodles in WigglyPaint are never uploaded to any server. WigglyPaint doesn't require login, and no personal data is collected during use - your WigglyPaint creations stay private.</div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-question">Q: What export formats does WigglyPaint support?</div>
-                        <div class="faq-answer">A: WigglyPaint goes beyond what Shake Art and KidPix could do by exporting as high-quality GIF animations that preserve all the wiggly effects, perfect for sharing as memes, stickers, or social media content. WigglyPaint GIFs maintain their wiggle animations when shared, bringing the magic of Shake Art and KidPix into the modern era.</div>
+                        <div class="faq-answer">A: WigglyPaint exports as high-quality GIF animations that preserve all the wiggly effects, perfect for sharing as memes, stickers, or social media content. WigglyPaint GIFs maintain their wiggle animations when shared.</div>
                     </div>
                 </div>
             </div>

@@ -11,8 +11,8 @@ export const ui = {
     en: {
         // Hero
         'hero.title': 'WigglyPaint',
-        'hero.subtitle': 'WigglyPaint: Like Shake Art & KidPix with Animated Pixel Art, Comics & Doodles',
-        'hero.description': 'Relive the magic of classic drawing tools like Shake Art and KidPix! WigglyPaint brings back that nostalgic creative experience with 8 unique animated brushes and modern wiggly line effects. Perfect for making GIF animations, memes, and pixel art reminiscent of Shake Art and KidPix.',
+        'hero.subtitle': 'WigglyPaint: Create Animated Pixel Art, Comics & Doodles with Wiggly & Jiggly Lines',
+        'hero.description': 'Draw with 8 unique animated brushes and watch your lines come to life! Perfect for creating GIF animations, memes, comics, and pixel art. No signup required.',
 
         // Navigation
         'nav.file': 'File',
@@ -26,16 +26,16 @@ export const ui = {
 
         // Features
         'feature.whatIs.title': '✨ What is WigglyPaint?',
-        'feature.whatIs.content': 'WigglyPaint is a modern revival of classic drawing tools like Shake Art and KidPix. This free online pixel art and drawing tool brings your creativity to life with animated wiggly lines, capturing the nostalgic charm of Shake Art and KidPix while adding contemporary web features.',
+        'feature.whatIs.content': 'WigglyPaint is a revolutionary free online pixel art and drawing tool that brings your creativity to life with animated wiggly lines. WigglyPaint is perfect for creating pixel art, comics, manga, hand-drawn sketches, and doodles with unique wiggle animations.',
 
         'feature.howTo.title': '🎯 How to Use WigglyPaint?',
-        'feature.howTo.content': 'Using WigglyPaint is as intuitive as the beloved Shake Art and KidPix! Select different brushes on the right side of the WigglyPaint drawing tool. Click to select and start drawing on the whiteboard. Try out each WigglyPaint brush to see the various wiggle effects reminiscent of classic tools.',
+        'feature.howTo.content': 'Using WigglyPaint is simple! Select different brushes on the right side of the WigglyPaint drawing tool. Click to select and start drawing on the whiteboard. Try out each WigglyPaint brush to see the various wiggle effects they offer.',
 
         'feature.why.title': '🌟 Why Choose WigglyPaint?',
-        'feature.why.content': 'Experience the creative joy of Shake Art and KidPix with modern technology! Unlike static drawing tools, every stroke in WigglyPaint creates living, breathing lines that wiggle and move with personality. Perfect for recreating that nostalgic Shake Art and KidPix magic in today\'s digital world.',
+        'feature.why.content': 'Unlike static drawing tools, every stroke in WigglyPaint creates living, breathing lines that wiggle and move with personality. WigglyPaint is perfect for creating viral memes, animated stickers, and social media content that stands out.',
 
         'feature.privacy.title': '🔒 WigglyPaint Privacy Protection',
-        'feature.privacy.content': 'Just like the original Shake Art and KidPix, all your WigglyPaint drawings and doodles are never uploaded to any server. WigglyPaint requires no login and collects no personal information - your creativity stays private, maintaining the simplicity of classic tools like Shake Art and KidPix.',
+        'feature.privacy.content': 'All your WigglyPaint drawings and doodles are never uploaded to any server. WigglyPaint requires no login and collects no personal information - your creativity stays private.',
 
         // Download
         'download.title': '📱 Download WigglyPaint Apps',
@@ -103,8 +103,8 @@ export const ui = {
     zh: {
         // Hero
         'hero.title': 'WigglyPaint',
-        'hero.subtitle': 'WigglyPaint：类似 Shake Art 和 KidPix 的免费在线摇摆线条绘画工具！',
-        'hero.description': '重温 Shake Art 和 KidPix 等经典绘画工具的魔力！WigglyPaint 用8种独特的动画画笔和现代摇摆线条效果，带回那种怀旧的创作体验。完美制作 GIF 动画、表情包和像素艺术，重现 Shake Art 和 KidPix 的经典魅力。',
+        'hero.subtitle': 'WigglyPaint：让你的画作摇摆起来的免费在线绘画工具！',
+        'hero.description': '用8种独特的动画画笔绘制，看着你的线条生动起来！完美制作GIF动画、表情包、漫画和像素艺术。无需注册。',
 
         // Navigation  
         'nav.file': '文件',
@@ -118,16 +118,16 @@ export const ui = {
 
         // Features
         'feature.whatIs.title': '✨ 什么是 WigglyPaint？',
-        'feature.whatIs.content': 'WigglyPaint 是经典绘画工具 Shake Art 和 KidPix 的现代复刻版。这款免费的在线像素艺术和绘画工具通过动画摇摆线条让你的创意栩栩如生，既保留了 Shake Art 和 KidPix 的怀旧魅力，又增加了现代网络功能。',
+        'feature.whatIs.content': 'WigglyPaint 是一款免费的在线像素艺术和绘画工具，通过动画摇摆和颤动线条让你的创意栩栩如生。非常适合创作像素艺术、漫画、手绘素描和涂鸦。',
 
         'feature.howTo.title': '🎯 如何使用？',
-        'feature.howTo.content': '使用 WigglyPaint 就像使用备受喜爱的 Shake Art 和 KidPix 一样直观！在绘画工具右侧选择不同的画笔。点击选择并在白板上开始绘画。尝试每种画笔体验类似经典工具的不同摇摆效果。',
+        'feature.howTo.content': '在绘画工具右侧选择不同的画笔。点击选择并在白板上开始绘画。尝试每种画笔体验不同的摇摆和颤动效果。',
 
         'feature.why.title': '🌟 为什么选择 WigglyPaint？',
-        'feature.why.content': '用现代技术体验 Shake Art 和 KidPix 的创作乐趣！与静态绘画工具不同，WigglyPaint 中的每一笔都会创造充满个性、摇摆移动的活跃线条。完美重现 Shake Art 和 KidPix 在当今数字世界中的怀旧魔力。',
+        'feature.why.content': '与静态绘画工具不同，WigglyPaint 中的每一笔都会创造充满个性、摇摆移动的活跃线条。制作病毒式表情包、动画贴纸和社交媒体内容的理想选择。',
 
         'feature.privacy.title': '🔒 隐私保护',
-        'feature.privacy.content': '就像原版 Shake Art 和 KidPix 一样，你的所有绘画和涂鸦都不会上传到任何服务器。无需登录，不收集任何个人信息，保持像 Shake Art 和 KidPix 等经典工具的简洁性。',
+        'feature.privacy.content': '你的所有绘画和涂鸦都不会上传到任何服务器。无需登录，不收集任何个人信息。',
 
         // Download
         'download.title': '📱 下载应用',
@@ -195,8 +195,8 @@ export const ui = {
     ja: {
         // Hero
         'hero.title': 'WigglyPaint',
-        'hero.subtitle': 'Shake Art と KidPix のような無料オンライン描画ツール！',
-        'hero.description': 'Shake Art と KidPix などクラシック描画ツールの魔法を再体験！WigglyPaint は8種類のユニークなアニメーションブラシとモダンなぐねぐね線効果で、その懐かしいクリエイティブ体験を蘇らせます。Shake Art と KidPix を彷彿とさせる GIF アニメーション、ミーム、ピクセルアートの作成に最適。',
+        'hero.subtitle': 'あなたのアートを生き生きと動かす無料オンライン描画ツール！',
+        'hero.description': '8種類のユニークなアニメーションブラシで描画し、線が生き生きと動くのを見てください！GIFアニメーション、ミーム、漫画、ピクセルアートの作成に最適。登録不要。',
 
         // Navigation
         'nav.file': 'ファイル',
@@ -210,16 +210,16 @@ export const ui = {
 
         // Features
         'feature.whatIs.title': '✨ WigglyPaintとは',
-        'feature.whatIs.content': 'WigglyPaint は Shake Art と KidPix などクラシック描画ツールのモダンな復活版です。この無料オンラインピクセルアートと描画ツールは、アニメーションぐねぐね線であなたの創造性を生き生きと表現し、Shake Art と KidPix の懐かしい魅力を保ちながら現代的なウェブ機能を追加しています。',
+        'feature.whatIs.content': 'WigglyPaintは、アニメーションぐねぐね＆ぷるぷる線であなたの創造性を生き生きと表現する無料オンラインピクセルアートと描画ツールです。ピクセルアート、漫画、手描きスケッチ、落書きの作成に最適。',
 
         'feature.howTo.title': '🎯 使い方',
-        'feature.howTo.content': 'WigglyPaint の使用は愛される Shake Art と KidPix のように直感的！描画ツールの右側で異なるブラシを選択。クリックして選択し、ホワイトボードで描画を開始。各ブラシを試してクラシックツールを彷彿とさせる様々なぐねぐね効果を確認。',
+        'feature.howTo.content': '描画ツールの右側で異なるブラシを選択。クリックして選択し、ホワイトボードで描画を開始。各ブラシを試して様々なぐねぐね＆ぷるぷる効果を確認。',
 
         'feature.why.title': '🌟 選択する理由',
-        'feature.why.content': 'モダンな技術で Shake Art と KidPix のクリエイティブな喜びを体験！静的な描画ツールとは異なり、WigglyPaint のすべてのストロークは個性的でぐねぐね動く生きた線を作成します。今日のデジタル世界で Shake Art と KidPix の懐かしい魔法を完璧に再現。',
+        'feature.why.content': '静的な描画ツールとは異なり、WigglyPaintのすべてのストロークは個性的でぐねぐね動く生きた線を作成します。バイラルミーム、アニメーションステッカー、ソーシャルメディアコンテンツの作成に理想的。',
 
         'feature.privacy.title': '🔒 プライバシー保護',
-        'feature.privacy.content': 'オリジナルの Shake Art と KidPix のように、すべての描画や落書きはサーバーにアップロードされません。ログイン不要、個人情報は収集されません。Shake Art と KidPix などクラシックツールのシンプルさを維持。',
+        'feature.privacy.content': 'すべての描画や落書きはサーバーにアップロードされません。ログイン不要、個人情報は収集されません。',
 
         // Download
         'download.title': '📱 アプリダウンロード',
@@ -287,8 +287,8 @@ export const ui = {
     ko: {
         // Hero
         'hero.title': 'WigglyPaint',
-        'hero.subtitle': 'Shake Art 와 KidPix 같은 무료 온라인 그리기 도구！',
-        'hero.description': 'Shake Art와 KidPix 같은 클래식 그리기 도구의 마법을 재경험하세요! WigglyPaint는 8가지 독특한 애니메이션 브러시와 모던한 구불구불한 선 효과로 그 향수 어린 창작 경험을 되살립니다. Shake Art와 KidPix를 연상시키는 GIF 애니메이션, 밈, 픽셀 아트 제작에 완벽합니다.',
+        'hero.subtitle': '당신의 작품을 생생하게 움직이는 무료 온라인 그리기 도구！',
+        'hero.description': '8가지 독특한 애니메이션 브러시로 그리고 선이 생생하게 움직이는 것을 보세요! GIF 애니메이션, 밈, 만화, 픽셀 아트 제작에 완벽. 가입 불필요.',
 
         // Navigation
         'nav.file': '파일',
@@ -302,16 +302,16 @@ export const ui = {
 
         // Features
         'feature.whatIs.title': '✨ WigglyPaint란',
-        'feature.whatIs.content': 'WigglyPaint는 Shake Art와 KidPix 같은 클래식 그리기 도구의 모던한 부활입니다. 이 무료 온라인 픽셀 아트 및 그리기 도구는 애니메이션 구불구불한 선으로 당신의 창의성을 생생하게 표현하며, Shake Art와 KidPix의 향수 어린 매력을 보존하면서 현대적인 웹 기능을 추가합니다.',
+        'feature.whatIs.content': 'WigglyPaint는 애니메이션 구불구불＆흔들흔들한 선으로 당신의 창의성을 생생하게 표현하는 무료 온라인 픽셀 아트 및 그리기 도구입니다. 픽셀 아트, 만화, 손그림 스케치, 낙서 작성에 완벽합니다.',
 
         'feature.howTo.title': '🎯 사용 방법',
-        'feature.howTo.content': 'WigglyPaint 사용은 사랑받는 Shake Art와 KidPix처럼 직관적입니다! 그리기 도구 오른쪽에서 다른 브러시 선택. 클릭하여 선택하고 화이트보드에서 그리기 시작. 각 브러시를 시도하여 클래식 도구를 연상시키는 다양한 구불구불한 효과 확인.',
+        'feature.howTo.content': '그리기 도구 오른쪽에서 다른 브러시 선택. 클릭하여 선택하고 화이트보드에서 그리기 시작. 각 브러시를 시도하여 다양한 구불구불＆흔들흔들 효과 확인.',
 
         'feature.why.title': '🌟 선택하는 이유',
-        'feature.why.content': '모던 기술로 Shake Art와 KidPix의 창작 즐거움을 경험하세요! 정적인 그리기 도구와 달리, WigglyPaint의 모든 스트로크는 개성적이고 구불구불 움직이는 살아있는 선을 만듭니다. 오늘날의 디지털 세계에서 Shake Art와 KidPix의 향수 어린 마법을 완벽하게 재현합니다.',
+        'feature.why.content': '정적인 그리기 도구와 달리, WigglyPaint의 모든 스트로크는 개성적이고 구불구불 움직이는 살아있는 선을 만듭니다. 바이럴 밈, 애니메이션 스티커, 소셜 미디어 콘텐츠 제작에 이상적입니다.',
 
         'feature.privacy.title': '🔒 개인정보 보호',
-        'feature.privacy.content': '원래 Shake Art와 KidPix처럼, 모든 그림과 낙서는 서버에 업로드되지 않습니다. 로그인 불필요, 개인정보 수집 없음. Shake Art와 KidPix 같은 클래식 도구의 단순함을 유지합니다.',
+        'feature.privacy.content': '모든 그림과 낙서는 서버에 업로드되지 않습니다. 로그인 불필요, 개인정보 수집 없음.',
 
         // Download
         'download.title': '📱 앱 다운로드',
