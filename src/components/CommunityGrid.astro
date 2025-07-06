@@ -31,7 +31,7 @@ const { items, infinite = false } = Astro.props;
     <div class="community-grid" id="community-grid"></div>
     <div id="load-more-trigger" style="height: 1px;"></div>
     <div id="community-loading" style="text-align:center;display:none;margin:20px 0;">
-      <span>加载中...</span>
+      <span>Loading...</span>
     </div>
     <script type="module" is:inline>
       const allItems = JSON.parse('{JSON.stringify(items)}');
