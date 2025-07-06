@@ -1,0 +1,64 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "items": [
+      {
+        "id": "90db1ee2-3c49-49e9-a925-c19151fa5eb5",
+        "title": "Doodle dump incoming!",
+        "src": "https://cdn.wigglypaint.com/gallery/6dab3be2-d497-4bc7-bc25-e985f3dc1478.gif",
+        "alt": "prepare for some chaotic energy 🤪",
+        "format": "gif",
+        "category": "drawing",
+        "isVideo": false
+      },
+      {
+        "id": "2cb3ce74-5ec8-4690-bbdf-07db86f3f6cf",
+        "title": "Art block hitting hard 😩",
+        "src": "https://cdn.wigglypaint.com/gallery/e8345571-14c5-487a-8832-ac9a507dcac0.gif",
+        "alt": "Send help (and inspiration) pls",
+        "format": "gif",
+        "category": "drawing",
+        "isVideo": false
+      },
+      {
+        "id": "4798d423-a426-4f94-8064-78e073f41907",
+        "title": "Anime Waifu Material?",
+        "src": "https://cdn.wigglypaint.com/gallery/291af14c-4400-483f-9730-8f1bb2f0d1be.gif",
+        "alt": "Do you even anime, bro?",
+        "format": "gif",
+        "category": "drawing",
+        "isVideo": false
+      },
+      {
+        "id": "0733a33f-58a1-4cac-ac26-d507ce5d5e20",
+        "title": "Sleepy birb 😴",
+        "src": "https://cdn.wigglypaint.com/gallery/4b1b2dc8-6ab4-4e66-9538-a5588bc8d650.gif",
+        "alt": "he jus a lil guy fr fr",
+        "format": "gif",
+        "category": "drawing",
+        "isVideo": false
+      },
+      {
+        "id": "8625570a-cafc-417f-a9b7-b1cc1752d722",
+        "title": "Pixel Art attempt #1000",
+        "src": "https://cdn.wigglypaint.com/gallery/e9fd2a32-2de6-4ed5-9675-e2cbc23619da.gif",
+        "alt": "still can't get the hang of this but imma keep trying 😭",
+        "format": "gif",
+        "category": "drawing",
+        "isVideo": false
+      },
+      {
+        "id": "12f0971a-e4ff-45cf-8fe5-e73d35f7b303",
+        "title": "Wiggly paint be like:",
+        "src": "https://cdn.wigglypaint.com/gallery/85d3cb67-5879-4aba-856e-ff0060b917b9.gif",
+        "alt": "Abstract art? More like abstract mess",
+        "format": "gif",
+        "category": "drawing",
+        "isVideo": false
+      }
+    ],
+    "total": 1484,
+    "totalPages": 63
+  }
+}

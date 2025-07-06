@@ -17,12 +17,23 @@ export const ui = {
         // Navigation
         'nav.file': 'File',
         'nav.help': 'Help',
+        'nav.home': 'Home',
         'nav.about': 'About',
+        'nav.community': 'Community',
         'nav.language': 'Language',
         'nav.tryOnline': 'Try WigglyPaint Online',
         'nav.download': 'Download WigglyPaint',
         'nav.features': 'Features',
         'nav.faq': 'FAQ',
+
+        // Community
+        'community.title': 'Community Gallery - WigglyPaint',
+        'community.description': 'Discover amazing artworks created by WigglyPaint community members.',
+        'community.heading': 'Community Gallery',
+        'community.subtitle': 'Discover amazing artworks created by our community!',
+        'community.viewAll': 'View All Community Art',
+        'community.noResults': 'No artworks found.',
+        'community.loadMore': 'Load More',
 
         // Features
         'feature.whatIs.title': '✨ What is WigglyPaint?',
@@ -109,12 +120,23 @@ export const ui = {
         // Navigation  
         'nav.file': '文件',
         'nav.help': '帮助',
+        'nav.home': '首页',
         'nav.about': '关于',
+        'nav.community': '社区',
         'nav.language': '语言',
         'nav.tryOnline': '在线试用 WigglyPaint',
         'nav.download': '下载 WigglyPaint',
         'nav.features': '功能特点',
         'nav.faq': '常见问题',
+
+        // Community
+        'community.title': '社区作品集 - WigglyPaint',
+        'community.description': '发现由 WigglyPaint 社区成员创作的精彩作品。',
+        'community.heading': '社区作品集',
+        'community.subtitle': '发现我们社区创作的精彩作品！',
+        'community.viewAll': '查看所有社区作品',
+        'community.noResults': '未找到作品。',
+        'community.loadMore': '加载更多',
 
         // Features
         'feature.whatIs.title': '✨ 什么是 WigglyPaint？',
@@ -201,12 +223,23 @@ export const ui = {
         // Navigation
         'nav.file': 'ファイル',
         'nav.help': 'ヘルプ',
+        'nav.home': 'ホーム',
         'nav.about': '概要',
+        'nav.community': 'コミュニティ',
         'nav.language': '言語',
         'nav.tryOnline': 'オンラインで試す',
         'nav.download': 'ダウンロード',
         'nav.features': '機能',
         'nav.faq': 'よくある質問',
+
+        // Community
+        'community.title': 'コミュニティ作品集 - WigglyPaint',
+        'community.description': 'WigglyPaintコミュニティメンバーによって作成された素晴らしい作品を発見。',
+        'community.heading': 'コミュニティ作品集',
+        'community.subtitle': 'コミュニティの素晴らしい作品を発見！',
+        'community.viewAll': 'すべてのコミュニティ作品を表示',
+        'community.noResults': '作品が見つかりません。',
+        'community.loadMore': 'もっと読み込む',
 
         // Features
         'feature.whatIs.title': '✨ WigglyPaintとは',
@@ -273,7 +306,7 @@ export const ui = {
         'about.features.professional': 'プロツール - カスタムパレット、透明マスク、カラーサンプリングで高度なクリエイターに対応',
         'about.features.universal': 'ユニバーサルアクセス - ペン、マウス、タッチ入力をサポートする任意のモダンブラウザで動作',
         'about.technology.title': '🛠️ 技術',
-        'about.technology.content': 'WigglyPaintは最適な互換性とパフォーマンスのためにモダンなウェブ技術を活用：滑らかな描画のためのHTML5キャンバス、軽量でありながら強力な創造性のためのDeckerエンジン、オフライン使用のためのプログレッシブウェブアプリ機能、ハードウェアアクセラレーテッドグラフィックスのためのWebGL、あらゆる画面に適応するレスポンシブデザイン。',
+        'about.technology.content': 'WigglyPaintは最適な互換性とパフォーマンスのためにモダンなウェブ技術を活用：滑らかな描画のためのHTML5キャンバス、軽量でありながら強力な創造性のためのDeckerエンジン、オフライン使用のためのプログレッシブウェブアプリ機能、ハードウェルアクセラレーテッドグラフィックスのためのWebGL、あらゆる画面に適応するレスポンシブデザイン。',
         'about.privacy.title': '🔒 プライバシーと安全性',
         'about.privacy.subtitle': 'あなたのアート、あなたの権利',
         'about.privacy.local': 'すべてのアートワークはブラウザ内でローカルに作成・保存されます',
@@ -293,12 +326,23 @@ export const ui = {
         // Navigation
         'nav.file': '파일',
         'nav.help': '도움말',
+        'nav.home': '홈',
         'nav.about': '정보',
+        'nav.community': '커뮤니티',
         'nav.language': '언어',
         'nav.tryOnline': '온라인 체험',
         'nav.download': '다운로드',
         'nav.features': '기능',
         'nav.faq': '자주 묻는 질문',
+
+        // Community
+        'community.title': '커뮤니티 작품 갤러리 - WigglyPaint',
+        'community.description': 'WigglyPaint 커뮤니티 멤버들이 만든 멋진 작품을 발견하세요.',
+        'community.heading': '커뮤니티 작품 갤러리',
+        'community.subtitle': '커뮤니티의 멋진 작품을 발견하세요!',
+        'community.viewAll': '모든 커뮤니티 작품 보기',
+        'community.noResults': '작품을 찾을 수 없습니다.',
+        'community.loadMore': '더 불러오기',
 
         // Features
         'feature.whatIs.title': '✨ WigglyPaint란',

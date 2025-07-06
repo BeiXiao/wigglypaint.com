@@ -1,7 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CommunityGrid from '../../components/CommunityGrid.astro';
+import Navigation from '../../components/Navigation.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import galleryIndex from '../../data/gallery-index.json';
 
 // 获取当前语言
 const lang = getLangFromUrl(Astro.url);
@@ -33,42 +36,13 @@ const description = lang === 'en'
   : lang === 'ja'
   ? 'WigglyPaintは、ユニークなぐねぐね線効果でアニメーションピクセルアート、漫画、落書きを作成する無料オンライン描画ツールです。今すぐ描画開始 - 登録不要！'
   : 'WigglyPaint는 독특한 구불구불 선 효과로 애니메이션 픽셀 아트, 만화, 낙서를 만드는 무료 온라인 그리기 도구입니다. 지금 그리기 시작 - 가입 불필요!';
+
+// 精选社区作品数据
+const featuredCommunityData = galleryIndex.data.items;
 ---
 
 <Layout title={title} description={description} lang={lang}>
-    <!-- Menu Bar -->
-    <ul role="menu-bar">
-        <li role="menu-item" tabindex="0" aria-haspopup="true">
-            <span>{t('nav.file')}</span>
-            <ul role="menu">
-                <li role="menu-item"><a href="#hero">{t('nav.tryOnline')}</a></li>
-                <li role="menu-item"><a href="#download">{t('nav.download')}</a></li>
-                <li role="menu-item" class="divider"><a href="#features">{t('nav.features')}</a></li>
-                <li role="menu-item"><a href="#faq">{t('nav.faq')}</a></li>
-            </ul>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="true">
-            <span>{t('nav.help')}</span>
-            <ul role="menu">
-                <li role="menu-item"><a href="#how-to-use">User Guide</a></li>
-                <li role="menu-item"><a href="#faq">{t('nav.faq')}</a></li>
-                <li role="menu-item" class="divider"><a href="https://github.com/JohnEarnest/Decker" target="_blank">Decker Project</a></li>
-                <li role="menu-item"><a href="mailto:support@wigglypaint.com">Contact Us</a></li>
-            </ul>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="false">
-            <a href={getRelativeLocaleUrl(lang, 'about')}>{t('nav.about')}</a>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="true" style="margin-left: auto;">
-            <span>{t('nav.language')}</span>
-            <ul role="menu">
-                <li role="menu-item"><a href={getRelativeLocaleUrl('en', '')}>English</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl('zh', '')}>中文</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl('ja', '')}>日本語</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl('ko', '')}>한국어</a></li>
-            </ul>
-        </li>
-    </ul>
+    <Navigation currentPage="home" />
 
     <div class="main-container">
         <!-- Hero & Demo Section -->
@@ -137,6 +111,25 @@ const description = lang === 'en'
                 <div class="separator"></div>
                 <div class="window-pane feature-content">
                     <p>{t('feature.privacy.content')}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Preview Section -->
+        <div id="community-preview" class="community-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('community.heading')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <p style="text-align: center; margin-bottom: 20px;">{t('community.subtitle')}</p>
+                    <CommunityGrid items={featuredCommunityData} page={1} pageSize={3} showPagination={false} />
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href={getRelativeLocaleUrl(lang, 'community')} class="btn">
+                            {t('community.viewAll')} →
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -230,4 +223,10 @@ const description = lang === 'en'
             </div>
         </footer>
     </div>
-</Layout> 
+</Layout>
+
+<style>
+.community-section {
+    margin: 40px 0;
+}
+</style>

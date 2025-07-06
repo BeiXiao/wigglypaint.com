@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
@@ -30,39 +31,7 @@ const description = t('about.subtitle');
 ---
 
 <Layout title={title} description={description} lang={lang}>
-    <!-- Menu Bar -->
-    <ul role="menu-bar">
-        <li role="menu-item" tabindex="0" aria-haspopup="true">
-            <span>{t('nav.file')}</span>
-            <ul role="menu">
-                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '')}>{t('nav.tryOnline')}</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '') + '#download'}>{t('nav.download')}</a></li>
-                <li role="menu-item" class="divider"><a href={getRelativeLocaleUrl(lang, '') + '#features'}>{t('nav.features')}</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '') + '#faq'}>{t('nav.faq')}</a></li>
-            </ul>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="true">
-            <span>{t('nav.help')}</span>
-            <ul role="menu">
-                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '') + '#how-to-use'}>User Guide</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '') + '#faq'}>{t('nav.faq')}</a></li>
-                <li role="menu-item" class="divider"><a href="https://github.com/JohnEarnest/Decker" target="_blank">Decker Project</a></li>
-                <li role="menu-item"><a href="mailto:support@wigglypaint.com">Contact Us</a></li>
-            </ul>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="false">
-            <a href={getRelativeLocaleUrl(lang, 'about')} class="active">{t('nav.about')}</a>
-        </li>
-        <li role="menu-item" tabindex="0" aria-haspopup="true" style="margin-left: auto;">
-            <span>{t('nav.language')}</span>
-            <ul role="menu">
-                <li role="menu-item"><a href={getRelativeLocaleUrl('en', 'about')}>English</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl('zh', 'about')}>中文</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl('ja', 'about')}>日本語</a></li>
-                <li role="menu-item"><a href={getRelativeLocaleUrl('ko', 'about')}>한국어</a></li>
-            </ul>
-        </li>
-    </ul>
+    <Navigation currentPage="about" />
 
     <div class="main-container">
         <!-- Header -->

@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CommunityGrid from '../../components/CommunityGrid.astro';
+import Navigation from '../../components/Navigation.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import galleryData from '../../data/gallery.json';
+const allCommunityData = galleryData.data.items;
+
+// 获取当前语言
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// 为静态生成定义路径
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'zh' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'ko' } },
+  ];
+}
+
+---
+
+<Layout title={t('community.title')} description={t('community.description')} lang={lang}>
+    <Navigation currentPage="community" />
+
+    <div class="main-container">
+        <!-- Community Header -->
+        <div class="community-header">
+            <div class="window">
+                <div class="title-bar">
+                    <button aria-label="Close" class="close"></button>
+                    <h1 class="title">{t('community.heading')}</h1>
+                    <button aria-label="Resize" class="resize"></button>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px; text-align: center;">
+                    <p>{t('community.subtitle')}</p>
+                    <a href={getRelativeLocaleUrl(lang, '')} class="btn">← Back to WigglyPaint</a>
+
+                    <!-- Community Grid -->
+                    <div class="community-content">
+                        <CommunityGrid items={allCommunityData} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+.community-header {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.community-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+</style> 

@@ -1,0 +1,116 @@
+---
+export interface Item {
+  id: string;
+  title: string;
+  src: string;
+  alt: string;
+  format: string;
+  category: string;
+  isVideo: boolean;
+}
+export interface Props {
+  items: Item[];
+  infinite?: boolean;
+}
+const { items, infinite = false } = Astro.props;
+---
+
+{!infinite && (
+  <div class="community-grid">
+    {items.map(item => (
+      <div class="community-item" key={item.id}>
+        <img src={item.src} alt={item.alt} loading="lazy" class="community-img" />
+        <div class="community-title">{item.title}</div>
+      </div>
+    ))}
+  </div>
+)}
+
+{infinite && (
+  <div id="community-grid-root">
+    <div class="community-grid" id="community-grid"></div>
+    <div id="load-more-trigger" style="height: 1px;"></div>
+    <div id="community-loading" style="text-align:center;display:none;margin:20px 0;">
+      <span>加载中...</span>
+    </div>
+    <script type="module" is:inline>
+      const allItems = {JSON.stringify(items)};
+      const grid = document.getElementById('community-grid');
+      const loading = document.getElementById('community-loading');
+      const trigger = document.getElementById('load-more-trigger');
+      let loaded = 0;
+      const pageSize = 20;
+      function renderItems(start, end) {
+        const frag = document.createDocumentFragment();
+        for (let i = start; i < end && i < allItems.length; i++) {
+          const item = allItems[i];
+          const div = document.createElement('div');
+          div.className = 'community-item';
+          div.innerHTML = `<img src="${item.src}" alt="${item.alt}" loading="lazy" class="community-img" />` +
+            `<div class='community-title'>${item.title}</div>`;
+          frag.appendChild(div);
+        }
+        grid.appendChild(frag);
+      }
+      function loadMore() {
+        if (loaded >= allItems.length) return;
+        loading.style.display = 'block';
+        setTimeout(() => {
+          renderItems(loaded, loaded + pageSize);
+          loaded += pageSize;
+          loading.style.display = 'none';
+        }, 200);
+      }
+      renderItems(0, pageSize);
+      loaded = pageSize;
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          loadMore();
+        }
+      }, { rootMargin: '200px' });
+      observer.observe(trigger);
+    </script>
+  </div>
+)}
+
+<style>
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.community-item {
+  text-align: center;
+}
+
+.community-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border: 2px solid #010101;
+  background: #fff;
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+.community-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  font-family: 'ChicagoFLF', system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .community-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  .community-img {
+    max-width: 220px;
+  }
+}
+</style> 

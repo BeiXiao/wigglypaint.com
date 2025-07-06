@@ -1,0 +1,60 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+export interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = 'home' } = Astro.props;
+
+// 获取当前语言
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<ul role="menu-bar">
+    <li role="menu-item" tabindex="0" aria-haspopup="false">
+        <a href={getRelativeLocaleUrl(lang, '')} class:list={[currentPage === 'home' && 'active']}>{t('nav.home')}</a>
+    </li>
+    <li role="menu-item" tabindex="0" aria-haspopup="true">
+        <span>{t('nav.file')}</span>
+        <ul role="menu">
+            <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '')}>{t('nav.tryOnline')}</a></li>
+            <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '')}>{t('nav.download')}</a></li>
+            <li role="menu-item" class="divider"><a href={getRelativeLocaleUrl(lang, '')}>{t('nav.features')}</a></li>
+            <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '')}>{t('nav.faq')}</a></li>
+        </ul>
+    </li>
+    <li role="menu-item" tabindex="0" aria-haspopup="true">
+        <span>{t('nav.help')}</span>
+        <ul role="menu">
+            <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '')}>User Guide</a></li>
+            <li role="menu-item"><a href={getRelativeLocaleUrl(lang, '')}>{t('nav.faq')}</a></li>
+            <li role="menu-item" class="divider"><a href="https://github.com/JohnEarnest/Decker" target="_blank">Decker Project</a></li>
+            <li role="menu-item"><a href="mailto:support@wigglypaint.com">Contact Us</a></li>
+        </ul>
+    </li>
+    <li role="menu-item" tabindex="0" aria-haspopup="false">
+        <a href={getRelativeLocaleUrl(lang, 'about')} class:list={[currentPage === 'about' && 'active']}>{t('nav.about')}</a>
+    </li>
+    <li role="menu-item" tabindex="0" aria-haspopup="false">
+        <a href={getRelativeLocaleUrl(lang, 'community')} class:list={[currentPage === 'community' && 'active']}>{t('nav.community')}</a>
+    </li>
+    <li role="menu-item" tabindex="0" aria-haspopup="true" style="margin-left: auto;">
+        <span>{t('nav.language')}</span>
+        <ul role="menu">
+            <li role="menu-item"><a href={getRelativeLocaleUrl('en', currentPage === 'home' ? '' : currentPage)}>English</a></li>
+            <li role="menu-item"><a href={getRelativeLocaleUrl('zh', currentPage === 'home' ? '' : currentPage)}>中文</a></li>
+            <li role="menu-item"><a href={getRelativeLocaleUrl('ja', currentPage === 'home' ? '' : currentPage)}>日本語</a></li>
+            <li role="menu-item"><a href={getRelativeLocaleUrl('ko', currentPage === 'home' ? '' : currentPage)}>한국어</a></li>
+        </ul>
+    </li>
+</ul>
+
+<style>
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+</style> 
