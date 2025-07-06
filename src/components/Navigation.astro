@@ -1,15 +1,13 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { useTranslations } from '../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 export interface Props {
+  lang: string;
   currentPage?: string;
 }
 
-const { currentPage = 'home' } = Astro.props;
-
-// 获取当前语言
-const lang = getLangFromUrl(Astro.url);
+const { lang, currentPage = 'home' } = Astro.props;
 const t = useTranslations(lang);
 ---
 
