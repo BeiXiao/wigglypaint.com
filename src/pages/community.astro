@@ -1,3 +1,49 @@
 ---
-return Astro.redirect('/en/community');
+import Layout from '../layouts/Layout.astro';
+import CommunityGrid from '../components/CommunityGrid.astro';
+import Navigation from '../components/Navigation.astro';
+import { useTranslations } from '../i18n/utils';
+import galleryIndex from '../data/gallery-index.json';
+
+// 英文版本社区页面 (默认语言)
+const lang = 'en';
+const t = useTranslations(lang);
+
+// SEO 数据
+const title = 'Community Gallery - WigglyPaint';
+const description = 'Discover amazing artworks created by WigglyPaint community members.';
+
+// 社区作品数据
+const communityData = galleryIndex.data.items;
 ---
+
+<Layout title={title} description={description} lang={lang}>
+    <Navigation lang={lang} currentPage="community" />
+
+    <div class="main-container">
+        <div class="content-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('community.heading')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <p style="text-align: center; margin-bottom: 30px;">{t('community.subtitle')}</p>
+                    <CommunityGrid items={communityData} page={1} pageSize={12} showPagination={true} />
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .content-section {
+        margin: 40px 0;
+    }
+</style>

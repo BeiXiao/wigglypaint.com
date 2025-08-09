@@ -1,3 +1,132 @@
 ---
-return Astro.redirect('/en/changelog');
---- 
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import { useTranslations } from '../i18n/utils';
+
+// 英文版本更新日志页面 (默认语言)
+const lang = 'en';
+const t = useTranslations(lang);
+
+// SEO 数据
+const title = 'WigglyPaint Changelog - Updates & New Features';
+const description = 'See the latest WigglyPaint updates and feature releases. Discover new animated brushes, drawing tools, bug fixes, and enhancements to make your WigglyPaint digital art creation even better.';
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <Navigation lang={lang} currentPage="changelog" />
+
+    <div class="main-container">
+        <div class="content-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('changelog.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <p style="text-align: center; margin-bottom: 30px;">{t('changelog.subtitle')}</p>
+                    <a href="/" class="back-link">{t('changelog.backToHome')}</a>
+                    
+                    <div class="changelog-content">
+                        <div class="version-entry">
+                            <h3>Version 1.2.0</h3>
+                            <p class="date">December 19, 2024</p>
+                            <ul>
+                                <li>Added 3 new animated brush effects</li>
+                                <li>Improved GIF export quality</li>
+                                <li>Fixed mobile touch drawing issues</li>
+                                <li>Enhanced color picker interface</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="version-entry">
+                            <h3>Version 1.1.0</h3>
+                            <p class="date">November 15, 2024</p>
+                            <ul>
+                                <li>Added multilingual support (Chinese, Japanese, Korean)</li>
+                                <li>Implemented community gallery</li>
+                                <li>Added undo/redo functionality</li>
+                                <li>Performance optimizations for large canvases</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="version-entry">
+                            <h3>Version 1.0.0</h3>
+                            <p class="date">October 1, 2024</p>
+                            <ul>
+                                <li>Initial release of WigglyPaint</li>
+                                <li>8 unique animated brushes</li>
+                                <li>GIF export functionality</li>
+                                <li>Web-based drawing interface</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .main-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .content-section {
+        margin: 40px 0;
+    }
+    
+    .back-link {
+        color: #0066cc;
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
+    
+    .changelog-content {
+        margin-top: 30px;
+    }
+    
+    .version-entry {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .version-entry:last-child {
+        border-bottom: none;
+    }
+    
+    .version-entry h3 {
+        margin: 0 0 10px 0;
+        color: #333;
+    }
+    
+    .date {
+        color: #666;
+        font-style: italic;
+        margin: 0 0 15px 0;
+    }
+    
+    .version-entry ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+    
+    .version-entry li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .main-container {
+            padding: 10px;
+        }
+    }
+</style> 

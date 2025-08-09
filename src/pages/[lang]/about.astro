@@ -8,10 +8,9 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// 为静态生成定义路径
+// 为静态生成定义路径 (仅非默认语言)
 export async function getStaticPaths() {
   return [
-    { params: { lang: 'en' } },
     { params: { lang: 'zh' } },
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },

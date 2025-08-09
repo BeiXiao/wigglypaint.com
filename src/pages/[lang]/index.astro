@@ -13,7 +13,6 @@ const t = useTranslations(lang);
 // 为静态生成定义路径
 export async function getStaticPaths() {
   return [
-    { params: { lang: 'en' } },
     { params: { lang: 'zh' } },
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },

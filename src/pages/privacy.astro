@@ -1,3 +1,138 @@
 ---
-return Astro.redirect('/en/privacy');
---- 
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import { useTranslations } from '../i18n/utils';
+
+// 英文版本隐私政策页面 (默认语言)
+const lang = 'en';
+const t = useTranslations(lang);
+
+// SEO 数据
+const title = 'WigglyPaint Privacy Policy';
+const description = 'Learn how WigglyPaint protects your privacy. We never upload your drawings, require no login, and collect no personal information.';
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <Navigation lang={lang} currentPage="privacy" />
+
+    <div class="main-container">
+        <div class="content-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('privacy.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 30px;">
+                    <a href="/" class="back-link">{t('privacy.backToHome')}</a>
+                    
+                    <div class="privacy-content">
+                        <p><strong>{t('privacy.lastUpdated')}</strong></p>
+                        <p><strong>{t('privacy.effectiveDate')}</strong></p>
+                        
+                        <h2>Our Privacy Promise</h2>
+                        <p>At WigglyPaint, we believe your creativity should remain private. This privacy policy explains our commitment to protecting your personal information and creative work.</p>
+                        
+                        <h2>What We DON'T Collect</h2>
+                        <ul>
+                            <li><strong>Your Drawings:</strong> All artwork is created and stored locally in your browser. We never upload, store, or access your creative work.</li>
+                            <li><strong>Personal Information:</strong> No names, email addresses, or personal details are required or collected.</li>
+                            <li><strong>User Accounts:</strong> WigglyPaint requires no registration or login.</li>
+                            <li><strong>Tracking Data:</strong> We don't use cookies for tracking or analytics.</li>
+                            <li><strong>Device Information:</strong> We don't collect information about your device or browser beyond what's necessary for the app to function.</li>
+                        </ul>
+                        
+                        <h2>How WigglyPaint Works</h2>
+                        <p>WigglyPaint operates entirely within your web browser using modern web technologies:</p>
+                        <ul>
+                            <li>All drawing and animation happens locally on your device</li>
+                            <li>GIF exports are generated in your browser</li>
+                            <li>No server communication is required for core functionality</li>
+                        </ul>
+                        
+                        <h2>Third-Party Services</h2>
+                        <p>WigglyPaint is hosted on standard web hosting services, but no personal data is transmitted to these services beyond standard web server logs (which typically include IP addresses for technical purposes).</p>
+                        
+                        <h2>Data Security</h2>
+                        <p>Since we don't collect personal data, there's no personal data to be breached. Your creative work remains on your device and under your control.</p>
+                        
+                        <h2>Children's Privacy</h2>
+                        <p>WigglyPaint is safe for users of all ages. We don't knowingly collect personal information from anyone, including children under 13.</p>
+                        
+                        <h2>Changes to This Policy</h2>
+                        <p>If we make changes to this privacy policy, we will update the date at the top of this page.</p>
+                        
+                        <h2>Contact Us</h2>
+                        <p>If you have questions about this privacy policy, please contact us at <a href="mailto:support@wigglypaint.com">support@wigglypaint.com</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .main-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .content-section {
+        margin: 40px 0;
+    }
+    
+    .back-link {
+        color: #0066cc;
+        text-decoration: none;
+        font-size: 14px;
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
+    
+    .privacy-content {
+        margin-top: 30px;
+        line-height: 1.6;
+    }
+    
+    .privacy-content h2 {
+        color: #333;
+        margin: 30px 0 15px 0;
+        font-size: 20px;
+    }
+    
+    .privacy-content p {
+        margin-bottom: 15px;
+    }
+    
+    .privacy-content ul {
+        margin: 15px 0;
+        padding-left: 30px;
+    }
+    
+    .privacy-content li {
+        margin-bottom: 10px;
+    }
+    
+    .privacy-content a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    
+    .privacy-content a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .main-container {
+            padding: 10px;
+        }
+        
+        .privacy-content ul {
+            padding-left: 20px;
+        }
+    }
+</style> 
