@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import CommunityGrid from '../components/CommunityGrid.astro';
 import Navigation from '../components/Navigation.astro';
+import AnnouncementBanner from '../components/AnnouncementBanner.astro';
 import { useTranslations } from '../i18n/utils';
 import galleryIndex from '../data/gallery-index.json';
 
@@ -10,8 +11,8 @@ const lang = 'en';
 const t = useTranslations(lang);
 
 // SEO 数据
-const title = 'WigglyPaint - Free Online Drawing Tool with Animated Wiggly Lines | Create Pixel Art & GIFs';
-const description = 'WigglyPaint is a free online drawing tool for creating animated pixel art, comics, and doodles with unique wiggly line effects. Start drawing today - no signup required!';
+const title = 'Wiggly Paint - Free Online Drawing Tool with Animated Wiggly Lines | Create Pixel Art & GIFs';
+const description = 'Wiggly Paint is a free online drawing tool for creating animated pixel art, comics, and doodles with unique wiggly line effects. Start drawing today - no signup required!';
 
 // 精选社区作品数据
 const featuredCommunityData = galleryIndex.data.items;
@@ -19,6 +20,7 @@ const featuredCommunityData = galleryIndex.data.items;
 
 <Layout title={title} description={description} lang={lang}>
     <Navigation lang={lang} currentPage="home" />
+    <AnnouncementBanner lang={lang} />
 
     <div class="main-container">
         <!-- Hero & Demo Section -->
@@ -41,8 +43,29 @@ const featuredCommunityData = galleryIndex.data.items;
                         <!-- Demo Content -->
                         <div id="demo" class="demo-content">
                             <iframe id="demo-iframe" src="/wiggly.html" class="demo-iframe"
-                                title="WigglyPaint Online Demo"></iframe>
+                                title="Wiggly Paint Online Demo"></iframe>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div id="download" class="download-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('download.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane download-content">
+                    <div class="download-text">
+                        <p>{t('download.description')}</p>
+                    </div>
+                    <div class="platform-buttons">
+                        <button class="btn platform-btn ipad-highlight" onclick="window.open('https://apps.apple.com/us/app/wigglypaint/id6747758024', '_blank')">
+                            <span>{t('download.ipad')}</span>
+                            <small>Apple Pencil • Make GIFs & Videos</small>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -110,30 +133,6 @@ const featuredCommunityData = galleryIndex.data.items;
             </div>
         </div>
 
-        <!-- Download Section -->
-        <div id="download" class="download-section">
-            <div class="window">
-                <div class="title-bar">
-                    <h1 class="title">{t('download.title')}</h1>
-                </div>
-                <div class="separator"></div>
-                <div class="window-pane" style="padding: 30px; text-align: center;">
-                    <p>{t('download.description')}</p>
-                    <div class="platform-buttons">
-                        <button class="btn platform-btn" onclick="document.getElementById('hero').scrollIntoView()">
-                            <span>{t('download.web')}</span>
-                        </button>
-                        <button class="btn platform-btn" onclick="window.open('#', '_blank')">
-                            <span>{t('download.ipad')}</span>
-                        </button>
-                        <button class="btn platform-btn"
-                            onclick="window.open('https://github.com/JohnEarnest/Decker', '_blank')">
-                            <span>{t('download.decker')}</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- FAQ Section -->
         <div id="faq" class="faq-section">
@@ -203,6 +202,145 @@ const featuredCommunityData = galleryIndex.data.items;
 
 <style>
 .community-section {
-    margin: 40px 0;
+    margin: 24px 0;
+}
+
+.ipad-banner-section {
+    margin: 24px 0;
+}
+
+.ipad-banner-content {
+    padding: 20px;
+}
+
+.ipad-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.ipad-banner-text {
+    flex: 1;
+}
+
+.ipad-banner-subtitle {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 8px 0;
+    color: #666;
+}
+
+.ipad-banner-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #888;
+}
+
+.ipad-banner-screenshots {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.ipad-screenshot-main {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.ipad-screenshot-main:hover {
+    transform: scale(1.02);
+}
+
+.ipad-cta-btn {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+    margin-top: 12px !important;
+}
+
+.ipad-cta-btn:hover {
+    background: #333 !important;
+}
+
+.ipad-cta-btn:active {
+    background: #111 !important;
+}
+
+.download-section {
+    margin: 24px 0;
+}
+
+.download-content {
+    padding: 30px;
+}
+
+.download-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.download-text p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #333;
+}
+
+.platform-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.platform-btn {
+    min-width: 160px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 0 !important;
+    border: 2px solid #c0c0c0 !important;
+}
+
+.ipad-highlight {
+    background: #000 !important;
+    color: white !important;
+    border: 2px solid #000 !important;
+}
+
+.ipad-highlight:hover {
+    background: #333 !important;
+    border-color: #333 !important;
+}
+
+.ipad-highlight:active {
+    background: #111 !important;
+    border-color: #111 !important;
+}
+
+.ipad-highlight small {
+    display: block;
+    font-size: 12px;
+    opacity: 0.9;
+    margin-top: 3px;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .platform-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .platform-btn {
+        width: 220px;
+    }
 }
 </style> 

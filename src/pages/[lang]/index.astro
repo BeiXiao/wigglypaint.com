@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import CommunityGrid from '../../components/CommunityGrid.astro';
 import Navigation from '../../components/Navigation.astro';
+import AnnouncementBanner from '../../components/AnnouncementBanner.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import galleryIndex from '../../data/gallery-index.json';
@@ -21,20 +22,20 @@ export async function getStaticPaths() {
 
 // SEO 数据
 const title = lang === 'en' 
-  ? 'WigglyPaint - Free Online Drawing Tool with Animated Wiggly Lines | Create Pixel Art & GIFs'
+  ? 'Wiggly Paint - Free Online Drawing Tool with Animated Wiggly Lines | Create Pixel Art & GIFs'
   : lang === 'zh'
-  ? 'WigglyPaint - 免费在线摇摆线条绘画工具 | 创作像素艺术和GIF动画'
+  ? 'Wiggly Paint - 免费在线摇摆线条绘画工具 | 创作像素艺术和GIF动画'
   : lang === 'ja'
-  ? 'WigglyPaint - アニメーションぐねぐね線描画ツール | ピクセルアート＆GIF作成'
-  : 'WigglyPaint - 애니메이션 구불구불 선 그리기 도구 | 픽셀아트 & GIF 제작';
+  ? 'Wiggly Paint - アニメーションぐねぐね線描画ツール | ピクセルアート＆GIF作成'
+  : 'Wiggly Paint - 애니메이션 구불구불 선 그리기 도구 | 픽셀아트 & GIF 제작';
 
 const description = lang === 'en'
-  ? 'WigglyPaint is a free online drawing tool for creating animated pixel art, comics, and doodles with unique wiggly line effects. Start drawing today - no signup required!'
+  ? 'Wiggly Paint is a free online drawing tool for creating animated pixel art, comics, and doodles with unique wiggly line effects. Start drawing today - no signup required!'
   : lang === 'zh' 
-  ? 'WigglyPaint 是免费在线绘画工具，用独特的摇摆线条效果创作动画像素艺术、漫画和涂鸦。立即开始绘画 - 无需注册！'
+  ? 'Wiggly Paint 是免费在线绘画工具，用独特的摇摆线条效果创作动画像素艺术、漫画和涂鸦。立即开始绘画 - 无需注册！'
   : lang === 'ja'
-  ? 'WigglyPaintは、ユニークなぐねぐね線効果でアニメーションピクセルアート、漫画、落書きを作成する無料オンライン描画ツールです。今すぐ描画開始 - 登録不要！'
-  : 'WigglyPaint는 독특한 구불구불 선 효과로 애니메이션 픽셀 아트, 만화, 낙서를 만드는 무료 온라인 그리기 도구입니다. 지금 그리기 시작 - 가입 불필요!';
+  ? 'Wiggly Paintは、ユニークなぐねぐね線効果でアニメーションピクセルアート、漫画、落書きを作成する無料オンライン描画ツールです。今すぐ描画開始 - 登録不要！'
+  : 'Wiggly Paint는 독특한 구불구불 선 효과로 애니메이션 픽셀 아트, 만화, 낙서를 만드는 무료 온라인 그리기 도구입니다. 지금 그리기 시작 - 가입 불필요!';
 
 // 精选社区作品数据
 const featuredCommunityData = galleryIndex.data.items;
@@ -42,6 +43,7 @@ const featuredCommunityData = galleryIndex.data.items;
 
 <Layout title={title} description={description} lang={lang}>
     <Navigation lang={lang} currentPage="home" />
+    <AnnouncementBanner lang={lang} />
 
     <div class="main-container">
         <!-- Hero & Demo Section -->
@@ -64,8 +66,29 @@ const featuredCommunityData = galleryIndex.data.items;
                         <!-- Demo Content -->
                         <div id="demo" class="demo-content">
                             <iframe id="demo-iframe" src="/wiggly.html" class="demo-iframe"
-                                title="WigglyPaint Online Demo"></iframe>
+                                title="Wiggly Paint Online Demo"></iframe>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div id="download" class="download-section">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('download.title')}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane download-content">
+                    <div class="download-text">
+                        <p>{t('download.description')}</p>
+                    </div>
+                    <div class="platform-buttons">
+                        <button class="btn platform-btn ipad-highlight" onclick="window.open('https://apps.apple.com/us/app/wigglypaint/id6747758024', '_blank')">
+                            <span>{t('download.ipad')}</span>
+                            <small>{t('ipadBanner.subtitle')}</small>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -133,30 +156,6 @@ const featuredCommunityData = galleryIndex.data.items;
             </div>
         </div>
 
-        <!-- Download Section -->
-        <div id="download" class="download-section">
-            <div class="window">
-                <div class="title-bar">
-                    <h1 class="title">{t('download.title')}</h1>
-                </div>
-                <div class="separator"></div>
-                <div class="window-pane" style="padding: 30px; text-align: center;">
-                    <p>{t('download.description')}</p>
-                    <div class="platform-buttons">
-                        <button class="btn platform-btn" onclick="document.getElementById('hero').scrollIntoView()">
-                            <span>{t('download.web')}</span>
-                        </button>
-                        <button class="btn platform-btn" onclick="window.open('#', '_blank')">
-                            <span>{t('download.ipad')}</span>
-                        </button>
-                        <button class="btn platform-btn"
-                            onclick="window.open('https://github.com/JohnEarnest/Decker', '_blank')">
-                            <span>{t('download.decker')}</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- FAQ Section -->
         <div id="faq" class="faq-section">
@@ -167,28 +166,28 @@ const featuredCommunityData = galleryIndex.data.items;
                 <div class="separator"></div>
                 <div class="window-pane" style="padding: 30px;">
                     <div class="faq-item">
-                        <div class="faq-question">Q: How was WigglyPaint developed?</div>
-                        <div class="faq-answer">A: WigglyPaint is a lively drawing program developed by Internet Janitor using Decker technology. WigglyPaint shares notable similarities with Shake Art and KidPix, but with unique wiggle animation features and modern web capabilities.</div>
+                        <div class="faq-question">{t('faq.q1')}</div>
+                        <div class="faq-answer">{t('faq.a1')}</div>
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">Q: What devices can I use WigglyPaint on?</div>
-                        <div class="faq-answer">A: WigglyPaint is a web-based application, so you can use WigglyPaint on PC, mobile, or tablet—just visit the WigglyPaint website to get started. We also provide a dedicated WigglyPaint iPad app.</div>
+                        <div class="faq-question">{t('faq.q2')}</div>
+                        <div class="faq-answer">{t('faq.a2')}</div>
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">Q: How many times can I use WigglyPaint for free?</div>
-                        <div class="faq-answer">A: WigglyPaint is completely free to use with no limits on usage or GIF exports. Enjoy unlimited WigglyPaint drawing sessions!</div>
+                        <div class="faq-question">{t('faq.q3')}</div>
+                        <div class="faq-answer">{t('faq.a3')}</div>
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">Q: How does WigglyPaint protect my privacy?</div>
-                        <div class="faq-answer">A: All your drawings and doodles in WigglyPaint are never uploaded to any server. WigglyPaint doesn't require login, and no personal data is collected during use - your WigglyPaint creations stay private.</div>
+                        <div class="faq-question">{t('faq.q4')}</div>
+                        <div class="faq-answer">{t('faq.a4')}</div>
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">Q: What export formats does WigglyPaint support?</div>
-                        <div class="faq-answer">A: WigglyPaint exports as high-quality GIF animations that preserve all the wiggly effects, perfect for sharing as memes, stickers, or social media content. WigglyPaint GIFs maintain their wiggle animations when shared.</div>
+                        <div class="faq-question">{t('faq.q5')}</div>
+                        <div class="faq-answer">{t('faq.a5')}</div>
                     </div>
                 </div>
             </div>
@@ -226,6 +225,149 @@ const featuredCommunityData = galleryIndex.data.items;
 
 <style>
 .community-section {
-    margin: 40px 0;
+    margin: 24px 0;
+}
+
+.ipad-banner-section {
+    margin: 24px 0;
+}
+
+.ipad-banner-content {
+    padding: 20px;
+}
+
+.ipad-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.ipad-banner-text {
+    flex: 1;
+}
+
+.ipad-banner-subtitle {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 8px 0;
+    color: #666;
+}
+
+.ipad-banner-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #888;
+}
+
+.ipad-banner-cta {
+    flex-shrink: 0;
+}
+
+.ipad-banner-screenshots {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.ipad-screenshot-main {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.ipad-screenshot-main:hover {
+    transform: scale(1.02);
+}
+
+.ipad-cta-btn {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+    margin-top: 12px !important;
+}
+
+.ipad-cta-btn:hover {
+    background: #333 !important;
+}
+
+.ipad-cta-btn:active {
+    background: #111 !important;
+}
+
+.download-section {
+    margin: 24px 0;
+}
+
+.download-content {
+    padding: 30px;
+}
+
+.download-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.download-text p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #333;
+}
+
+.platform-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.platform-btn {
+    min-width: 160px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 0 !important;
+    border: 2px solid #c0c0c0 !important;
+}
+
+.ipad-highlight {
+    background: #000 !important;
+    color: white !important;
+    border: 2px solid #000 !important;
+}
+
+.ipad-highlight:hover {
+    background: #333 !important;
+    border-color: #333 !important;
+}
+
+.ipad-highlight:active {
+    background: #111 !important;
+    border-color: #111 !important;
+}
+
+.ipad-highlight small {
+    display: block;
+    font-size: 12px;
+    opacity: 0.9;
+    margin-top: 3px;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .platform-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .platform-btn {
+        width: 220px;
+    }
 }
 </style>

@@ -1,0 +1,89 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+export interface Props {
+    lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div class="announcement-banner">
+    <div class="container">
+        <span class="announcement-text">
+            {t("announcement.ipadApp")}
+        </span>
+        <a
+            href="https://apps.apple.com/us/app/wigglypaint/id6747758024"
+            target="_blank"
+            class="btn download-btn"
+        >
+            {t("announcement.downloadNow")}
+        </a>
+    </div>
+</div>
+
+<style>
+    .announcement-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 8px 8px;
+        text-align: center;
+        background: #111;
+        border-bottom: 2px solid #000;
+        font-family:
+            "ChicagoFLF",
+            system-ui,
+            -apple-system,
+            sans-serif;
+    }
+
+    .container {
+        display: flex;
+        width: 1100px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .announcement-text {
+        font-weight: bold;
+        font-size: 14px;
+        color: white;
+    }
+
+    .download-btn {
+        border: none;
+        border-radius: 2px;
+    }
+
+    .announcement-btn:hover {
+        background: #d0d0d0;
+    }
+
+    .announcement-btn:active {
+        border: 2px inset #c0c0c0;
+        background: #a0a0a0;
+    }
+
+    @media (max-width: 768px) {
+        .announcement-banner {
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px 20px;
+        }
+
+        .announcement-text {
+            font-size: 12px;
+        }
+
+        .announcement-btn {
+            font-size: 11px;
+            padding: 5px 10px;
+        }
+    }
+</style>
