@@ -41,7 +41,7 @@ export async function getStaticPaths() {
 
                     <!-- Community Grid -->
                     <div class="community-content">
-                        <CommunityGrid items={allCommunityData} />
+                        <CommunityGrid items={allCommunityData} page={1} pageSize={999} showPagination={false} />
                     </div>
                 </div>
             </div>

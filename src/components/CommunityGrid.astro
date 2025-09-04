@@ -11,13 +11,21 @@ export interface Item {
 export interface Props {
   items: Item[];
   infinite?: boolean;
+  page?: number;
+  pageSize?: number;
+  showPagination?: boolean;
 }
-const { items, infinite = false } = Astro.props;
+const { items, infinite = false, page = 1, pageSize = 20, showPagination = false } = Astro.props;
+
+// 计算要显示的items
+const startIndex = (page - 1) * pageSize;
+const endIndex = startIndex + pageSize;
+const displayItems = infinite ? items : items.slice(startIndex, endIndex);
 ---
 
 {!infinite && (
   <div class="community-grid">
-    {items.map(item => (
+    {displayItems.map(item => (
       <div class="community-item" key={item.id}>
         <img src={item.src} alt={item.alt} loading="lazy" class="community-img" />
         <div class="community-title">{item.title}</div>

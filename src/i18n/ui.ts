@@ -276,7 +276,7 @@ export const ui = {
         'nav.ipadDownload': '📱 iPad版',
 
         // Announcement Banner
-        'announcement.ipadApp': '🎆 新登場！iPad版 - Apple Pencilで描ける、作品保存、GIF作成！',
+        'announcement.ipadApp': '🎆 新登場！iPad版 - Apple Pencilで描ける、作品保存、GIF・動画作成！',
         'announcement.downloadNow': 'iPadアプリを入手 →',
 
         // Community
@@ -400,7 +400,7 @@ export const ui = {
         'nav.ipadDownload': '📱 iPad용',
 
         // Announcement Banner
-        'announcement.ipadApp': '🎆 신규출시! iPad버전 - Apple Pencil로 그리기, 작품저장, GIF만들기!',
+        'announcement.ipadApp': '🎆 신규출시! iPad버전 - Apple Pencil로 그리기, 작품저장, GIF&동영상 만들기!',
         'announcement.downloadNow': 'iPad 앱 받기 →',
 
         // Community
