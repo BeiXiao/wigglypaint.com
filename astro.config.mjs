@@ -13,14 +13,15 @@ export default defineConfig({
                     en: 'en',
                     zh: 'zh-CN',
                     ja: 'ja',
-                    ko: 'ko'
+                    ko: 'ko',
+                    es: 'es'
                 }
             },
             entryLimit: 50000  // 设置更高的限制，避免分割成多个sitemap
         })
     ],
     i18n: {
-        locales: ['en', 'zh', 'ja', 'ko'],
+        locales: ['en', 'zh', 'ja', 'ko', 'es'],
         defaultLocale: 'en',
         routing: {
             prefixDefaultLocale: false  // 英文版本直接在根路径 /

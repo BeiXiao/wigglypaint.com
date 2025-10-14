@@ -13,17 +13,20 @@ export async function getStaticPaths() {
     { params: { lang: 'zh' } },
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },
+    { params: { lang: 'es' } },
   ];
 }
 
 // SEO 数据
 const title = `${t('privacy.title')} - WigglyPaint`;
-const description = lang === 'en' 
+const description = lang === 'en'
   ? 'WigglyPaint Privacy Policy - Learn how we protect your privacy and data when using our free online drawing tool.'
   : lang === 'zh'
   ? 'WigglyPaint 隐私政策 - 了解我们如何在使用免费在线绘画工具时保护你的隐私和数据。'
   : lang === 'ja'
   ? 'WigglyPaint プライバシーポリシー - 無料オンライン描画ツールを使用する際のプライバシーとデータの保護について。'
+  : lang === 'es'
+  ? 'Política de Privacidad de WigglyPaint - Aprende cómo protegemos tu privacidad y datos cuando usas nuestra herramienta de dibujo gratuita en línea.'
   : 'WigglyPaint 개인정보 보호정책 - 무료 온라인 그리기 도구 사용 시 개인정보와 데이터 보호 방법.';
 ---
 
@@ -216,6 +219,69 @@ const description = lang === 'en'
                         <div class="contact-box">
                             <p><strong>ウェブサイト：</strong> wigglypaint.com</p>
                             <p><strong>メール：</strong> support@wigglypaint.com</p>
+                        </div>
+                    </>
+                )}
+
+                {lang === 'es' && (
+                    <>
+                        <p><strong>WigglyPaint - Herramienta de Dibujo Gratuita en Línea</strong></p>
+
+                        <div class="highlight-box">
+                            <strong>En resumen:</strong> WigglyPaint respeta tu privacidad. No recopilamos datos personales, no usamos cookies para rastreo, y todos tus dibujos se procesan localmente en tu dispositivo. Tu arte permanece privado a menos que elijas compartirlo.
+                        </div>
+
+                        <h2>1. Introducción</h2>
+                        <p>Bienvenido a WigglyPaint. Esta Política de Privacidad explica cómo recopilamos, usamos,
+                            divulgamos y protegemos tu información cuando visitas nuestro sitio web wigglypaint.com o usas nuestra
+                            aplicación móvil.</p>
+                        <p>WigglyPaint es una herramienta de dibujo gratuita en línea que crea líneas animadas onduladas. Estamos comprometidos
+                            con proteger tu privacidad y asegurar que tengas una experiencia positiva en nuestra plataforma.</p>
+
+                        <h2>2. Información que No Recopilamos</h2>
+                        <p>WigglyPaint está diseñado pensando en la privacidad. <strong>NO</strong> recopilamos:</p>
+                        <ul>
+                            <li>Información de identificación personal (nombre, correo electrónico, número de teléfono)</li>
+                            <li>Datos de registro de cuenta (no se requieren cuentas)</li>
+                            <li>Información de pago (el servicio es completamente gratuito)</li>
+                            <li>Tus dibujos u obras de arte (todo el procesamiento es local)</li>
+                            <li>Datos de ubicación o coordenadas GPS</li>
+                            <li>Identificadores de dispositivo o datos de huella digital</li>
+                            <li>Perfiles de redes sociales o conexiones</li>
+                        </ul>
+
+                        <h2>3. Información que Podemos Recopilar</h2>
+                        <p>Podemos recopilar información mínima no personal para funcionalidad básica:</p>
+
+                        <h3>3.1 Información Técnica</h3>
+                        <ul>
+                            <li><strong>Tipo y versión del navegador</strong> - Para asegurar compatibilidad</li>
+                            <li><strong>Sistema operativo</strong> - Para optimizar el rendimiento</li>
+                            <li><strong>Resolución de pantalla</strong> - Para proporcionar la mejor experiencia de usuario</li>
+                            <li><strong>Ubicación general (país/región)</strong> - Solo para preferencias de idioma</li>
+                        </ul>
+
+                        <h3>3.2 Análisis de Uso</h3>
+                        <ul>
+                            <li>Número de visitantes (agregado, anónimo)</li>
+                            <li>Uso de funciones y herramientas populares</li>
+                            <li>Métricas de rendimiento (tiempos de carga, errores)</li>
+                            <li>Fuentes de referencia (qué sitios web enlazan a nosotros)</li>
+                        </ul>
+                        <p><em>Nota: Todos los datos de análisis se anonimizan y no pueden rastrearse hasta usuarios individuales.</em></p>
+
+                        <h2>4. Cómo se Procesa tu Arte</h2>
+                        <div class="highlight-box">
+                            <strong>Procesamiento Local:</strong> Todos tus dibujos, animaciones y trabajo creativo se
+                            procesan completamente en tu dispositivo. Tu obra de arte nunca sale de tu dispositivo a menos que explícitamente
+                            elijas descargar o compartirla.
+                        </div>
+
+                        <h2>5. Contáctanos</h2>
+                        <p>Si tienes alguna pregunta sobre esta Política de Privacidad:</p>
+                        <div class="contact-box">
+                            <p><strong>Sitio web:</strong> wigglypaint.com</p>
+                            <p><strong>Correo electrónico:</strong> support@wigglypaint.com</p>
                         </div>
                     </>
                 )}
