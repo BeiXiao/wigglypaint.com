@@ -8,6 +8,7 @@ export async function getStaticPaths() {
     { params: { lang: 'zh' } },
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },
+    { params: { lang: 'th' } },
   ];
 }
 
@@ -17,13 +18,15 @@ const t = useTranslations(lang);
 
 // SEO 数据
 const title = `${t('changelog.title')} - WigglyPaint`;
-const description = lang === 'en' 
+const description = lang === 'en'
   ? 'See the latest updates and feature releases for WigglyPaint. Discover new animated brushes, drawing tools, bug fixes, and enhancements to make your digital art creation even better.'
   : lang === 'zh'
   ? '查看 WigglyPaint 的最新更新和功能发布。发现新的动画画笔、绘画工具、错误修复和功能增强，让你的数字艺术创作体验更加出色。'
   : lang === 'ja'
   ? 'WigglyPaintの最新アップデートと機能リリースをご覧ください。新しいアニメーションブラシ、描画ツール、バグ修正、機能強化を発見して、デジタルアート制作をさらに向上させましょう。'
-  : 'WigglyPaint의 최신 업데이트와 기능 릴리스를 확인하세요. 새로운 애니메이션 브러시, 그리기 도구, 버그 수정 및 향상된 기능을 발견하여 디지털 아트 제작을 더욱 향상시키세요.';
+  : lang === 'ko'
+  ? 'WigglyPaint의 최신 업데이트와 기능 릴리스를 확인하세요. 새로운 애니메이션 브러시, 그리기 도구, 버그 수정 및 향상된 기능을 발견하여 디지털 아트 제작을 더욱 향상시키세요.'
+  : 'ดูการอัปเดตและการเปิดตัวฟีเจอร์ล่าสุดสำหรับ WigglyPaint ค้นพบแปรงอนิเมชั่นใหม่ เครื่องมือวาดรูป การแก้ไขข้อบกพร่อง และการปรับปรุงเพื่อให้การสร้างสรรค์ศิลปะดิจิทัลของคุณดียิ่งขึ้น';
 ---
 
 <Layout title={title} description={description} lang={lang}>
