@@ -17,7 +17,11 @@ export default defineConfig({
                     th: 'th'
                 }
             },
-            entryLimit: 50000  // 设置更高的限制，避免分割成多个sitemap
+            entryLimit: 50000,  // 设置更高的限制，避免分割成多个sitemap
+            customPages: [
+                // 添加静态页面和重要资源
+                'https://wigglypaint.com/wiggly.html'
+            ]
         })
     ],
     i18n: {
