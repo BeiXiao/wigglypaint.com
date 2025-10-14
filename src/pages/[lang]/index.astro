@@ -17,25 +17,30 @@ export async function getStaticPaths() {
     { params: { lang: 'zh' } },
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },
+    { params: { lang: 'th' } },
   ];
 }
 
 // SEO 数据
-const title = lang === 'en' 
+const title = lang === 'en'
   ? 'Wiggly Paint - Free Online Drawing Tool with Animated Wiggly Lines | Create Pixel Art & GIFs'
   : lang === 'zh'
   ? 'Wiggly Paint - 免费在线摇摆线条绘画工具 | 创作像素艺术和GIF动画'
   : lang === 'ja'
   ? 'Wiggly Paint - アニメーションぐねぐね線描画ツール | ピクセルアート＆GIF作成'
-  : 'Wiggly Paint - 애니메이션 구불구불 선 그리기 도구 | 픽셀아트 & GIF 제작';
+  : lang === 'ko'
+  ? 'Wiggly Paint - 애니메이션 구불구불 선 그리기 도구 | 픽셀아트 & GIF 제작'
+  : 'Wiggly Paint - เครื่องมือวาดรูปออนไลน์ฟรีพร้อมเส้นแอนิเมชั่นที่สั่นไหว | สร้างศิลปะพิกเซลและ GIF';
 
 const description = lang === 'en'
   ? 'Wiggly Paint is a free online drawing tool for creating animated pixel art, comics, and doodles with unique wiggly line effects. Start drawing today - no signup required!'
-  : lang === 'zh' 
+  : lang === 'zh'
   ? 'Wiggly Paint 是免费在线绘画工具，用独特的摇摆线条效果创作动画像素艺术、漫画和涂鸦。立即开始绘画 - 无需注册！'
   : lang === 'ja'
   ? 'Wiggly Paintは、ユニークなぐねぐね線効果でアニメーションピクセルアート、漫画、落書きを作成する無料オンライン描画ツールです。今すぐ描画開始 - 登録不要！'
-  : 'Wiggly Paint는 독특한 구불구불 선 효과로 애니메이션 픽셀 아트, 만화, 낙서를 만드는 무료 온라인 그리기 도구입니다. 지금 그리기 시작 - 가입 불필요!';
+  : lang === 'ko'
+  ? 'Wiggly Paint는 독특한 구불구불 선 효과로 애니메이션 픽셀 아트, 만화, 낙서를 만드는 무료 온라인 그리기 도구입니다. 지금 그리기 시작 - 가입 불필요!'
+  : 'Wiggly Paint เป็นเครื่องมือวาดรูปออนไลน์ฟรีสำหรับสร้างศิลปะพิกเซลแอนิเมชั่น, การ์ตูน และรูปวาดฝีมือด้วยเอฟเฟกต์เส้นที่สั่นไหวเฉพาะตัว เริ่มวาดวันนี้ - ไม่ต้องสมัครสมาชิก!';
 
 // 精选社区作品数据
 const featuredCommunityData = galleryIndex.data.items;
