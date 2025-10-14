@@ -14,6 +14,7 @@ export async function getStaticPaths() {
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },
     { params: { lang: 'es' } },
+    { params: { lang: 'th' } },
   ];
 }
 
@@ -25,9 +26,11 @@ const description = lang === 'en'
   ? 'WigglyPaint 隐私政策 - 了解我们如何在使用免费在线绘画工具时保护你的隐私和数据。'
   : lang === 'ja'
   ? 'WigglyPaint プライバシーポリシー - 無料オンライン描画ツールを使用する際のプライバシーとデータの保護について。'
+  : lang === 'ko'
+  ? 'WigglyPaint 개인정보 보호정책 - 무료 온라인 그리기 도구 사용 시 개인정보와 데이터 보호 방법.'
   : lang === 'es'
   ? 'Política de Privacidad de WigglyPaint - Aprende cómo protegemos tu privacidad y datos cuando usas nuestra herramienta de dibujo gratuita en línea.'
-  : 'WigglyPaint 개인정보 보호정책 - 무료 온라인 그리기 도구 사용 시 개인정보와 데이터 보호 방법.';
+  : 'นโยบายความเป็นส่วนตัว WigglyPaint - เรียนรู้วิธีที่เราปกป้องความเป็นส่วนตัวและข้อมูลของคุณเมื่อใช้เครื่องมือวาดรูปออนไลน์ฟรีของเรา';
 ---
 
 <Layout title={title} description={description} lang={lang}>

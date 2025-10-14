@@ -18,6 +18,7 @@ export async function getStaticPaths() {
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },
     { params: { lang: 'es' } },
+    { params: { lang: 'th' } },
   ];
 }
 
@@ -30,7 +31,9 @@ const title = lang === 'en'
   ? 'Wiggly Paint - アニメーションぐねぐね線描画ツール | ピクセルアート＆GIF作成'
   : lang === 'ko'
   ? 'Wiggly Paint - 애니메이션 구불구불 선 그리기 도구 | 픽셀아트 & GIF 제작'
-  : 'Wiggly Paint - Herramienta de Dibujo Animada Gratuita | Crea Arte de Píxeles y GIFs';
+  : lang === 'es'
+  ? 'Wiggly Paint - Herramienta de Dibujo Animada Gratuita | Crea Arte de Píxeles y GIFs'
+  : 'Wiggly Paint - เครื่องมือวาดรูปออนไลน์ฟรีพร้อมเส้นแอนิเมชั่นที่สั่นไหว | สร้างศิลปะพิกเซลและ GIF';
 
 const description = lang === 'en'
   ? 'Wiggly Paint is a free online drawing tool for creating animated pixel art, comics, and doodles with unique wiggly line effects. Start drawing today - no signup required!'
@@ -40,7 +43,9 @@ const description = lang === 'en'
   ? 'Wiggly Paintは、ユニークなぐねぐね線効果でアニメーションピクセルアート、漫画、落書きを作成する無料オンライン描画ツールです。今すぐ描画開始 - 登録不要！'
   : lang === 'ko'
   ? 'Wiggly Paint는 독특한 구불구불 선 효과로 애니메이션 픽셀 아트, 만화, 낙서를 만드는 무료 온라인 그리기 도구입니다. 지금 그리기 시작 - 가입 불필요!'
-  : 'Wiggly Paint es una herramienta de dibujo animada gratuita para crear arte de píxeles, cómics y dibujos con efectos de línea temblorosos únicos. ¡Comienza a dibujar hoy - no requiere registro!';
+  : lang === 'es'
+  ? 'Wiggly Paint es una herramienta de dibujo animada gratuita para crear arte de píxeles, cómics y dibujos con efectos de línea temblorosos únicos. ¡Comienza a dibujar hoy - no requiere registro!'
+  : 'Wiggly Paint เป็นเครื่องมือวาดรูปออนไลน์ฟรีสำหรับสร้างศิลปะพิกเซลแอนิเมชั่น, การ์ตูน และรูปวาดฝีมือด้วยเอฟเฟกต์เส้นที่สั่นไหวเฉพาะตัว เริ่มวาดวันนี้ - ไม่ต้องสมัครสมาชิก!';
 
 // 精选社区作品数据
 const featuredCommunityData = galleryIndex.data.items;
@@ -82,7 +87,7 @@ const featuredCommunityData = galleryIndex.data.items;
         <div id="download" class="download-section">
             <div class="window">
                 <div class="title-bar">
-                    <h1 class="title">{t('download.title')}</h1>
+                    <h2 class="title">{t('download.title')}</h2>
                 </div>
                 <div class="separator"></div>
                 <div class="window-pane download-content">
@@ -103,7 +108,7 @@ const featuredCommunityData = galleryIndex.data.items;
         <div id="features" class="features-grid">
             <div class="window feature-window">
                 <div class="title-bar">
-                    <h1 class="title">{t('feature.whatIs.title')}</h1>
+                    <h2 class="title">{t('feature.whatIs.title')}</h2>
                 </div>
                 <div class="separator"></div>
                 <div class="window-pane feature-content">
@@ -113,7 +118,7 @@ const featuredCommunityData = galleryIndex.data.items;
 
             <div class="window feature-window">
                 <div class="title-bar">
-                    <h1 class="title">{t('feature.howTo.title')}</h1>
+                    <h2 class="title">{t('feature.howTo.title')}</h2>
                 </div>
                 <div class="separator"></div>
                 <div class="window-pane feature-content">
@@ -123,7 +128,7 @@ const featuredCommunityData = galleryIndex.data.items;
 
             <div class="window feature-window">
                 <div class="title-bar">
-                    <h1 class="title">{t('feature.why.title')}</h1>
+                    <h2 class="title">{t('feature.why.title')}</h2>
                 </div>
                 <div class="separator"></div>
                 <div class="window-pane feature-content">
@@ -133,7 +138,7 @@ const featuredCommunityData = galleryIndex.data.items;
 
             <div class="window feature-window">
                 <div class="title-bar">
-                    <h1 class="title">{t('feature.privacy.title')}</h1>
+                    <h2 class="title">{t('feature.privacy.title')}</h2>
                 </div>
                 <div class="separator"></div>
                 <div class="window-pane feature-content">
@@ -146,7 +151,7 @@ const featuredCommunityData = galleryIndex.data.items;
         <div id="community-preview" class="community-section">
             <div class="window">
                 <div class="title-bar">
-                    <h1 class="title">{t('community.heading')}</h1>
+                    <h2 class="title">{t('community.heading')}</h2>
                 </div>
                 <div class="separator"></div>
                 <div class="window-pane" style="padding: 30px;">
@@ -166,7 +171,7 @@ const featuredCommunityData = galleryIndex.data.items;
         <div id="faq" class="faq-section">
             <div class="window">
                 <div class="title-bar">
-                    <h1 class="title">{t('faq.title')}</h1>
+                    <h2 class="title">{t('faq.title')}</h2>
                 </div>
                 <div class="separator"></div>
                 <div class="window-pane" style="padding: 30px;">
@@ -202,7 +207,7 @@ const featuredCommunityData = galleryIndex.data.items;
         <footer class="footer-section">
             <div class="window">
                 <div class="title-bar">
-                    <h1 class="title">{t('footer.title')}</h1>
+                    <h2 class="title">{t('footer.title')}</h2>
                 </div>
                 <div class="separator"></div>
                 <div class="window-pane footer-content">
