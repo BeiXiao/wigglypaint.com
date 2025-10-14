@@ -14,6 +14,7 @@ export default defineConfig({
                     zh: 'zh-CN',
                     ja: 'ja',
                     ko: 'ko',
+                    es: 'es',
                     th: 'th'
                 }
             },
@@ -25,7 +26,7 @@ export default defineConfig({
         })
     ],
     i18n: {
-        locales: ['en', 'zh', 'ja', 'ko', 'th'],
+        locales: ['en', 'zh', 'ja', 'ko', 'es', 'th'],
         defaultLocale: 'en',
         routing: {
             prefixDefaultLocale: false  // 英文版本直接在根路径 /

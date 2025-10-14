@@ -3,6 +3,7 @@ export const languages = {
     zh: '中文',
     ja: '日本語',
     ko: '한국어',
+    es: 'Español',
     th: 'ไทย',
 };
 
@@ -503,6 +504,130 @@ export const ui = {
         'about.privacy.family': '광고나 추적이 없는 가족 친화적 환경',
         'about.start.title': '🎯 시작하기',
         'about.start.content': '창작을 시작할 준비가 되셨나요? Wiggly Paint는 첫 번째 스트로크부터 직관적으로 설계되었습니다: 홈페이지에 방문하기만 하면 됩니다 - 다운로드 불필요, 브러시를 선택하고 팔레트에서 색상 선택, 그리기를 시작하고 스트로크가 구불구불 효과로 애니메이트되는 것을 관찰, 프레임을 추가하여 더 긴 애니메이션 생성, 작품을 GIF로 내보내거나 인터랙티브 파일로 저장.'
+    },
+
+es: {
+        // Hero
+        'hero.title': 'Wiggly Paint',
+        'hero.subtitle': '¡Wiggly Paint: Crea Arte Animado de Píxeles, Cómics y Dibujos con Líneas Temblorosas y Vibrantes!',
+        'hero.description': '¡Dibuja con 8 pinceles animados únicos y mira cómo tus líneas cobran vida! Perfecto para crear animaciones GIF, memes, cómics y arte de píxeles. No requiere registro.',
+
+        // Navigation
+        'nav.file': 'Archivo',
+        'nav.help': 'Ayuda',
+        'nav.home': 'Inicio',
+        'nav.about': 'Acerca de',
+        'nav.community': 'Comunidad',
+        'nav.language': 'Idioma',
+        'nav.tryOnline': 'Probar Wiggly Paint Online',
+        'nav.download': 'Descargar Wiggly Paint',
+        'nav.features': 'Características',
+        'nav.faq': 'Preguntas Frecuentes',
+        'nav.ipadDownload': '📱 App iPad',
+
+        // Announcement Banner
+        'announcement.ipadApp': '🎆 ¡Nuevo! App iPad - Dibuja con Apple Pencil, Guarda tu Arte, Crea GIFs y Videos!',
+        'announcement.downloadNow': 'Obtener App iPad →',
+
+        // Community
+        'community.title': 'Galería de la Comunidad - Wiggly Paint',
+        'community.description': 'Descubre obras increíbles creadas por los miembros de la comunidad Wiggly Paint.',
+        'community.heading': 'Galería de la Comunidad',
+        'community.subtitle': '¡Descubre las obras increíbles creadas por nuestra comunidad!',
+        'community.viewAll': 'Ver Todo el Arte de la Comunidad',
+        'community.noResults': 'No se encontraron obras.',
+        'community.loadMore': 'Cargar Más',
+
+        // Features
+        'feature.whatIs.title': '✨ ¡Crea Arte que se Mueve!',
+        'feature.whatIs.content': '¡Wiggly Paint hace que cada línea que dibujas tiemble y baile! Usa Wiggly Paint para crear arte animado increíble, memes y GIFs que destacan en las redes sociales. Wiggly Paint es perfecto para estudiantes que quieren hacer su arte único y divertido.',
+
+        'feature.howTo.title': '🎯 ¡Súper Fácil de Usar!',
+        'feature.howTo.content': '¡Usar Wiggly Paint es súper fácil! Solo elige un pincel Wiggly Paint y comienza a dibujar. Cada pincel Wiggly Paint crea diferentes efectos de temblor. La versión de iPad de Wiggly Paint con Apple Pencil se siente como dibujar en papel, ¡pero mucho más genial!',
+
+        'feature.why.title': '🌟 ¿Por Qué a los Estudiantes Les Encanta?',
+        'feature.why.content': '¡Tu arte Wiggly Paint se vuelve instantáneamente compartible! Crea contenido viral para TikTok, historias de Instagram y memes de Discord con Wiggly Paint que a tus amigos les encantarán. Además, Wiggly Paint es completamente gratis - ¡nunca suscripciones!',
+
+        'feature.privacy.title': '📱 ¡Perfecto para iPad!',
+        'feature.privacy.content': 'La app iPad de Wiggly Paint con soporte para Apple Pencil es la mejor manera de crear arte tembloroso. Dibuja en cualquier lugar con Wiggly Paint, exporta como GIFs o videos, y comparte tus obras maestras Wiggly Paint instantáneamente!',
+
+        // Download
+        'download.title': '📱 Descargar Apps de Wiggly Paint',
+        'download.description': '¡Dibuja Arte Increíble con Wiggly Paint! Ahora disponible en iPad con soporte para Apple Pencil - crea animaciones temblorosas y exporta como GIF o Video.',
+        'download.web': '🌐 Versión Web de Wiggly Paint',
+        'download.ipad': '📱 Wiggly Paint para iPad',
+        'download.decker': '🛠️ Wiggly Paint en Plataforma Decker',
+
+        // iPad Banner
+        'ipadBanner.title': '🎨 Versión iPad',
+        'ipadBanner.subtitle': 'Apple Pencil • Crear GIFs y Videos',
+        'ipadBanner.description': 'Mejor para dibujar en iPad.',
+        'ipadBanner.downloadBtn': '📱 Obtener App',
+
+        // FAQ
+        'faq.title': '❓ Preguntas Frecuentes de Wiggly Paint',
+        'faq.q1': '¿Qué hace especial a Wiggly Paint?',
+        'faq.a1': '¡Wiggly Paint hace que tus dibujos cobren vida con animaciones temblorosas! Cada línea que dibujas se mueve y tiembla, haciendo tu arte divertido y único. Perfecto para estudiantes que quieren crear arte animado increíble.',
+        'faq.q2': '¿Puedo usarlo en mi iPad?',
+        'faq.a2': '¡Sí! Tenemos una app iPad increíble que funciona con Apple Pencil. Es la mejor manera de dibujar - tus líneas se sienten naturales y puedes exportar tu arte como GIFs o videos para compartir con amigos.',
+        'faq.q3': '¿Es realmente gratis?',
+        'faq.a3': '¡Sí, completamente gratis! Dibuja todo lo que quieras y exporta GIFs y videos ilimitados. Sin costos ocultos, sin suscripciones - solo pura diversión creativa.',
+        'faq.q4': '¿Están seguros mis dibujos?',
+        'faq.a4': '¡Absolutamente! Tu arte permanece en tu dispositivo - nunca subimos o vemos tus dibujos. No se necesita cuenta, no se recopila información personal. Tu trabajo creativo es 100% privado.',
+        'faq.q5': '¿Cómo puedo compartir mi arte?',
+        'faq.a5': '¡Fácil! Exporta tus animaciones temblorosas como GIFs para redes sociales o como videos para TikTok, Instagram y más. La app iPad te da ambas opciones - perfecta para compartir tus obras maestras creativas!',
+
+        // Footer
+        'footer.title': 'Wiggly Paint',
+        'footer.description': 'Wiggly Paint - Herramienta de dibujo animado gratuita. Crea, anima, comparte.',
+        'footer.about': 'Acerca de Wiggly Paint',
+        'footer.privacyPolicy': 'Política de Privacidad de Wiggly Paint',
+        'footer.changelog': 'Registro de Cambios de Wiggly Paint',
+        'footer.contact': 'Contactar Equipo Wiggly Paint',
+        'footer.github': 'Proyecto GitHub de Wiggly Paint',
+        'footer.copyright': '© 2024 Wiggly Paint. Hecho con ❤️ por Internet Janitor.',
+        'footer.deckerProject': 'Wiggly Paint está construido con tecnología Decker.',
+
+        // Privacy Page
+        'privacy.title': 'Política de Privacidad de Wiggly Paint',
+        'privacy.backToHome': '← Volver a Wiggly Paint',
+        'privacy.lastUpdated': 'Última Actualización: 19 de diciembre de 2024',
+        'privacy.effectiveDate': 'Fecha de Vigencia: 19 de diciembre de 2024',
+
+        // Changelog Page
+        'changelog.title': 'Registro de Cambios de Wiggly Paint - Actualizaciones y Nuevas Características',
+        'changelog.subtitle': 'Ve las últimas actualizaciones y lanzamientos de características de Wiggly Paint. Descubre nuevos pinceles animados, herramientas de dibujo, correcciones de errores y mejoras para hacer tu creación de arte digital Wiggly Paint aún mejor.',
+        'changelog.backToHome': '← Volver a Wiggly Paint',
+        'changelog.version': 'Versión',
+        'changelog.date': 'Fecha',
+        'changelog.changes': 'Cambios',
+
+        // About Page
+        'about.title': 'Acerca de Wiggly Paint - Herramienta de Dibujo Animado',
+        'about.subtitle': 'Dando vida a tu arte digital con las líneas temblorosas animadas de Wiggly Paint',
+        'about.backToHome': '← Volver a Wiggly Paint',
+        'about.what.title': '🎨 ¿Qué es Wiggly Paint?',
+        'about.what.content': 'Wiggly Paint es una herramienta de dibujo gratuita basada en navegador que transforma tu arte con animaciones temblorosas características. Construida en la innovadora plataforma Decker, hace que la creación de arte digital sea accesible, divertida y atractiva para creadores de todos los niveles de habilidad.',
+        'about.mission.title': '🚀 Nuestra Misión',
+        'about.mission.quote': '"¡Crea arte que cobra vida!"',
+        'about.mission.content': 'Creemos que la creatividad debería ser accesible para todos, en todas partes. Nuestra misión es proporcionar una experiencia de dibujo gratuita, poderosa y alegre que elimina barreras entre la imaginación y la creación.',
+        'about.features.title': '✨ Características Clave',
+        'about.features.wiggle': 'Animación Temblorosa Característica - Cada trazo recibe un suave balanceo que respira vida en tus ilustraciones',
+        'about.features.export': 'Exportación GIF de Un Clic - Transforma instantáneamente tus creaciones animadas en GIFs de bucle suaves',
+        'about.features.decker': 'Motor Potenciado por Decker - Rendimiento increíblemente rápido con trazos vectoriales nítidos y deshacer instantáneo',
+        'about.features.friendly': 'Interfaz Intuitiva - Botones grandes y coloridos e íconos claros lo hacen accesible para todos',
+        'about.features.professional': 'Herramientas Profesionales - Paletas personalizadas, máscaras de transparencia y muestreo de color para creadores avanzados',
+        'about.features.universal': 'Acceso Universal - Funciona en cualquier navegador moderno con soporte para entrada de lápiz, mouse y táctil',
+        'about.technology.title': '🛠️ Tecnología',
+        'about.technology.content': 'Wiggly Paint aprovecha tecnologías web modernas para compatibilidad y rendimiento óptimos: HTML5 Canvas para dibujo suave, Motor Decker para creatividad liviana pero poderosa, capacidades de Aplicación Web Progresiva para uso sin conexión, WebGL para gráficos acelerados por hardware, y diseño responsivo que se adapta a cualquier pantalla.',
+        'about.privacy.title': '🔒 Privacidad y Seguridad',
+        'about.privacy.subtitle': 'Tu Arte, Tus Derechos',
+        'about.privacy.local': 'Toda el arte se crea y almacena localmente en tu navegador',
+        'about.privacy.noCollection': 'No recopilamos, almacenamos o accedemos a tu trabajo creativo',
+        'about.privacy.noAccount': 'No se requieren cuentas de usuario - comienza a crear inmediatamente',
+        'about.privacy.family': 'Ambiente familiar sin anuncios ni rastreo',
+        'about.start.title': '🎯 Comenzando',
+        'about.start.content': '¿Listo para comenzar a crear? Wiggly Paint está diseñado para ser intuitivo desde el primer trazo: Simplemente visita nuestra página de inicio - no se requieren descargas, elige tu pincel y selecciona colores de nuestra paleta, comienza a dibujar y mira cómo tus trazos se animan con efectos temblorosos, agrega marcos para crear animaciones más largas, y exporta tu creación como un GIF o guarda como un archivo interactivo.'
     },
 
     th: {

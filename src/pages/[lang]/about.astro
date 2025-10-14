@@ -14,6 +14,7 @@ export async function getStaticPaths() {
     { params: { lang: 'zh' } },
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },
+    { params: { lang: 'es' } },
     { params: { lang: 'th' } },
   ];
 }
@@ -27,6 +28,8 @@ const title = lang === 'en'
   ? 'WigglyPaintについて - アニメーション線でアートに命を吹き込む'
   : lang === 'ko'
   ? 'WigglyPaint 소개 - 애니메이션 선으로 아트에 생명을 불어넣기'
+  : lang === 'es'
+  ? 'Acerca de WigglyPaint - Dando Vida al Arte con Líneas Animadas'
   : 'เกี่ยวกับ WigglyPaint - ทำให้ศิลปะมีชีวิตด้วยเส้นแอนิเมชั่น';
 
 const description = t('about.subtitle');
