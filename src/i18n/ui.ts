@@ -924,6 +924,10 @@ es: {
         'feature.whatIs.title': '�️ Gambar Seni yang Bergerak!',
         'feature.whatIs.content': 'WigglyPaint membuat setiap garis yang Anda gambar bergoyang dan menari! Gunakan WigglyPaint untuk membuat seni animasi yang menakjubkan, meme, dan GIF yang menonjol di media sosial. WigglyPaint sangat cocok untuk siswa yang ingin membuat karya seni mereka unik dan menyenangkan.',
 
+        // Announcement Banner
+        'announcement.ipadApp': '🎆 Baru! Aplikasi iPad - Lukis dengan Apple Pencil, Simpan Karya Seni Anda, Cipta GIF & Video!',
+        'announcement.downloadNow': 'Dapatkan Aplikasi iPad →',
+
         // Download
         'download.title': '📱 Unduh Aplikasi WigglyPaint',
         'download.description': 'Gambar seni animasi dengan Apple Pencil! Ekspor sebagai GIF dan video',
@@ -968,6 +972,10 @@ es: {
         // Features
         'feature.whatIs.title': '✨ Vẽ Nghệ Thuật Động!',
         'feature.whatIs.content': 'WigglyPaint làm cho mọi đường nét bạn vẽ lung lay và khiêu vũ! Sử dụng WigglyPaint để tạo nghệ thuật hoạt hình đáng kinh ngạc, meme, và GIF nổi bật trên mạng xã hội. WigglyPaint hoàn hảo cho sinh viên muốn làm cho nghệ thuật của họ độc đáo và thú vị.',
+
+        // Announcement Banner
+        'announcement.ipadApp': '🎆 Mới! Ứng dụng iPad - Vẽ với Apple Pencil, Lưu tác phẩm của bạn, Tạo GIF và Video!',
+        'announcement.downloadNow': 'Tải Ứng dụng iPad →',
 
         // Download
         'download.title': '📱 Tải Ứng Dụng WigglyPaint',
