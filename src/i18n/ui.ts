@@ -15,6 +15,7 @@ export const ui = {
         'hero.title': 'Wiggly Paint',
         'hero.subtitle': 'Wiggly Paint: Create Animated Pixel Art, Comics & Doodles with Wiggly & Jiggly Lines',
         'hero.description': 'Draw with 8 unique animated brushes and watch your lines come to life! Perfect for creating GIF animations, memes, comics, and pixel art. No signup required.',
+        'hero.socialShare': 'Share this free drawing tool with your friends!',
 
         // Navigation
         'nav.file': 'File',
@@ -57,7 +58,7 @@ export const ui = {
 
         // Download
         'download.title': '📱 Download Wiggly Paint Apps',
-        'download.description': 'Draw Amazing Art with Wiggly Paint! Now available on iPad with Apple Pencil support - create wiggly animations and export as GIF or Video.',
+        'download.description': 'Draw animated art with Apple Pencil support. Export as GIFs & videos!',
         'download.web': '🌐 Wiggly Paint Web Version',
         'download.ipad': '📱 Wiggly Paint for iPad',
         'download.decker': '🛠️ Wiggly Paint on Decker Platform',
@@ -139,6 +140,7 @@ export const ui = {
         'hero.title': 'Wiggly Paint',
         'hero.subtitle': 'Wiggly Paint：让你的画作摇摆起来的免费在线绘画工具！',
         'hero.description': '用8种独特的动画画笔绘制，看着你的线条生动起来！完美制作GIF动画、表情包、漫画和像素艺术。无需注册。',
+        'hero.socialShare': '与您的朋友分享这个免费绘画工具！',
 
         // Navigation  
         'nav.file': '文件',
@@ -181,7 +183,7 @@ export const ui = {
 
         // Download
         'download.title': '📱 下载应用',
-        'download.description': '用Wiggly Paint画出超酷作品！现已登陆iPad，支持Apple Pencil - 创作摇摆动画并导出GIF或视频。',
+        'download.description': '用Apple Pencil绘制动画艺术，导出GIF和视频！',
         'download.web': '🌐 网页版本',
         'download.ipad': '📱 iPad 版本',
         'download.decker': '🛠️ Decker 平台',
@@ -263,6 +265,7 @@ export const ui = {
         'hero.title': 'Wiggly Paint',
         'hero.subtitle': 'あなたのアートを生き生きと動かす無料オンライン描画ツール！',
         'hero.description': '8種類のユニークなアニメーションブラシで描画し、線が生き生きと動くのを見てください！GIFアニメーション、ミーム、漫画、ピクセルアートの作成に最適。登録不要。',
+        'hero.socialShare': 'この無料描画ツールを友達とシェア！',
 
         // Navigation
         'nav.file': 'ファイル',
@@ -305,7 +308,7 @@ export const ui = {
 
         // Download
         'download.title': '📱 アプリダウンロード',
-        'download.description': 'Wiggly Paintで素晴らしいアートを描こう！iPad版登場、Apple Pencil対応 - 揺れるアニメーションを作ってGIFや動画で書き出せる。',
+        'download.description': 'Apple Pencilでアニメーションアートを描こう。GIFや動画でエクスポート！',
         'download.web': '🌐 ウェブ版',
         'download.ipad': '📱 iPad版',
         'download.decker': '🛠️ Deckerプラットフォーム',
@@ -387,6 +390,7 @@ export const ui = {
         'hero.title': 'Wiggly Paint',
         'hero.subtitle': '당신의 작품을 생생하게 움직이는 무료 온라인 그리기 도구！',
         'hero.description': '8가지 독특한 애니메이션 브러시로 그리고 선이 생생하게 움직이는 것을 보세요! GIF 애니메이션, 밈, 만화, 픽셀 아트 제작에 완벽. 가입 불필요.',
+        'hero.socialShare': '친구들과 이 무료 그리기 도구를 공유하세요!',
 
         // Navigation
         'nav.file': '파일',
@@ -429,7 +433,7 @@ export const ui = {
 
         // Download
         'download.title': '📱 앱 다운로드',
-        'download.description': 'Wiggly Paint로 멋진 아트를 그리세요! iPad 버전 출시, Apple Pencil 지원 - 흔들흔들 애니메이션을 만들고 GIF나 동영상으로 내보내세요.',
+        'download.description': 'Apple Pencil로 애니메이션 아트를 그리고, GIF와 영상으로 내보내세요!',
         'download.web': '🌐 웹 버전',
         'download.ipad': '📱 iPad 버전',
         'download.decker': '🛠️ Decker 플랫폼',
@@ -511,6 +515,7 @@ es: {
         'hero.title': 'Wiggly Paint',
         'hero.subtitle': '¡Wiggly Paint: Crea Arte Animado de Píxeles, Cómics y Dibujos con Líneas Temblorosas y Vibrantes!',
         'hero.description': '¡Dibuja con 8 pinceles animados únicos y mira cómo tus líneas cobran vida! Perfecto para crear animaciones GIF, memes, cómics y arte de píxeles. No requiere registro.',
+        'hero.socialShare': '¡Comparte esta herramienta de dibujo gratuita con tus amigos!',
 
         // Navigation
         'nav.file': 'Archivo',
@@ -553,7 +558,7 @@ es: {
 
         // Download
         'download.title': '📱 Descargar Apps de Wiggly Paint',
-        'download.description': '¡Dibuja Arte Increíble con Wiggly Paint! Ahora disponible en iPad con soporte para Apple Pencil - crea animaciones temblorosas y exporta como GIF o Video.',
+        'download.description': '¡Dibuja arte animado con Apple Pencil! Exporta como GIFs y videos.',
         'download.web': '🌐 Versión Web de Wiggly Paint',
         'download.ipad': '📱 Wiggly Paint para iPad',
         'download.decker': '🛠️ Wiggly Paint en Plataforma Decker',
@@ -635,6 +640,7 @@ es: {
         'hero.title': 'Wiggly Paint',
         'hero.subtitle': 'Wiggly Paint: เครื่องมือวาดรูปออนไลน์ฟรีที่ทำให้ภาพวาดของคุณเคลื่อนไหว!',
         'hero.description': 'วาดด้วยแปรงอนิเมชั่น 8 แบบที่ไม่ซ้ำกันและดูเส้นของคุณมีชีวิต! เหมาะสำหรับสร้างภาพเคลื่อนไหว GIF, มีม, การ์ตูน และศิลปะพิกเซล ไม่ต้องสมัครสมาชิก',
+        'hero.socialShare': 'แชร์เครื่องมือวาดรูปฟรีนี้ให้เพื่อนๆ!',
 
         // Navigation
         'nav.file': 'ไฟล์',
@@ -677,7 +683,7 @@ es: {
 
         // Download
         'download.title': '📱 ดาวน์โหลดแอ็พ Wiggly Paint',
-        'download.description': 'วาดศิลปะที่น่าทึ่งด้วย Wiggly Paint! ตอนนี้พร้อมใช้งานบน iPad ที่รองรับ Apple Pencil - สร้างแอนิเมชั่นที่สั่นไหวและส่งออกเป็น GIF หรือวิดีโอ',
+        'download.description': 'วาดศิลปะแอนิเมชั่นด้วย Apple Pencil! ส่งออกเป็น GIF และวิดีโอ',
         'download.web': '🌐 เวอร์ชันเว็บ Wiggly Paint',
         'download.ipad': '📱 Wiggly Paint สำหรับ iPad',
         'download.decker': '🛠️ Wiggly Paint บนแพลตฟอร์ม Decker',

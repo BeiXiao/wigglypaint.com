@@ -19,6 +19,8 @@ export default defineConfig({
                 }
             },
             entryLimit: 50000,  // 设置更高的限制，避免分割成多个sitemap
+            changefreq: 'weekly',
+            priority: 0.7,
             customPages: [
                 // 添加静态页面和重要资源
                 'https://wigglypaint.com/wiggly.html'

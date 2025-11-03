@@ -1,0 +1,334 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { useTranslations } from '../../i18n/utils';
+
+// 英文版本博客文章页面
+const lang = 'en';
+const t = useTranslations(lang);
+
+// SEO 数据 - 优化长度
+const title = 'Pixel Art Animation Guide: Create Living Characters';
+const description = 'Transform static pixel art into animated characters with this step-by-step guide. Learn sprite animation techniques for game development.';
+const publishDate = '2025-01-20';
+const author = 'WigglyPaint Team';
+const readTime = '10 min read';
+const category = 'Pixel Art';
+
+// Open Graph 图像
+const ogImage = 'https://cdn.wigglypaint.com/gallery/e9fd2a32-2de6-4ed5-9675-e2cbc23619da.gif';
+
+// JSON-LD 结构化数据
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "image": ogImage,
+  "datePublished": publishDate,
+  "dateModified": publishDate,
+  "author": {
+    "@type": "Organization",
+    "name": author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WigglyPaint",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wigglypaint.com/og-img.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wigglypaint.com/blog/pixel-art-animation-guide"
+  },
+  "wordCount": 1500,
+  "keywords": "pixel art, animation, sprites, game development, character design, 8-bit, 16-bit",
+  "articleSection": category
+};
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <!-- 结构化数据 -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <Navigation lang={lang} currentPage="blog" />
+
+    <div class="main-container">
+        <article class="blog-article">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">Pixel Art Animation Guide: Create Living Characters</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane">
+                    <!-- 文章头部信息 -->
+                    <div class="article-header">
+                        <div class="article-meta">
+                            <span class="category-tag">Pixel Art</span>
+                            <span class="publish-date">January 20, 2025</span>
+                            <span class="read-time">10 min read</span>
+                            <span class="author">By WigglyPaint Team</span>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="https://cdn.wigglypaint.com/gallery/e9fd2a32-2de6-4ed5-9675-e2cbc23619da.gif" alt="Pixel art character animation" />
+                        </div>
+
+                        <div class="article-intro">
+                            <p>Pixel art isn't just static sprites anymore. In today's indie games and digital art, animated pixel characters bring personality and life to otherwise static pixels. But how do you transform a simple pixel drawing into a living, breathing character?</p>
+
+                            <p>This guide will walk you through the entire process of pixel art animation, from basic character design to smooth, professional animations. Whether you're creating game sprites or just having fun with pixel art, these techniques will elevate your work from static pixels to dynamic characters.</p>
+                        </div>
+                    </div>
+
+                    <!-- 文章内容 -->
+                    <div class="article-content">
+                        <h2>Understanding Pixel Art Animation</h2>
+                        <p>Pixel art animation follows the same principles as traditional animation but with unique constraints. Every pixel matters, and each frame must be carefully crafted to maintain consistency while creating fluid motion. The key is working within limitations while maximizing expressiveness.</p>
+
+                        <h2>Character Design Basics</h2>
+                        <p>Before animating, you need a solid character design. Keep these principles in mind:</p>
+                        <ul>
+                            <li><strong>Simple shapes:</strong> Use basic geometric forms that can be easily animated</li>
+                            <li><strong>Clear silhouette:</strong> Your character should be recognizable even in silhouette form</li>
+                            <li><strong>Limited palette:</strong> Stick to 2-4 colors per sprite for consistency</li>
+                            <li><strong>Expressive features:</strong> Focus on eyes, mouth, and body language</li>
+                        </ul>
+
+                        <h2>The Animation Process</h2>
+
+                        <h3>1. Planning Your Frames</h3>
+                        <p>Start by planning key poses. For a simple walk cycle, you might need 4-8 frames. Sketch these out first before committing to pixel art.</p>
+
+                        <h3>2. Creating the Base Sprite</h3>
+                        <p>Design your character in a neutral standing pose. This will be your reference frame. Pay attention to proportions and ensure everything is properly aligned.</p>
+
+                        <h3>3. Adding Movement</h3>
+                        <p>Animation is all about change. Each frame should show progression. For a walk cycle:
+                        - Frame 1: Standing pose
+                        - Frame 2: Right leg forward, left arm forward
+                        - Frame 3: Opposite pose
+                        - Frame 4: Return to standing (or continue the cycle)</p>
+
+                        <h3>4. Refining Details</h3>
+                        <p>Once basic movement is established, add secondary animations: hair bounce, clothing sway, facial expressions. These small details bring characters to life.</p>
+
+                        <h2>Common Animation Types</h2>
+
+                        <h3>Walk Cycles</h3>
+                        <p>The most fundamental animation. A good walk cycle tells you everything about a character's personality. Are they confident, timid, energetic, or tired?</p>
+
+                        <h3>Idle Animations</h3>
+                        <p>Characters shouldn't be completely still when not moving. Small idle animations (breathing, shifting weight, looking around) make characters feel alive.</p>
+
+                        <h3>Attack/Action Animations</h3>
+                        <p>Quick, impactful animations that need to read clearly. Use anticipation (wind-up) and follow-through for more impact.</p>
+
+                        <h2>Technical Tips for Pixel Animation</h2>
+
+                        <h3>Frame Rate</h3>
+                        <p>Pixel art typically works best at lower frame rates (8-12 FPS for retro feel, 12-24 FPS for smoother animation). Test different rates to see what works for your style.</p>
+
+                        <h3>Consistency</h3>
+                        <p>Keep pixel consistency across frames. Avoid "pixel shifting" where pixels jump around inconsistently. Use onion skinning tools if available.</p>
+
+                        <h3>Color Palette</h3>
+                        <p>Maintain the same color palette across all frames. This is crucial for professional-looking animations.</p>
+
+                        <h2>Common Mistakes to Avoid</h2>
+                        <ul>
+                            <li><strong>Inconsistent outlines:</strong> Keep line weights consistent across frames</li>
+                            <li><strong>Too much detail:</strong> Pixel art benefits from simplicity</li>
+                            <li><strong>Poor timing:</strong> Animation should flow naturally</li>
+                            <li><strong>Missing frames:</strong> Don't skip important in-between poses</li>
+                        </ul>
+
+                        <h2>Tools and Resources</h2>
+                        <p>While specialized tools exist, you can create excellent pixel art animations with basic drawing programs. WigglyPaint offers animated brushes perfect for pixel art, and the web-based nature means no software installation required.</p>
+
+                        <h2>Putting It All Together</h2>
+                        <p>Great pixel art animation combines technical skill with creative expression. Start simple, master the basics, and gradually add complexity. Remember: the best pixel animations tell a story, even if it's just a character walking across the screen.</p>
+
+                        <h2>Next Steps</h2>
+                        <p>Ready to start animating? Begin with a simple character and a basic walk cycle. Once you master that, explore more complex animations. The pixel art community is incredibly supportive, and there's always something new to learn.</p>
+
+                        <div class="cta-section">
+                            <h3>Start Creating Today</h3>
+                            <p>Join thousands of artists creating amazing pixel art animations with WigglyPaint. It's free, it's fun, and you can start right now!</p>
+                            <a href="/" class="cta-button">Try WigglyPaint for Free →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</Layout>
+
+<style>
+    .blog-article {
+        margin: 24px 0;
+    }
+
+    .window-pane {
+        padding: 30px;
+    }
+
+    .article-header {
+        margin-bottom: 40px;
+    }
+
+    .article-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        color: #666;
+        flex-wrap: wrap;
+    }
+
+    .category-tag {
+        background: #f0f0f0;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .hero-image {
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .article-intro {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .article-intro p {
+        margin-bottom: 15px;
+    }
+
+    .article-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .article-content h2 {
+        font-size: 24px;
+        margin: 40px 0 20px 0;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .article-content h3 {
+        font-size: 20px;
+        margin: 30px 0 15px 0;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .article-content p {
+        margin-bottom: 20px;
+    }
+
+    .article-content ul {
+        margin: 20px 0;
+        padding-left: 30px;
+    }
+
+    .article-content li {
+        margin-bottom: 10px;
+    }
+
+    .article-content strong {
+        color: #333;
+        font-weight: bold;
+    }
+
+    .cta-section {
+        margin-top: 50px;
+        padding: 30px;
+        background: #f0f0f0;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .cta-section h3 {
+        margin: 0 0 15px 0;
+        font-size: 22px;
+        color: #333;
+    }
+
+    .cta-section p {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+        color: #666;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: #333;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 0;
+        transition: background 0.2s ease;
+    }
+
+    .cta-button:hover {
+        background: #555;
+        text-decoration: none;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .window-pane {
+            padding: 20px;
+        }
+
+        .article-meta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .article-intro {
+            font-size: 16px;
+        }
+
+        .article-content {
+            font-size: 15px;
+        }
+
+        .article-content h2 {
+            font-size: 22px;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+        }
+
+        .cta-section {
+            margin-top: 40px;
+            padding: 20px;
+        }
+    }
+</style>

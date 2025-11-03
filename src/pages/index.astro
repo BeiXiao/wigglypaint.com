@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import CommunityGrid from '../components/CommunityGrid.astro';
 import Navigation from '../components/Navigation.astro';
 import AnnouncementBanner from '../components/AnnouncementBanner.astro';
+import { SocialShare } from 'astro-social-share';
 import { useTranslations } from '../i18n/utils';
 import galleryIndex from '../data/gallery-index.json';
 
@@ -37,13 +38,26 @@ const featuredCommunityData = galleryIndex.data.items;
                         <!-- Hero Content -->
                         <div class="hero-content">
                             <p class="hero-subtitle">{t('hero.subtitle')}</p>
-                            <p>{t('hero.description')}</p>
+                            <p>Draw with animated brushes and create GIFs instantly!</p>
                         </div>
 
                         <!-- Demo Content -->
                         <div id="demo" class="demo-content">
                             <iframe id="demo-iframe" src="/wiggly.html" class="demo-iframe"
                                 title="Wiggly Paint Online Demo"></iframe>
+                        </div>
+
+                        <!-- Social Share inside Hero -->
+                        <div class="hero-social-share">
+                            <div class="hero-share-content">
+                                <p style="text-align: center; margin-bottom: 8px; font-size: 13px; color: #666;">{t('hero.socialShare')}</p>
+                                <div style="text-align: center;">
+                                    <SocialShare
+                                        description={description}
+                                        title={title}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,7 +78,6 @@ const featuredCommunityData = galleryIndex.data.items;
                     <div class="platform-buttons">
                         <button class="btn platform-btn ipad-highlight" onclick="window.open('https://apps.apple.com/us/app/wigglypaint/id6747758024', '_blank')">
                             <span>{t('download.ipad')}</span>
-                            <small>Apple Pencil • Make GIFs & Videos</small>
                         </button>
                     </div>
                 </div>
@@ -200,6 +213,15 @@ const featuredCommunityData = galleryIndex.data.items;
 </Layout>
 
 <style>
+/* Hero内部社交分享样式 */
+.hero-social-share {
+    margin-top: 10px;
+}
+
+.hero-share-content {
+    padding: 0;
+}
+
 .community-section {
     margin: 24px 0;
 }
@@ -274,7 +296,7 @@ const featuredCommunityData = galleryIndex.data.items;
 }
 
 .download-content {
-    padding: 30px;
+    padding: 40px 30px;
 }
 
 .download-text {

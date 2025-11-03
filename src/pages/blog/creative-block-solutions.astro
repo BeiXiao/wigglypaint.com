@@ -1,0 +1,317 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { useTranslations } from '../../i18n/utils';
+
+// 英文版本博客文章页面
+const lang = 'en';
+const t = useTranslations(lang);
+
+// SEO 数据 - 优化长度
+const title = '10 Creative Prompts to Beat Drawing Block';
+const description = 'Struggling with creative block? Try these 10 drawing prompts designed specifically for animated art. Get inspired and start creating again!';
+const publishDate = '2025-01-25';
+const author = 'WigglyPaint Team';
+const readTime = '6 min read';
+const category = 'Creative Tips';
+
+// Open Graph 图像
+const ogImage = 'https://cdn.wigglypaint.com/gallery/e8345571-14c5-487a-8832-ac9a507dcac0.gif';
+
+// JSON-LD 结构化数据
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "image": ogImage,
+  "datePublished": publishDate,
+  "dateModified": publishDate,
+  "author": {
+    "@type": "Organization",
+    "name": author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WigglyPaint",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wigglypaint.com/og-img.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wigglypaint.com/blog/creative-block-solutions"
+  },
+  "wordCount": 1000,
+  "keywords": "creative block, drawing prompts, animation inspiration, artist motivation, creativity exercises",
+  "articleSection": category
+};
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <!-- 结构化数据 -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <Navigation lang={lang} currentPage="blog" />
+
+    <div class="main-container">
+        <article class="blog-article">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">10 Creative Prompts to Beat Drawing Block</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane">
+                    <!-- 文章头部信息 -->
+                    <div class="article-header">
+                        <div class="article-meta">
+                            <span class="category-tag">Creative Tips</span>
+                            <span class="publish-date">January 25, 2025</span>
+                            <span class="read-time">6 min read</span>
+                            <span class="author">By WigglyPaint Team</span>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="https://cdn.wigglypaint.com/gallery/e8345571-14c5-487a-8832-ac9a507dcac0.gif" alt="Creative drawing inspiration" />
+                        </div>
+
+                        <div class="article-intro">
+                            <p>Every artist hits a wall. The blank canvas stares back, the ideas won't come, and frustration builds. But here's the secret: creativity isn't something you wait for—it's something you cultivate.</p>
+
+                            <p>These 10 drawing prompts are specifically designed for animated art. They'll help you break through creative blocks, discover new techniques, and most importantly, get back to the joy of creating.</p>
+                        </div>
+                    </div>
+
+                    <!-- 文章内容 -->
+                    <div class="article-content">
+                        <h2>Why Creative Blocks Happen</h2>
+                        <p>Creative blocks usually stem from one of three places: perfectionism, burnout, or simply running out of ideas. The key is recognizing that creativity is like a muscle—it needs exercise, rest, and sometimes a completely new approach to stay strong.</p>
+
+                        <h2>10 Animated Art Prompts</h2>
+
+                        <h3>1. The Living Object</h3>
+                        <p>Take an everyday object and bring it to life. A lamp that stretches when turned on, a coffee cup that yawns before being filled, or a book whose pages flutter like wings when opened. The challenge is maintaining the object's recognizable form while adding personality through animation.</p>
+
+                        <h3>2. Weather in Motion</h3>
+                        <p>Animate weather phenomena with personality. Rain that dances, snowflakes that play, clouds that tell stories, or lightning that draws temporary art across the sky. Focus on the rhythm and flow of natural movements.</p>
+
+                        <h3>3. Color Transformation</h3>
+                        <p>Start with a simple shape and animate it through a complete color transformation. Watch how changing colors affects mood, energy, and perception. This is excellent practice for understanding color theory in motion.</p>
+
+                        <h3>4. The Tiny Story</h3>
+                        <p>Create a complete story in just 3-5 seconds. A seed sprouting and growing into a flower, a bubble forming and popping, or a light turning on and off. Focus on storytelling efficiency and emotional impact.</p>
+
+                        <h3>5. Abstract Emotion</h3>
+                        <p>Animate an emotion without using characters or literal representations. Joy might be bouncing, flowing lines; sadness could be slow, drooping movements; anger might be sharp, jagged actions.</p>
+
+                        <h3>6. Musical Movement</h3>
+                        <p>Put on a song and animate shapes that dance to the rhythm. Don't try to create characters—just let the music guide movement, color, and timing. This exercise is excellent for understanding timing and rhythm in animation.</p>
+
+                        <h3>7. The Morphing Sequence</h3>
+                        <p>Animate one object smoothly transforming into another completely different object. A clock turning into a bird, a tree becoming a book, or a phone morphing into a butterfly. Focus on the in-between stages and maintaining flow.</p>
+
+                        <h3>8. Particle Symphony</h3>
+                        <p>Create an animation using only small particles or dots. Watch how they can form shapes, create patterns, or tell stories through collective movement. This teaches the power of simple elements working together.</p>
+
+                        <h3>9. Opposite Actions</h3>
+                        <p>Animate two opposing actions happening simultaneously. While something grows, something else shrinks. While one element moves left, another moves right. This creates interesting visual tension and balance.</p>
+
+                        <h3>10. The Loop Challenge</h3>
+                        <p>Create a seamless animation that loops perfectly. The ending should flow naturally back into the beginning without any jarring transitions. This teaches the importance of smooth transitions and timing.</p>
+
+                        <h2>Making the Most of These Prompts</h2>
+
+                        <h3>Set Time Limits</h3>
+                        <p>Give yourself 30 minutes to 1 hour per prompt. Time constraints prevent overthinking and encourage instinctive creativity.</p>
+
+                        <h3>Focus on Movement, Not Perfection</h3>
+                        <p>These exercises are about exploring animation, not creating masterpieces. Embrace imperfections and focus on the joy of movement.</p>
+
+                        <h3>Document Your Process</h3>
+                        <p>Take screenshots or save different versions of your work. Sometimes the journey is more interesting than the destination, and you might discover techniques worth revisiting.</p>
+
+                        <h3>Share and Collaborate</h3>
+                        <p>Share your results with other artists. Creative blocks thrive in isolation but disappear in community. You might inspire someone else or get valuable feedback on your work.</p>
+
+                        <h2>Building a Sustainable Creative Practice</h2>
+                        <p>Creative blocks often happen when we treat creativity as an on-demand resource rather than a regular practice. Try to create something—anything—every day, even if it's just a 5-minute sketch or a simple animated loop.</p>
+
+                        <h2>When Prompts Don't Work</h2>
+                        <p>Sometimes, even prompts don't break through the block. That's okay. Take a walk, watch other animations, visit a museum, or do something completely unrelated to art. Creativity often strikes when we're not actively seeking it.</p>
+
+                        <h2>The Power of Constraints</h2>
+                        <p>These prompts work because they provide constraints, and constraints breed creativity. When you have infinite possibilities, it's paralyzing. When you have specific parameters, your brain can focus on creative solutions within those boundaries.</p>
+
+                        <h2>Next Steps</h2>
+                        <p>Pick one prompt that resonates with you right now and start creating. Don't worry about the result—focus on the process. Remember, the goal isn't to create perfect art, it's to reconnect with the joy of creating.</p>
+
+                        <div class="cta-section">
+                            <h3>Start Creating Now</h3>
+                            <p>Ready to break through that creative block? Open WigglyPaint and try one of these prompts right now!</p>
+                            <a href="/" class="cta-button">Start Animating →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</Layout>
+
+<style>
+    .blog-article {
+        margin: 24px 0;
+    }
+
+    .window-pane {
+        padding: 30px;
+    }
+
+    .article-header {
+        margin-bottom: 40px;
+    }
+
+    .article-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        color: #666;
+        flex-wrap: wrap;
+    }
+
+    .category-tag {
+        background: #f0f0f0;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .hero-image {
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .article-intro {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .article-intro p {
+        margin-bottom: 15px;
+    }
+
+    .article-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .article-content h2 {
+        font-size: 24px;
+        margin: 40px 0 20px 0;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .article-content h3 {
+        font-size: 20px;
+        margin: 30px 0 15px 0;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .article-content p {
+        margin-bottom: 20px;
+    }
+
+    .article-content strong {
+        color: #333;
+        font-weight: bold;
+    }
+
+    .cta-section {
+        margin-top: 50px;
+        padding: 30px;
+        background: #f0f0f0;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .cta-section h3 {
+        margin: 0 0 15px 0;
+        font-size: 22px;
+        color: #333;
+    }
+
+    .cta-section p {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+        color: #666;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: #333;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 0;
+        transition: background 0.2s ease;
+    }
+
+    .cta-button:hover {
+        background: #555;
+        text-decoration: none;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .window-pane {
+            padding: 20px;
+        }
+
+        .article-meta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .article-intro {
+            font-size: 16px;
+        }
+
+        .article-content {
+            font-size: 15px;
+        }
+
+        .article-content h2 {
+            font-size: 22px;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+        }
+
+        .cta-section {
+            margin-top: 40px;
+            padding: 20px;
+        }
+    }
+</style>

@@ -1,0 +1,526 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { useTranslations } from '../../i18n/utils';
+
+// 英文版本博客文章页面
+const lang = 'en';
+const t = useTranslations(lang);
+
+// SEO 数据 - 优化长度
+const title = 'Getting Started with Animated Drawing: 5 Essential Techniques';
+const description = 'Learn the fundamentals of animated drawing with these 5 core techniques that will transform your static artwork into dynamic creations.';
+const publishDate = '2025-01-25';
+const author = 'WigglyPaint Team';
+const readTime = '8 min read';
+const category = 'Drawing Tutorials';
+
+// Open Graph 图像
+const ogImage = 'https://cdn.wigglypaint.com/gallery/e9fd2a32-2de6-4ed5-9675-e2cbc23619da.gif';
+
+// JSON-LD 结构化数据
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "image": ogImage,
+  "datePublished": publishDate,
+  "dateModified": publishDate,
+  "author": {
+    "@type": "Organization",
+    "name": author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WigglyPaint",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wigglypaint.com/og-img.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wigglypaint.com/blog/getting-started-animated-drawing"
+  },
+  "wordCount": 1200,
+  "keywords": "animated drawing, animation basics, digital art, WigglyPaint, drawing techniques, beginners guide",
+  "articleSection": category
+};
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <!-- 结构化数据 -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <Navigation lang={lang} currentPage="blog" />
+
+    <div class="main-container">
+        <article class="blog-article">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">Getting Started with Animated Drawing: 5 Essential Techniques</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane">
+                    <!-- 文章头部信息 -->
+                    <div class="article-header">
+                        <div class="article-meta">
+                            <span class="category-tag">Drawing Tutorials</span>
+                            <span class="publish-date">January 25, 2025</span>
+                            <span class="read-time">8 min read</span>
+                            <span class="author">By WigglyPaint Team</span>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="https://cdn.wigglypaint.com/gallery/e9fd2a32-2de6-4ed5-9675-e2cbc23619da.gif" alt="Animated drawing techniques demonstration" />
+                        </div>
+
+                        <div class="article-intro">
+                            <p>Ever watched your drawings come to life? Animated drawing transforms static artwork into dynamic, moving creations that capture attention and tell stories. Whether you're creating pixel art characters, animated logos, or just having fun with doodles, mastering these fundamental techniques will elevate your art from static to spectacular.</p>
+
+                            <p>In this guide, we'll explore five essential animated drawing techniques that every beginner should know. Best of all, you can practice these techniques right now with WigglyPaint – no software installation required!</p>
+                        </div>
+                    </div>
+
+                    <!-- 文章内容 -->
+                    <div class="article-content">
+                        <h2>Technique 1: The Squash & Stretch Principle</h2>
+                        <p>Squash and stretch is the foundation of animation. This technique gives your drawings weight, flexibility, and life. When an object moves, it doesn't stay perfectly rigid – it deforms slightly to show its physical properties.</p>
+
+                        <h3>How to Apply It:</h3>
+                        <ul>
+                            <li><strong>Think in extremes:</strong> When a ball bounces, squash it when it hits the ground and stretch it when it moves upward</li>
+                            <li><strong>Maintain volume:</strong> When you squash something horizontally, stretch it vertically to keep the overall volume consistent</li>
+                            <li><strong>Use it subtly:</strong> Even slight squashing and stretching can make simple movements feel more natural</li>
+                        </ul>
+
+                        <div class="demo-box">
+                            <h4>Try This in WigglyPaint:</h4>
+                            <p>Draw a simple circle. In the next frame, make it wider and shorter (squash). In the following frame, make it taller and narrower (stretch). Play it back and watch how your simple circle suddenly feels alive!</p>
+                        </div>
+
+                        <h2>Technique 2: Anticipation & Follow-Through</h2>
+                        <p>Great animation isn't just about the main action – it's about what happens before and after. Anticipation prepares viewers for movement, while follow-through shows the aftermath.</p>
+
+                        <h3>Anticipation Examples:</h3>
+                        <ul>
+                            <li>A character crouching before jumping</li>
+                            <li>A rubber band pulling back before snapping</li>
+                            <li>A wind-up before throwing something</li>
+                        </ul>
+
+                        <h3>Follow-Through Examples:</h3>
+                        <ul>
+                            <li>Hair continuing to move after a character stops</li>
+                            <li>Clothing settling after motion stops</li>
+                            <li>Water droplets continuing after a splash</li>
+                        </ul>
+
+                        <div class="demo-box">
+                            <h4>Practice Exercise:</h4>
+                            <p>Draw a simple stick figure jumping. Create frames showing: 1) Crouch (anticipation), 2) Jump up, 3) Mid-air, 4) Landing, 5) Recover (follow-through). The difference will amaze you!</p>
+                        </div>
+
+                        <h2>Technique 3: Arc & Natural Movement</h2>
+                        <p>Nature rarely moves in straight lines. Most natural movements follow arcs – think of a swinging pendulum, a thrown ball, or even the way your arm moves when waving.</p>
+
+                        <h3>Creating Natural Arcs:</h3>
+                        <ul>
+                            <li><strong>Study real movement:</strong> Watch how objects and people move in real life</li>
+                            <li><strong>Use curved paths:</strong> Instead of straight lines between keyframes, think of curved trajectories</li>
+                            <li><strong>Consider physics:</strong> Gravity, momentum, and other forces create natural arcs</li>
+                        </ul>
+
+                        <div class="demo-box">
+                            <h4>Quick Exercise:</h4>
+                            <p>Animate a ball rolling down a hill. Instead of moving straight down, have it follow the curve of the hill, bouncing and following realistic arcs as it moves.</p>
+                        </div>
+
+                        <h2>Technique 4: Timing & Spacing</h2>
+                        <p>Timing and spacing are the heartbeat of animation. The distance between frames and the speed of movement convey emotion, weight, and energy.</p>
+
+                        <h3>Key Principles:</h3>
+                        <ul>
+                            <li><strong>Slow in, slow out:</strong> Movements naturally accelerate and decelerate</li>
+                            <li><strong>Spacing indicates speed:</strong> Wider spacing = faster movement, tighter spacing = slower movement</li>
+                            <li><strong>Timing creates mood:</strong> Fast timing feels energetic, slow timing feels deliberate or heavy</li>
+                        </ul>
+
+                        <div class="demo-box">
+                            <h4>Experiment:</h4>
+                            <p>Try animating the same simple movement (like a dot moving from left to right) with different timing. Notice how fast timing feels energetic while slow timing feels heavy or thoughtful.</p>
+                        </div>
+
+                        <h2>Technique 5: Secondary Animation</h2>
+                        <p>Secondary animation adds detail and realism by animating elements that respond to the primary movement. These are the small details that make your animation feel polished and professional.</p>
+
+                        <h3>Common Secondary Elements:</h3>
+                        <ul>
+                            <li><strong>Hair and clothing:</strong> Move in response to body movement</li>
+                            <li><strong>Accessories:</strong> Jewelry, hats, or other items that bounce or sway</li>
+                            <li><strong>Environmental effects:</strong> Dust, particles, or other elements affected by movement</li>
+                            <li><strong>Facial expressions:</strong> Changes that accompany body movements</li>
+                        </ul>
+
+                        <div class="demo-box">
+                            <h4>Advanced Practice:</h4>
+                            <p>Draw a character with hair. Animate them walking – the primary action is the walking, but add secondary animation by making the hair bounce and sway in response to the movement.</p>
+                        </div>
+
+                        <h2>Pro Tips for Beginners</h2>
+
+                        <h3>Start Simple</h3>
+                        <p>Don't try to animate complex scenes right away. Master these techniques with simple shapes and movements first. A bouncing ball teaches you more than you'd think!</p>
+
+                        <h3>Use Reference</h3>
+                        <p>Watch real-life movements, study professional animations, and use reference materials. The more you observe, the better your animations will become.</p>
+
+                        <h3>Embrace Imperfection</h3>
+                        <p>Your first animations won't be perfect – and that's okay! Every animator starts somewhere. The key is to keep practicing and learning from each attempt.</p>
+
+                        <h3>Get Feedback</h3>
+                        <p>Share your work with others and be open to constructive criticism. Animation is a collaborative art form, and feedback helps you grow.</p>
+
+                        <h2>Your Next Steps</h2>
+                        <p>Now that you understand these essential techniques, it's time to put them into practice! Here's how to get started:</p>
+
+                        <div class="action-steps">
+                            <div class="step">
+                                <h4>1. Open WigglyPaint</h4>
+                                <p>Start drawing right in your browser – no downloads required!</p>
+                            </div>
+
+                            <div class="step">
+                                <h4>2. Try Each Technique</h4>
+                                <p>Practice one technique at a time with simple drawings.</p>
+                            </div>
+
+                            <div class="step">
+                                <h4>3. Combine Techniques</h4>
+                                <p>Once comfortable, try combining multiple techniques in one animation.</p>
+                            </div>
+
+                            <div class="step">
+                                <h4>4. Share Your Work</h4>
+                                <p>Export your creations as GIFs and share them with friends!</p>
+                            </div>
+                        </div>
+
+                        <div class="cta-section">
+                            <h3>Ready to Start Animating?</h3>
+                            <p>Join thousands of artists who are already creating amazing animated artwork with WigglyPaint. It's free, it's fun, and you can start right now!</p>
+                            <a href="/" class="cta-button">Start Drawing for Free →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Related Articles -->
+        <section class="related-articles">
+            <div class="window">
+                <div class="title-bar">
+                    <h2 class="title">Continue Learning</h2>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane related-content">
+                    <div class="related-grid">
+                        <article class="related-card">
+                            <h4>Pixel Art Animation Guide: Create Living Characters</h4>
+                            <p>Transform static pixel art into animated characters with this step-by-step guide. Learn sprite animation techniques for game development.</p>
+                            <a href="/blog/pixel-art-animation-guide" class="read-more">Read More →</a>
+                        </article>
+
+                        <article class="related-card">
+                            <h4>10 Creative Prompts to Beat Drawing Block</h4>
+                            <p>Struggling with creative block? Try these 10 drawing prompts designed specifically for animated art. Get inspired and start creating again!</p>
+                            <a href="/blog/creative-block-solutions" class="read-more">Read More →</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+    .blog-article {
+        margin: 24px 0;
+    }
+
+    .window-pane {
+        padding: 30px;
+    }
+
+    .article-header {
+        margin-bottom: 40px;
+    }
+
+    .article-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        color: #666;
+        flex-wrap: wrap;
+    }
+
+    .category-tag {
+        background: #f0f0f0;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .hero-image {
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .article-intro {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .article-intro p {
+        margin-bottom: 15px;
+    }
+
+    .article-content {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .article-content h2 {
+        font-size: 24px;
+        margin: 40px 0 20px 0;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .article-content h3 {
+        font-size: 20px;
+        margin: 30px 0 15px 0;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .article-content h4 {
+        font-size: 18px;
+        margin: 20px 0 10px 0;
+        color: #333;
+    }
+
+    .article-content p {
+        margin-bottom: 20px;
+    }
+
+    .article-content ul {
+        margin: 20px 0;
+        padding-left: 30px;
+    }
+
+    .article-content li {
+        margin-bottom: 10px;
+    }
+
+    .article-content strong {
+        color: #333;
+        font-weight: bold;
+    }
+
+    .demo-box {
+        background: #f8f8f8;
+        border: 2px solid #ddd;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 8px;
+    }
+
+    .demo-box h4 {
+        margin: 0 0 10px 0;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .demo-box p {
+        margin: 0;
+        font-size: 15px;
+        color: #666;
+    }
+
+    .action-steps {
+        margin: 30px 0;
+    }
+
+    .step {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8f8f8;
+        border-left: 4px solid #333;
+    }
+
+    .step h4 {
+        margin: 0 0 8px 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .step p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .cta-section {
+        text-align: center;
+        margin: 40px 0 0 0;
+        padding: 30px;
+        background: #f0f0f0;
+        border-radius: 8px;
+    }
+
+    .cta-section h3 {
+        margin: 0 0 15px 0;
+        font-size: 22px;
+        color: #333;
+    }
+
+    .cta-section p {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+        color: #666;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: #333;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 0;
+        transition: background 0.2s ease;
+    }
+
+    .cta-button:hover {
+        background: #555;
+        text-decoration: none;
+        color: white;
+    }
+
+    .related-articles {
+        margin: 40px 0;
+    }
+
+    .related-content {
+        padding: 30px;
+    }
+
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .related-card {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        transition: border-color 0.2s ease;
+    }
+
+    .related-card:hover {
+        border-color: #999;
+    }
+
+    .related-card h4 {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+        line-height: 1.3;
+        color: #333;
+    }
+
+    .related-card p {
+        margin: 0 0 15px 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #666;
+    }
+
+    .read-more {
+        color: #0066cc;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .window-pane {
+            padding: 20px;
+        }
+
+        .article-meta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .article-intro {
+            font-size: 16px;
+        }
+
+        .article-content {
+            font-size: 15px;
+        }
+
+        .article-content h2 {
+            font-size: 22px;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+        }
+
+        .related-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .action-steps {
+            margin: 20px 0;
+        }
+
+        .cta-section {
+            margin: 30px 0 0 0;
+            padding: 20px;
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+    }
+</style>
