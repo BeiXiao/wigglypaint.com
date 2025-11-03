@@ -37,7 +37,7 @@ const { title, description, lang = 'en' } = Astro.props;
     <meta property="og:url" content={`https://wigglypaint.com/${lang === 'en' ? '' : lang + '/'}`}>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WigglyPaint">
-    <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang === 'zh' ? 'zh_CN' : lang === 'ja' ? 'ja_JP' : lang === 'ko' ? 'ko_KR' : lang === 'es' ? 'es_ES' : 'th_TH'}>
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang === 'zh' ? 'zh_CN' : lang === 'zh-Hant' ? 'zh_TW' : lang === 'ja' ? 'ja_JP' : lang === 'ko' ? 'ko_KR' : lang === 'ms' ? 'ms_MY' : lang === 'id' ? 'id_ID' : lang === 'vi' ? 'vi_VN' : lang === 'es' ? 'es_ES' : lang === 'th' ? 'th_TH' : lang === 'pt' ? 'pt_PT' : lang === 'pl' ? 'pl_PL' : lang === 'de' ? 'de_DE' : 'fr_FR'}>
     
     <!-- 添加额外的 Open Graph 标签 -->
     <meta property="article:author" content="Internet Janitor">
@@ -66,10 +66,18 @@ const { title, description, lang = 'en' } = Astro.props;
     <!-- 多语言版本 -->
     <link rel="alternate" hreflang="en" href="https://wigglypaint.com/">
     <link rel="alternate" hreflang="zh-CN" href="https://wigglypaint.com/zh/">
+    <link rel="alternate" hreflang="zh-TW" href="https://wigglypaint.com/zh-Hant/">
     <link rel="alternate" hreflang="ja" href="https://wigglypaint.com/ja/">
     <link rel="alternate" hreflang="ko" href="https://wigglypaint.com/ko/">
+    <link rel="alternate" hreflang="ms" href="https://wigglypaint.com/ms/">
+    <link rel="alternate" hreflang="id" href="https://wigglypaint.com/id/">
+    <link rel="alternate" hreflang="vi" href="https://wigglypaint.com/vi/">
     <link rel="alternate" hreflang="es" href="https://wigglypaint.com/es/">
     <link rel="alternate" hreflang="th" href="https://wigglypaint.com/th/">
+    <link rel="alternate" hreflang="pt" href="https://wigglypaint.com/pt/">
+    <link rel="alternate" hreflang="pl" href="https://wigglypaint.com/pl/">
+    <link rel="alternate" hreflang="de" href="https://wigglypaint.com/de/">
+    <link rel="alternate" hreflang="fr" href="https://wigglypaint.com/fr/">
     <link rel="alternate" hreflang="x-default" href="https://wigglypaint.com/">
 
     <!-- 预连接优化 -->

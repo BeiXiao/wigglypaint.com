@@ -16,37 +16,77 @@ const t = useTranslations(lang);
 export async function getStaticPaths() {
   return [
     { params: { lang: 'zh' } },
+    { params: { lang: 'zh-Hant' } },
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },
+    { params: { lang: 'ms' } },
+    { params: { lang: 'id' } },
+    { params: { lang: 'vi' } },
     { params: { lang: 'es' } },
     { params: { lang: 'th' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'pl' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'fr' } },
   ];
 }
 
 // SEO 数据 - 优化长度和关键词密度
 const title = lang === 'en'
-  ? 'WigglyPaint - Free Animated Drawing Tool | Create Pixel Art & GIFs'
+  ? 'WigglyPaint - Free Wiggly Animated Drawing & Pixel Art GIFs'
   : lang === 'zh'
-  ? 'WigglyPaint - 免费动画绘画工具 | 创作像素艺术和GIF'
+  ? 'WigglyPaint - 免费可爱的抖动绘画 & 像素艺术GIF'
+  : lang === 'zh-Hant'
+  ? 'WigglyPaint - 免費可愛的蠕動繪畫 & 像素藝術GIF'
   : lang === 'ja'
-  ? 'WigglyPaint - 無料アニメ描画ツール | ピクセルアート＆GIF作成'
+  ? 'WigglyPaint - 無料くねくねアニメ絵 & ピクセルアートGIF'
   : lang === 'ko'
-  ? 'WigglyPaint - 무료 애니메이션 그리기 도구 | 픽셀아트 & GIF'
+  ? 'WigglyPaint - 무료 꿈틀이 애니메이션 그림 & 픽셀아트 GIF'
+  : lang === 'ms'
+  ? 'WigglyPaint - Lukisan Animasi Bergeliat Percuma & GIF Seni Piksel'
+  : lang === 'id'
+  ? 'WigglyPaint - Gambar Animasi Bergoyang Gratis & GIF Seni Piksel'
+  : lang === 'vi'
+  ? 'WigglyPaint - Vẽ Hoạt Hình Run Rã Miễn Phí & GIF Nghệ Thuật Pixel'
   : lang === 'es'
-  ? 'WigglyPaint - Herramienta de Dibujo Animada Gratis | Arte Pixel & GIFs'
-  : 'WigglyPaint - เครื่องมือวาดรูปออนไลน์ฟรี | สร้างศิลปะพิกเซลและ GIF';
+  ? 'WigglyPaint - Dibujo Animado Tembloroso Gratis & Arte Pixel GIFs'
+  : lang === 'th'
+  ? 'WigglyPaint - ภาพวาดเคลื่อนไหวสนุกๆ ฟรี & พิกเซลอาร์ต GIFs'
+  : lang === 'pt'
+  ? 'WigglyPaint - Desenho Animado Tremido Grátis & GIFs Arte Pixel'
+  : lang === 'pl'
+  ? 'WigglyPaint - Darmowe Animowane Rysunki & GIFy Sztuki Pikselowej'
+  : lang === 'de'
+  ? 'WigglyPaint - Kostenlose Zitternde Animationen & Pixel-GIFs'
+  : 'WigglyPaint - Dessins Animés Tremblants Gratuits & GIFs Art Pixel';
 
 const description = lang === 'en'
   ? 'Create amazing animated drawings with wiggly lines! Free online tool for pixel art, comics & GIFs. No signup required.'
   : lang === 'zh'
   ? '创作摇摆线条动画绘画！免费在线像素艺术、漫画和GIF工具。无需注册。'
+  : lang === 'zh-Hant'
+  ? '創作蠕動線條動畫繪畫！免費在線像素藝術、漫畫和GIF工具。無需註冊。'
   : lang === 'ja'
   ? 'ぐねぐね線のアニメ絵を作成！無料オンラインピクセルアート・漫画・GIFツール。登録不要。'
   : lang === 'ko'
   ? '구불구불 선 애니메이션 그림 만들기! 무료 픽셀아트, 만화, GIF 도구. 가입 불필요.'
+  : lang === 'ms'
+  ? 'Cipta lukisan animasi menakjubkan dengan garis bergerak! Alat online percuma untuk seni piksel, komik & GIF. Tiada pendaftaran diperlukan.'
+  : lang === 'id'
+  ? 'Buat gambar animasi luar biasa dengan garis bergoyang! Alat online gratis untuk seni piksel, komik & GIF. Tidak perlu daftar.'
+  : lang === 'vi'
+  ? 'Tạo các bản vẽ hoạt hình đáng kinh ngạc với các đường line run rã! Công cụ online miễn phí cho nghệ thuật pixel, truyện tranh & GIF. Không cần đăng ký.'
   : lang === 'es'
   ? '¡Crea dibujos animados con líneas temblorosas! Herramienta gratuita para arte pixel, cómics y GIFs. Sin registro.'
-  : 'WigglyPaint เป็นเครื่องมือวาดรูปออนไลน์ฟรี สร้างศิลปะพิกเซลแอนิเมชั่น การ์ตูนและ GIF ไม่ต้องสมัครสมาชิก';
+  : lang === 'th'
+  ? 'WigglyPaint เป็นเครื่องมือวาดรูปออนไลน์ฟรี สร้างศิลปะพิกเซลแอนิเมชั่น การ์ตูนและ GIF ไม่ต้องสมัครสมาชิก'
+  : lang === 'pt'
+  ? 'Crie desenhos animados incríveis com linhas trêmulas! Ferramenta online gratuita para arte pixel, histórias em quadrinhos & GIFs. Sem cadastro.'
+  : lang === 'pl'
+  ? 'Twórz niesamowite animowane rysunki z drgającymi liniami! Darmowe narzędzie online do sztuki pikselowej, komiksów & GIFów. Bez rejestracji.'
+  : lang === 'de'
+  ? 'Erstaunliche animierte Zeichnungen mit zitternden Linien erstellen! Kostenloses Online-Tool für Pixel-Art, Comics & GIFs. Keine Anmeldung erforderlich.'
+  : 'Créez des dessins animés étonnants avec des lignes tremblantes! Outil en ligne gratuit pour l\'art pixel, les bandes dessinées & les GIFs. Pas d\'inscription requise.';
 
 // 精选社区作品数据
 const featuredCommunityData = galleryIndex.data.items;
@@ -120,7 +160,7 @@ const featuredCommunityData = galleryIndex.data.items;
         </div>
 
         <!-- Features Section -->
-        <div id="features" class="features-grid">
+        <div id="features" class="features-grid features-grid-wide">
             <div class="window feature-window">
                 <div class="title-bar">
                     <h2 class="title">{t('feature.whatIs.title')}</h2>
@@ -403,5 +443,17 @@ const featuredCommunityData = galleryIndex.data.items;
     .platform-btn {
         width: 220px;
     }
+}
+
+/* Features grid wider styling */
+.features-grid-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-grid-wide .feature-window {
+    flex: 1;
+    min-width: 280px;
 }
 </style>

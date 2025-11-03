@@ -20,7 +20,7 @@ export default defineConfig({
         })
     ],
     i18n: {
-        locales: ['en', 'zh', 'ja', 'ko', 'es', 'th'],
+        locales: ['en', 'zh', 'zh-Hant', 'ja', 'ko', 'ms', 'id', 'vi', 'es', 'th', 'pt', 'pl', 'de', 'fr'],
         defaultLocale: 'en',
         routing: {
             prefixDefaultLocale: false  // 英文版本直接在根路径 /

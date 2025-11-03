@@ -1,10 +1,18 @@
 export const languages = {
     en: 'English',
     zh: '中文',
+    'zh-Hant': '繁體中文',
     ja: '日本語',
     ko: '한국어',
+    ms: 'Bahasa Malaysia',
+    id: 'Bahasa Indonesia',
+    vi: 'Tiếng Việt',
     es: 'Español',
-    th: 'ไทย',
+    th: 'ภาษาไทย',
+    pt: 'Português',
+    pl: 'Polski',
+    de: 'Deutsch',
+    fr: 'Français',
 };
 
 export const defaultLang = 'en';
@@ -758,5 +766,429 @@ es: {
         'about.privacy.family': 'สภาพแวดล้อมที่เหมาะสำหรับครอบครัว ไม่มีโฆษณาหรือการติดตาม',
         'about.start.title': '🎯 เริ่มต้นใช้งาน',
         'about.start.content': 'พร้อมที่จะเริ่มสร้างสรรค์หรือไม่? WigglyPaint ออกแบบมาให้ใช้งานง่ายจากการวาดครั้งแรก: เพียงเยี่ยมชมหน้าแรกของเรา - ไม่ต้องดาวน์โหลด, เลือกแปรงและเลือกสีจากพาเลตของเรา, เริ่มวาดและดูเส้นของคุณเคลื่อนไหวด้วยเอฟเฟกต์การสั่นไหว, เพิ่มเฟรมเพื่อสร้างแอนิเมชั่นที่ยาวขึ้น, และส่งออกผลงานของคุณเป็น GIF หรือบันทึกเป็นไฟล์แบบโต้ตอบ'
+    },
+
+    'zh-Hant': {
+        // Hero
+        'hero.title': 'WigglyPaint',
+        'hero.subtitle': 'WigglyPaint：創建動畫像素藝術、漫畫與塗鴉，使用搖擺與擺動線條',
+        'hero.description': '使用8種獨特的動畫畫筆繪製，觀看您的線條變得生動！完美創建GIF動畫、迷因、漫畫和像素藝術。無需註冊。',
+        'hero.socialShare': '與您的朋友分享這個免費繪圖工具！',
+
+        // Navigation
+        'nav.file': '檔案',
+        'nav.help': '幫助',
+        'nav.home': '首頁',
+        'nav.about': '關於',
+        'nav.community': '社群',
+        'nav.language': '語言',
+        'nav.tryOnline': '線上試用 WigglyPaint',
+        'nav.download': '下載 WigglyPaint',
+        'nav.features': '功能',
+        'nav.faq': '常見問題',
+        'nav.ipadDownload': '📱 iPad 應用程式',
+
+        // Community
+        'community.title': '社群畫廊 - WigglyPaint',
+        'community.description': '發現由 WigglyPaint 社群成員創作的精彩藝術作品。',
+        'community.heading': '社群畫廊',
+        'community.subtitle': '發現由我們社群創作的精彩藝術作品！',
+        'community.viewAll': '查看所有社群藝術',
+        'community.noResults': '未找到藝術作品。',
+        'community.loadMore': '載入更多',
+
+        // Features
+        'feature.whatIs.title': '✨ 繪製會動的藝術作品！',
+        'feature.whatIs.content': 'WigglyPaint 讓您繪製的每一條線都搖擺舞動！使用 WigglyPaint 創建出色的動畫藝術、迷因和 GIF，在社交媒體上脫穎而出。WigglyPaint 非常適合想要讓藝術作品獨特有趣的學生。',
+
+        'feature.howTo.title': '🎯 超級易於使用！',
+        'feature.howTo.content': '使用 WigglyPaint 非常簡單！只需選擇 WigglyPaint 畫筆並開始繪製！每支 WigglyPaint 畫筆創建不同的搖擺效果。WigglyPaint iPad 版本搭配 Apple Pencil 的感覺就像在紙上繪製，但酷多了！',
+
+        'feature.why.title': '🌟 為什麼學生喜歡？',
+        'feature.why.content': '您的 WigglyPaint 藝術作品可以即時分享！使用 WigglyPaint 創建病毒式 TikTok 內容、Instagram 故事和 Discord 迷因，您的朋友會喜歡。此外，WigglyPaint 完全免費 - 從無訂閱費用！',
+
+        'feature.privacy.title': '📱 非常適合 iPad！',
+        'feature.privacy.content': '搭配 Apple Pencil 支援的 WigglyPaint iPad 應用程式是創建搖擺藝術的最佳方式。隨時隨地使用 WigglyPaint 繪製，匯出為 GIF 或影片，並即時分享您的 WigglyPaint 傑世傑作！',
+
+        // Download
+        'download.title': '📱 下載 WigglyPaint 應用程式',
+        'download.description': '使用 Apple Pencil 繪製動畫藝術！匯出為 GIF 和影片',
+        'download.web': '🌐 WigglyPaint 網頁版本',
+        'download.ipad': '📱 WigglyPaint for iPad',
+        'download.decker': '🛠️ Decker 平台上的 WigglyPaint',
+
+        // FAQ
+        'faq.title': '❓ WigglyPaint 常見問題',
+        'faq.q1': 'WigglyPaint 有什麼特別之處？',
+        'faq.a1': 'WigglyPaint 讓您的繪畫帶有搖擺動畫！每一條線都會移動和搖擺，讓您的藝術有趣且獨特。非常適合想要創作酷炫動畫藝術的學生。',
+        'faq.q2': 'WigglyPaint 支援哪些設備？',
+        'faq.a2': 'WigglyPaint 是基於網頁的應用程式，因此您可以在個人電腦、手機或平板電腦上使用。只需訪問 WigglyPaint 網站即可開始。我們還提供專用的 WigglyPaint iPad 應用程式，提供更佳的觸控體驗。',
+        'faq.q3': 'WigglyPaint 真的免費嗎？',
+        'faq.a3': '是的！WigglyPaint 完全免費使用，使用次數或 GIF 匯出沒有限制。享受無限制的 WigglyPaint 繪製會話！',
+        'faq.q4': 'WigglyPaint 如何保護我的隱私？',
+        'faq.a4': '您在 WigglyPaint 中的所有繪畫和塗鴉都不會上傳到伺服器。WigglyPaint 不需要登入，使用期間不收集個人資料 - 您的 WigglyPaint 作品保持私密。',
+        'faq.q5': 'WigglyPaint 支援哪些匯出格式？',
+        'faq.a5': 'WigglyPaint 匯出高品質 GIF 動畫，保留所有搖擺效果。非常適合作為迷因、貼紙或社交媒體內容分享。iPad 應用程式也支援影片匯出。',
+
+        // Footer
+        'footer.title': 'WigglyPaint',
+        'footer.description': 'WigglyPaint - 免費動畫繪圖工具。創建、動畫、分享。',
+        'footer.about': '關於 WigglyPaint',
+        'footer.privacyPolicy': 'WigglyPaint 隱私政策',
+        'footer.changelog': 'WigglyPaint 更新日誌',
+        'footer.contact': '聯繫 WigglyPaint 團隊',
+        'footer.github': 'WigglyPaint GitHub 專案',
+        'footer.copyright': '© 2024 WigglyPaint. 由 Internet Janitor 用 ❤️ 製作。',
+        'footer.deckerProject': 'WigglyPaint 使用 Decker 技術建構。',
+
+        // Blog
+        'blog.title': 'WigglyPaint 博客 - 繪圖教學與數位藝術技巧',
+        'blog.subtitle': '學習動畫繪圖技巧、像素藝術教學和數位藝術提示。發現使用 WigglyPaint 創作精彩 GIF 和藝術作品的創意想法。',
+
+        // Related Articles
+        'relatedArticles.title': '繼續學習'
+    },
+
+    ms: {
+        // Hero
+        'hero.title': 'WigglyPaint',
+        'hero.subtitle': 'WigglyPaint: Cipta Seni Piksel Animasi, Komik & Coreng dengan Garisan Wiggle & Jiggly',
+        'hero.description': 'Melukis dengan 8 berus animasi unik dan saksikan garisan anda hidup! Sempurna untuk membuat animasi GIF, meme, komik, dan seni piksel. Tiada pendaftaran diperlukan.',
+        'hero.socialShare': 'Kongsi alat melukis percuma ini dengan rakan anda!',
+
+        // Navigation
+        'nav.file': 'Fail',
+        'nav.help': 'Bantuan',
+        'nav.home': 'Laman Utama',
+        'nav.about': 'Tentang',
+        'nav.community': 'Komuniti',
+        'nav.language': 'Bahasa',
+        'nav.tryOnline': 'Cuba WigglyPaint Atas Talian',
+        'nav.download': 'Muat Turun WigglyPaint',
+        'nav.features': 'Ciri-ciri',
+        'nav.faq': 'Soalan Lazim',
+        'nav.ipadDownload': '📱 Aplikasi iPad',
+
+        // Community
+        'community.title': 'Galeri Komuniti - WigglyPaint',
+        'community.description': 'Temui karya seni yang luar biasa yang dicipta oleh ahli komuniti WigglyPaint.',
+        'community.heading': 'Galeri Komuniti',
+        'community.subtitle': 'Temui karya seni yang luar biasa yang dicipta oleh komuniti kami!',
+        'community.viewAll': 'Lihat Semua Seni Komuniti',
+
+        // Features
+        'feature.whatIs.title': '✨ Lukis Seni yang Bergerak!',
+        'feature.whatIs.content': 'WigglyPaint membuat setiap garisan yang anda lukis bergoyang dan menari! Gunakan WigglyPaint untuk mencipta seni animasi yang menakjubkan, meme, dan GIF yang menonjol di media sosial. WigglyPaint sangat sesuai untuk pelajar yang ingin menjadikan seni mereka unik dan menyeronokkan.',
+
+        // Download
+        'download.title': '📱 Muat Turun Aplikasi WigglyPaint',
+        'download.description': 'Lukis seni animasi dengan Apple Pencil! Eksport sebagai GIF dan video',
+        'download.ipad': '📱 WigglyPaint untuk iPad',
+
+        // Footer
+        'footer.title': 'WigglyPaint',
+        'footer.description': 'WigglyPaint - Alat melukis animasi percuma. Cipta, animasi, kongsi.',
+        'footer.about': 'Tentang WigglyPaint',
+        'footer.contact': 'Hubungi Pasukan WigglyPaint',
+        'footer.copyright': '© 2024 WigglyPaint. Dibuat dengan ❤️ oleh Internet Janitor.'
+    },
+
+    id: {
+        // Hero
+        'hero.title': 'WigglyPaint',
+        'hero.subtitle': 'WigglyPaint: Buat Seni Piksel Animasi, Komik & Doodle dengan Garis Wiggle & Jiggly',
+        'hero.description': 'Gambar dengan 8 kuas animasi unik dan lihat garis Anda hidup! Sempurna untuk membuat animasi GIF, meme, komik, dan seni piksel. Tidak perlu mendaftar.',
+        'hero.socialShare': 'Bagikan alat menggambar gratis ini dengan teman-teman Anda!',
+
+        // Navigation
+        'nav.file': 'File',
+        'nav.help': 'Bantuan',
+        'nav.home': 'Beranda',
+        'nav.about': 'Tentang',
+        'nav.community': 'Komunitas',
+        'nav.language': 'Bahasa',
+        'nav.tryOnline': 'Coba WigglyPaint Online',
+        'nav.download': 'Unduh WigglyPaint',
+        'nav.features': 'Fitur',
+        'nav.faq': 'FAQ',
+        'nav.ipadDownload': '📱 Aplikasi iPad',
+
+        // Community
+        'community.title': 'Galeri Komunitas - WigglyPaint',
+        'community.description': 'Temukan karya seni yang luar biasa yang dibuat oleh anggota komunitas WigglyPaint.',
+        'community.heading': 'Galeri Komunitas',
+        'community.subtitle': 'Temukan karya seni yang luar biasa yang dibuat oleh komunitas kami!',
+        'community.viewAll': 'Lihat Semua Seni Komunitas',
+
+        // Features
+        'feature.whatIs.title': '�️ Gambar Seni yang Bergerak!',
+        'feature.whatIs.content': 'WigglyPaint membuat setiap garis yang Anda gambar bergoyang dan menari! Gunakan WigglyPaint untuk membuat seni animasi yang menakjubkan, meme, dan GIF yang menonjol di media sosial. WigglyPaint sangat cocok untuk siswa yang ingin membuat karya seni mereka unik dan menyenangkan.',
+
+        // Download
+        'download.title': '📱 Unduh Aplikasi WigglyPaint',
+        'download.description': 'Gambar seni animasi dengan Apple Pencil! Ekspor sebagai GIF dan video',
+        'download.ipad': '📱 WigglyPaint untuk iPad',
+        'download.decker': '🛠️ WigglyPaint di Platform Decker',
+
+        // Footer
+        'footer.title': 'WigglyPaint',
+        'footer.description': 'WigglyPaint - Alat menggambar animasi gratis. Buat, animasi, bagikan.',
+        'footer.about': 'Tentang WigglyPaint',
+        'footer.contact': 'Hubungi Tim WigglyPaint',
+        'footer.copyright': '© 2024 WigglyPaint. Dibuat dengan ❤️ oleh Internet Janitor.'
+    },
+
+    vi: {
+        // Hero
+        'hero.title': 'WigglyPaint',
+        'hero.subtitle': 'WigglyPaint: Tạo Nghệ Thuật Điểm, Truyện Tranh & Vẽ với Đường Nốt Wiggle & Jiggly',
+        'hero.description': 'Vẽ với 8 cọ vẽ hoạt hình độc đáo và xem đường nét của bạn sống động! Hoàn hảo để tạo hoạt ảnh GIF, meme, truyện tranh, và nghệ thuật pixel. Không cần đăng ký.',
+        'hero.socialShare': 'Chia sẻ công cụ vẽ miễn phí này với bạn bè của bạn!',
+
+        // Navigation
+        'nav.file': 'Tệp',
+        'nav.help': 'Trợ giúp',
+        'nav.home': 'Trang chủ',
+        'nav.about': 'Về',
+        'nav.community': 'Cộng đồng',
+        'nav.language': 'Ngôn ngữ',
+        'nav.tryOnline': 'Thử WigglyPaint Online',
+        'nav.download': 'Tải WigglyPaint',
+        'nav.features': 'Tính năng',
+        'nav.faq': 'Câu hỏi thường gặp',
+        'nav.ipadDownload': '📱 Ứng dụng iPad',
+
+        // Community
+        'community.title': 'Thư Viện Cộng Đồng - WigglyPaint',
+        'community.description': 'Khám phá các tác phẩm nghệ thuật tuyệt vời được tạo bởi các thành viên cộng đồng WigglyPaint.',
+        'community.heading': 'Thư Viện Cộng Đồng',
+        'community.subtitle': 'Khám phá các tác phẩm nghệ thuật tuyệt vời được tạo bởi cộng đồng của chúng tôi!',
+        'community.viewAll': 'Xem Tất Cả Nghệ Thuật Cộng Đồng',
+
+        // Features
+        'feature.whatIs.title': '✨ Vẽ Nghệ Thuật Động!',
+        'feature.whatIs.content': 'WigglyPaint làm cho mọi đường nét bạn vẽ lung lay và khiêu vũ! Sử dụng WigglyPaint để tạo nghệ thuật hoạt hình đáng kinh ngạc, meme, và GIF nổi bật trên mạng xã hội. WigglyPaint hoàn hảo cho sinh viên muốn làm cho nghệ thuật của họ độc đáo và thú vị.',
+
+        // Download
+        'download.title': '📱 Tải Ứng Dụng WigglyPaint',
+        'download.description': 'Vẽ nghệ thuật hoạt hình với Apple Pencil! Xuất thành GIF và video',
+        'download.ipad': '📱 WigglyPaint cho iPad',
+        'download.decker': '🛠️ WigglyPaint trên Nền tảng Decker',
+
+        // Footer
+        'footer.title': 'WigglyPaint',
+        'footer.description': 'WigglyPaint - Công cụ vẽ hoạt hình miễn phí. Tạo, hoạt hình, chia sẻ.',
+        'footer.about': 'Về WigglyPaint',
+        'footer.contact': 'Liên hệ Đội WigglyPaint',
+        'footer.copyright': '© 2024 WigglyPaint. Được tạo với ❤️ bởi Internet Janitor.'
+    },
+
+    pt: {
+        // Hero
+        'hero.title': 'WigglyPaint',
+        'hero.subtitle': 'WigglyPaint: Crie Arte de Pixels Animado, Histórias em Quadrinhos & Desenhos com Linhas Wiggle & Jiggly',
+        'hero.description': 'Desenhe com 8 pincéis animados únicos e veja suas linhas ganharem vida! Perfeito para criar animações GIF, memes, histórias em quadrinhos e arte pixel. Não requer cadastro.',
+        'hero.socialShare': 'Compartilhe esta ferramenta de desenho gratuita com seus amigos!',
+
+        // Navigation
+        'nav.file': 'Arquivo',
+        'nav.help': 'Ajuda',
+        'nav.home': 'Início',
+        'nav.about': 'Sobre',
+        'nav.community': 'Comunidade',
+        'nav.language': 'Idioma',
+        'nav.tryOnline': 'Experimentar WigglyPaint Online',
+        'nav.download': 'Baixar WigglyPaint',
+        'nav.features': 'Recursos',
+        'nav.faq': 'FAQ',
+        'nav.ipadDownload': '📱 Aplicativo iPad',
+
+        // Community
+        'community.title': 'Galeria da Comunidade - WigglyPaint',
+        'community.description': 'Descubra obras de arte incríveis criadas pelos membros da comunidade WigglyPaint.',
+        'community.heading': 'Galeria da Comunidade',
+        'community.subtitle': 'Descubra obras de arte incríveis criadas pela nossa comunidade!',
+        'community.viewAll': 'Ver Toda a Arte da Comunidade',
+
+        // Features
+        'feature.whatIs.title': '✨ Crie Arte que se Move!',
+        'feature.whatIs.content': 'WigglyPaint faz cada linha que você desenha se contorcer e dançar! Use WigglyPaint para criar arte animada incrível, memes e GIF que se destacam nas redes sociais. WigglyPaint é perfeito para estudantes que querem tornar sua arte única e divertida.',
+
+        // Announcement Banner
+        'announcement.ipadApp': '🎆 Novo! App iPad - Desenhe com Apple Pencil, Salve sua Arte, Crie GIFs e Vídeos!',
+        'announcement.downloadNow': 'Obter App iPad →',
+
+        // Download
+        'download.title': '📱 Baixar Aplicativos WigglyPaint',
+        'download.description': 'Desenhe arte animado com Apple Pencil! Exporte como GIFs e vídeos',
+        'download.ipad': '📱 WigglyPaint para iPad',
+        'download.decker': '🛠️ WigglyPaint na Plataforma Decker',
+
+        // FAQ
+        'faq.title': '❓ Perguntas Frequentes WigglyPaint',
+        'faq.q1': 'O que torna o WigglyPaint especial?',
+        'faq.a1': 'WigglyPaint faz seus desenhos ganharem vida com animações tremeluzentes! Cada linha que você desenha se move e treme, tornando sua arte divertida e única. Perfeito para estudantes que querem criar arte animada incrível.',
+        'faq.q2': 'Posso usar no meu iPad?',
+        'faq.a2': 'Sim! Temos um aplicativo iPad incrível que funciona com Apple Pencil. É a melhor maneira de desenhar - suas linhas parecem naturais e você pode exportar sua arte como GIFs ou vídeos para compartilhar com amigos.',
+        'faq.q3': 'É realmente gratuito?',
+        'faq.a3': 'Sim, completamente gratuito! Desenhe quanto quiser e exporte GIFs e vídeos ilimitados. Sem custos ocultos, sem assinaturas - apenas pura diversão criativa.',
+        'faq.q4': 'Meus desenhos estão seguros?',
+        'faq.a4': 'Absolutamente! Sua arte permanece em seu dispositivo - nunca enviamos ou visualizamos seus desenhos. Sem necessidade de conta, sem informações pessoais coletadas. Seu trabalho criativo é 100% privado.',
+        'faq.q5': 'Como posso compartilhar minha arte?',
+        'faq.a5': 'Fácil! Exporte suas animações tremeluzentes como GIFs para redes sociais ou como vídeos para TikTok, Instagram e mais. O aplicativo iPad oferece ambas as opções - perfeito para compartilhar suas obras-primas criativas!',
+
+        // Footer
+        'footer.title': 'WigglyPaint',
+        'footer.description': 'WigglyPaint - Ferramenta de desenho animado gratuito. Crie, anime, compartilhe.',
+        'footer.about': 'Sobre WigglyPaint',
+        'footer.contact': 'Contatar Equipe WigglyPaint',
+        'footer.copyright': '© 2024 WigglyPaint. Feito com ❤️ por Internet Janitor.'
+    },
+
+    pl: {
+        // Hero
+        'hero.title': 'WigglyPaint',
+        'hero.subtitle': 'WigglyPaint: Twórz Animowaną Sztukę Pikseli, Komiksy & Rysunki z Poruszającymi Liniami Wiggle & Jiggly',
+        'hero.description': 'Rysuj z 8 unikalnych animowanych pędzelków i obserwuj, jak Twoje linie ożywają! Idealne do tworzenia animacji GIF, memów, komiksów i sztuki pikselowej. Wymagana rejestracji.',
+        'hero.socialShare': 'Udostępnij to darmowe narzędzie do rysowania ze znajomymi!',
+
+        // Navigation
+        'nav.file': 'Plik',
+        'nav.help': 'Pomoc',
+        'nav.home': 'Strona główna',
+        'nav.about': 'O nas',
+        'nav.community': 'Społeczność',
+        'nav.language': 'Język',
+        'nav.tryOnline': 'Wypróbuj WigglyPaint Online',
+        'nav.download': 'Pobierz WigglyPaint',
+        'nav.features': 'Funkcje',
+        'nav.faq': 'FAQ',
+        'nav.ipadDownload': '📱 Aplikacja iPad',
+
+        // Community
+        'community.title': 'Galeria Społeczności - WigglyPaint',
+        'community.description': 'Odkryj niesamowite dzieła sztuki stworzone przez członków społeczności WigglyPaint.',
+        'community.heading': 'Galeria Społeczności',
+        'community.subtitle': 'Odkryj niesamowite dzieła sztuki stworzone przez naszą społeczność!',
+        'community.viewAll': 'Zobacz Wszystkie Dzieła Społeczności',
+
+        // Features
+        'feature.whatIs.title': '✨ Rysuj Sztukę, która Się Porusza!',
+        'feature.whatIs.content': 'WigglyPaint sprawia, że każda narysowana przez Ciebie linia porusza się i tańczy! Użyj WigglyPaint do tworzenia niesamowitej animowanej sztuki, memów i GIF, które wyróżnią się w mediach społecznościowych. WigglyPaint jest idealny dla studentów, którzy chcą uczynić swoją sztukę unikalną i zabawną.',
+
+        // Announcement Banner
+        'announcement.ipadApp': '🎆 Nowe! Aplikacja iPad - Rysuj Apple Pencil, Zapisz Swoją Sztukę, Twórz GIF i Wideo!',
+        'announcement.downloadNow': 'Pobierz Aplikację iPad →',
+
+        // Download
+        'download.title': '📱 Pobierz Aplikacje WigglyPaint',
+        'download.description': 'Rysuj sztukę animowaną za pomocą Apple Pencil! Eksportuj jako GIF i wideo',
+        'download.ipad': '📱 WigglyPaint na iPada',
+        'download.decker': '🛠️ WigglyPaint na Platformie Decker',
+
+        // Footer
+        'footer.title': 'WigglyPaint',
+        'footer.description': 'WigglyPaint - Darmowe narzędzie do rysowania animowanego. Twórz, animuj, udostępnij.',
+        'footer.about': 'O WigglyPaint',
+        'footer.contact': 'Skontaktuj z Zespołem WigglyPaint',
+        'footer.copyright': '© 2024 WigglyPaint. Stworzone z ❤️ przez Internet Janitor.'
+    },
+
+    de: {
+        // Hero
+        'hero.title': 'WigglyPaint',
+        'hero.subtitle': 'WigglyPaint: Erstelle animierte Pixel-Kunst, Comics & Doodles mit wackelnden & zitternden Linien',
+        'hero.description': 'Zeichne mit 8 einzigartigen animierten Pinseln und beobachte, wie Ihre Linien zum Leben erwachen! Perfekt für die Erstellung von GIF-Animationen, Memes, Comics und Pixel-Kunst. Keine Anmeldung erforderlich.',
+        'hero.socialShare': 'Teile dieses kostenlose Zeichenwerkzeug mit Ihren Freunden!',
+
+        // Navigation
+        'nav.file': 'Datei',
+        'nav.help': 'Hilfe',
+        'nav.home': 'Startseite',
+        'nav.about': 'Über',
+        'nav.community': 'Community',
+        'nav.language': 'Sprache',
+        'nav.tryOnline': 'WigglyPaint Online ausprobieren',
+        'nav.download': 'WigglyPaint herunterladen',
+        'nav.features': 'Funktionen',
+        'nav.faq': 'FAQ',
+        'nav.ipadDownload': '📱 iPad App',
+
+        // Community
+        'community.title': 'Community-Galerie - WigglyPaint',
+        'community.description': 'Entdecke erstaunliche Kunstwerke, die von Mitgliedern der WigglyPaint-Community erstellt wurden.',
+        'community.heading': 'Community-Galerie',
+        'community.subtitle': 'Entdecke erstaunliche Kunstwerke, die von unserer Community erstellt wurden!',
+        'community.viewAll': 'Alle Community-Kunstwerke anzeigen',
+
+        // Features
+        'feature.whatIs.title': '✨ Zeichne Kunst, die sich bewegt!',
+        'feature.whatIs.content': 'WigglyPaint bringt jede von Ihnen gezeichnete Linie zum Wackeln und Tanzen! Verwenden Sie WigglyPaint, um erstaunliche animierte Kunst, Memes und GIFs zu erstellen, die in sozialen Medien herausstechen. WigglyPaint ist perfekt für Studenten, die ihre Kunst einzigartig und lustig gestalten möchten.',
+
+        // Announcement Banner
+        'announcement.ipadApp': '🎆 Neu! iPad-App - Mit Apple Pencil zeichnen, Ihre Kunst speichern, GIFs und Videos erstellen!',
+        'announcement.downloadNow': 'iPad-App herunterladen →',
+
+        // Download
+        'download.title': '📱 WigglyPaint Apps herunterladen',
+        'download.description': 'Animierte Kunst mit Apple Pencil zeichnen! Als GIF und Video exportieren',
+        'download.ipad': '📱 WigglyPaint für iPad',
+        'download.decker': '🛠️ WigglyPaint auf Decker-Plattform',
+
+        // Footer
+        'footer.title': 'WigglyPaint',
+        'footer.description': 'WigglyPaint - Kostenloses Werkzeug für animiertes Zeichnen. Erstellen, animieren, teilen.',
+        'footer.about': 'Über WigglyPaint',
+        'footer.contact': 'WigglyPaint Team kontaktieren',
+        'footer.copyright': '© 2024 WigglyPaint. Mit ❤️ von Internet Janitor erstellt.'
+    },
+
+    fr: {
+        // Hero
+        'hero.title': 'WigglyPaint',
+        'hero.subtitle': 'WigglyPaint : Créez de l\'Art Pixel Animé, des Bandes Dessinés & des Gribouillages avec des Lignes Wiggle & Jiggly',
+        'hero.description': 'Dessinez avec 8 pinceaux animés uniques et regardez vos lignes prendre vie ! Parfait pour créer des animations GIF, des mèmes, des bandes dessinées et de l\'art pixel. Aucune inscription requise.',
+        'hero.socialShare': 'Partagez cet outil de dessin gratuit avec vos amis !',
+
+        // Navigation
+        'nav.file': 'Fichier',
+        'nav.help': 'Aide',
+        'nav.home': 'Accueil',
+        'nav.about': 'À propos',
+        'nav.community': 'Communauté',
+        'nav.language': 'Langue',
+        'nav.tryOnline': 'Essayer WigglyPaint en Ligne',
+        'nav.download': 'Télécharger WigglyPaint',
+        'nav.features': 'Fonctionnalités',
+        'nav.faq': 'FAQ',
+        'nav.ipadDownload': '📱 Application iPad',
+
+        // Community
+        'community.title': 'Galerie de la Communauté - WigglyPaint',
+        'community.description': 'Découvrez des œuvres d\'art incroyables créées par les membres de la communauté WigglyPaint.',
+        'community.heading': 'Galerie de la Communauté',
+        'community.subtitle': 'Découvrez des œuvres d\'art incroyables créées par notre communauté !',
+        'community.viewAll': 'Voir Toute l\'Art Communautaire',
+
+        // Features
+        'feature.whatIs.title': '✨ Dessinez de l\'Art qui Bouge !',
+        'feature.whatIs.content': 'WigglyPaint fait trembler et danser chaque ligne que vous dessinez ! Utilisez WigglyPaint pour créer un art animé incroyable, des mèmes et des GIF qui se démarquent sur les réseaux sociaux. WigglyPaint est parfait pour les étudiants qui veulent rendre leur art unique et amusant.',
+
+        // Announcement Banner
+        'announcement.ipadApp': '🎆 Nouveau ! App iPad - Dessinez avec Apple Pencil, Sauvegardez votre Art, Créez des GIF et Vidéos !',
+        'announcement.downloadNow': 'Obtenir l\'App iPad →',
+
+        // Download
+        'download.title': '📱 Télécharger les Applications WigglyPaint',
+        'download.description': 'Dessinez de l\'art animé avec le Apple Pencil ! Exportez en GIF et vidéo',
+        'download.ipad': '📱 WigglyPaint pour iPad',
+        'download.decker': '🛠️ WigglyPaint sur la Plateforme Decker',
+
+        // Footer
+        'footer.title': 'WigglyPaint',
+        'footer.description': 'WigglyPaint - Outil de dessin animé gratuit. Créez, animez, partagez.',
+        'footer.about': 'À propos de WigglyPaint',
+        'footer.contact': 'Contacter l\'Équipe WigglyPaint',
+        'footer.copyright': '© 2024 WigglyPaint. Fait avec ❤️ par Internet Janitor.'
     }
-} as const; 
+}; 

@@ -15,10 +15,18 @@ const t = useTranslations(lang);
 export async function getStaticPaths() {
   return [
     { params: { lang: 'zh' } },
+    { params: { lang: 'zh-Hant' } },
     { params: { lang: 'ja' } },
     { params: { lang: 'ko' } },
+    { params: { lang: 'ms' } },
+    { params: { lang: 'id' } },
+    { params: { lang: 'vi' } },
     { params: { lang: 'es' } },
     { params: { lang: 'th' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'pl' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'fr' } },
   ];
 }
 

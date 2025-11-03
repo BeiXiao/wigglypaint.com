@@ -12,7 +12,7 @@ const lang = 'en';
 const t = useTranslations(lang);
 
 // SEO 数据 - 优化长度和关键词密度
-const title = 'WigglyPaint - Free Animated Drawing Tool | Create Pixel Art & GIFs';
+const title = 'WigglyPaint - Free Animated Drawing Tool & GIF Creator';
 const description = 'Create amazing animated drawings with wiggly lines! Free online tool for pixel art, comics & GIFs. No signup required.';
 
 // 精选社区作品数据
@@ -85,7 +85,7 @@ const featuredCommunityData = galleryIndex.data.items;
         </div>
 
         <!-- Features Section -->
-        <div id="features" class="features-grid">
+        <div id="features" class="features-grid features-grid-wide">
             <div class="window feature-window">
                 <div class="title-bar">
                     <h2 class="title">{t('feature.whatIs.title')}</h2>
@@ -363,6 +363,18 @@ const featuredCommunityData = galleryIndex.data.items;
     .platform-btn {
         width: 220px;
     }
+}
+
+/* Features grid wider styling */
+.features-grid-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-grid-wide .feature-window {
+    flex: 1;
+    min-width: 280px;
 }
 
 /* FAQ styling */
