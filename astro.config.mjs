@@ -1,24 +1,16 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import fs from 'fs';
+import path from 'path';
 
 // https://astro.build/config
 export default defineConfig({
     site: 'https://wigglypaint.com',
     integrations: [
         sitemap({
-            i18n: {
-                defaultLocale: 'en',
-                locales: {
-                    en: 'en',
-                    zh: 'zh-CN',
-                    ja: 'ja',
-                    ko: 'ko',
-                    es: 'es',
-                    th: 'th'
-                }
-            },
-            entryLimit: 50000,  // 设置更高的限制，避免分割成多个sitemap
+            // 不使用i18n配置，避免创建索引文件
+            entryLimit: 50000,
             changefreq: 'weekly',
             priority: 0.7,
             customPages: [
