@@ -40,7 +40,7 @@ const t = useTranslations(lang);
         <a href={getRelativeLocaleUrl(lang, 'community')} class:list={[currentPage === 'community' && 'active']}>{t('nav.community')}</a>
     </li>
     <li role="menu-item" tabindex="0" aria-haspopup="false">
-        <a href="/blog" class:list={[currentPage === 'blog' && 'active']}>Blog</a>
+        <a href={getRelativeLocaleUrl(lang, 'blog')} class:list={[currentPage === 'blog' && 'active']}>Blog</a>
     </li>
     <li role="menu-item" tabindex="0" aria-haspopup="true" style="margin-left: auto;">
         <span>{t('nav.language')}</span>
