@@ -1,7 +1,7 @@
 # Cloudflare Pages redirects
-# SEO-friendly 301 redirect from root to English version
-/ /en/ 301
+# Remove automatic redirect as English version is served at root path (/)
+# No redirect needed since prefixDefaultLocale: false in astro.config.mjs
 
-# Optional: also redirect common variations
-/index.html /en/ 301
-/home /en/ 301 
+# Optional: redirect common variations to root
+/index.html / 301
+/home / 301 
