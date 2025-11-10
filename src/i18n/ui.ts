@@ -81,6 +81,10 @@ export const ui = {
         'footer.github': 'WigglyPaint GitHub Project',
         'footer.copyright': '© 2024 WigglyPaint. Made with ❤️ by Internet Janitor.',
         'footer.deckerProject': 'WigglyPaint is built with Decker technology.',
+        'blog.title': 'WigglyPaint Blog - Drawing Tutorials & Tips',
+        'blog.subtitle': 'Learn animated drawing techniques, pixel art tutorials, and digital art tips to enhance your creative skills.',
+        'blog.readMore': 'Read More',
+        'blog.backToHome': '← Back to WigglyPaint',
         'privacy.title': 'WigglyPaint Privacy Policy',
         'privacy.backToHome': '← Back to WigglyPaint',
         'privacy.lastUpdated': 'Last Updated: December 19, 2024',
@@ -196,6 +200,10 @@ export const ui = {
         'footer.github': 'WigglyPaint GitHub',
         'footer.copyright': '© 2024 WigglyPaint. 由 Internet Janitor 用❤️制作。',
         'footer.deckerProject': 'WigglyPaint 使用 Decker技术构建。',
+        'blog.title': 'WigglyPaint 博客 - 绘画教程与技巧',
+        'blog.subtitle': '学习动画绘画技巧、像素艺术教程和数字艺术技巧，提升您的创意技能。',
+        'blog.readMore': '阅读更多',
+        'blog.backToHome': '← 返回 WigglyPaint',
 
         // Privacy Page
         'privacy.title': '隐私政策',

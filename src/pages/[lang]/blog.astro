@@ -1,0 +1,92 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+// 获取当前语言
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// 为静态生成定义路径
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'zh' } },
+    { params: { lang: 'zh-Hant' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'ko' } },
+    { params: { lang: 'ms' } },
+    { params: { lang: 'id' } },
+    { params: { lang: 'vi' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'th' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'pl' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+
+// SEO 数据 - 简化版本
+const title = 'WigglyPaint Blog - Drawing Tutorials';
+const description = 'Learn animated drawing techniques, pixel art tutorials, and digital art tips.';
+---
+
+<Layout title={title} description={description} lang={lang}>
+    <Navigation lang={lang} currentPage="blog" />
+
+    <div class="main-container">
+        <!-- Blog Header -->
+        <div class="blog-header">
+            <div class="window">
+                <div class="title-bar">
+                    <h1 class="title">{t('blog.title') || 'WigglyPaint Blog'}</h1>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane blog-header-content">
+                    <p class="blog-subtitle">{t('blog.subtitle') || 'Learn drawing techniques and tips'}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Content -->
+        <div class="blog-content">
+            <div class="window">
+                <div class="title-bar">
+                    <h2 class="title">Coming Soon</h2>
+                </div>
+                <div class="separator"></div>
+                <div class="window-pane" style="padding: 40px; text-align: center;">
+                    <p>Blog content is coming soon in your language!</p>
+                    <p>In the meantime, check out our <a href="/blog" style="color: #007AFF;">English blog</a>.</p>
+                    <div style="margin-top: 20px;">
+                        <a href={lang === 'en' ? '/' : `/${lang}/`} class="btn">
+                            {t('nav.home') || 'Home'} →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+.blog-header {
+    margin: 24px 0;
+}
+
+.blog-header-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.blog-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.blog-content {
+    margin: 24px 0;
+}
+</style>

@@ -6,6 +6,45 @@ export interface Props {
 }
 
 const { title, description, lang = 'en' } = Astro.props;
+
+// 获取当前页面路径用于生成正确的 hreflang 链接
+const currentPath = Astro.url.pathname;
+const isRootPage = currentPath === '/' || currentPath === '';
+
+// 生成当前页面的基础路径（去除语言前缀）
+let basePath = currentPath;
+if (currentPath !== '/') {
+  // 移除语言前缀，如 /zh/about/ -> /about/
+  basePath = currentPath.replace(/^\/[a-z]{2}(-[A-Z][a-z])?(\/|$)/, '/');
+  if (basePath === '') basePath = '/';
+}
+
+// 支持的语言列表
+const supportedLanguages = [
+  { code: 'en', hreflang: 'en', name: 'English' },
+  { code: 'zh', hreflang: 'zh-CN', name: '中文' },
+  { code: 'zh-Hant', hreflang: 'zh-TW', name: '繁體中文' },
+  { code: 'ja', hreflang: 'ja', name: '日本語' },
+  { code: 'ko', hreflang: 'ko', name: '한국어' },
+  { code: 'ms', hreflang: 'ms', name: 'Bahasa Malaysia' },
+  { code: 'id', hreflang: 'id', name: 'Bahasa Indonesia' },
+  { code: 'vi', hreflang: 'vi', name: 'Tiếng Việt' },
+  { code: 'es', hreflang: 'es', name: 'Español' },
+  { code: 'th', hreflang: 'th', name: 'ไทย' },
+  { code: 'pt', hreflang: 'pt', name: 'Português' },
+  { code: 'pl', hreflang: 'pl', name: 'Polski' },
+  { code: 'de', hreflang: 'de', name: 'Deutsch' },
+  { code: 'fr', hreflang: 'fr', name: 'Français' }
+];
+
+// 生成当前页面所有语言版本的 URL
+function generateLocalizedUrl(languageCode: string) {
+  if (languageCode === 'en') {
+    return `https://wigglypaint.com${basePath === '/' ? '' : basePath}`;
+  } else {
+    return `https://wigglypaint.com/${languageCode}${basePath}`;
+  }
+}
 ---
 
 <!DOCTYPE html>
@@ -34,7 +73,7 @@ const { title, description, lang = 'en' } = Astro.props;
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:url" content={`https://wigglypaint.com/${lang === 'en' ? '' : lang + '/'}`}>
+    <meta property="og:url" content={generateLocalizedUrl(lang)}>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WigglyPaint">
     <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang === 'zh' ? 'zh_CN' : lang === 'zh-Hant' ? 'zh_TW' : lang === 'ja' ? 'ja_JP' : lang === 'ko' ? 'ko_KR' : lang === 'ms' ? 'ms_MY' : lang === 'id' ? 'id_ID' : lang === 'vi' ? 'vi_VN' : lang === 'es' ? 'es_ES' : lang === 'th' ? 'th_TH' : lang === 'pt' ? 'pt_PT' : lang === 'pl' ? 'pl_PL' : lang === 'de' ? 'de_DE' : 'fr_FR'}>
@@ -60,25 +99,14 @@ const { title, description, lang = 'en' } = Astro.props;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- 规范化URL -->
-    <link rel="canonical" href={`https://wigglypaint.com/${lang === 'en' ? '' : lang + '/'}`}>
+    <!-- 规范化URL - 动态生成当前页面的正确 URL -->
+    <link rel="canonical" href={generateLocalizedUrl(lang)}>
 
-    <!-- 多语言版本 -->
-    <link rel="alternate" hreflang="en" href="https://wigglypaint.com/">
-    <link rel="alternate" hreflang="zh-CN" href="https://wigglypaint.com/zh/">
-    <link rel="alternate" hreflang="zh-TW" href="https://wigglypaint.com/zh-Hant/">
-    <link rel="alternate" hreflang="ja" href="https://wigglypaint.com/ja/">
-    <link rel="alternate" hreflang="ko" href="https://wigglypaint.com/ko/">
-    <link rel="alternate" hreflang="ms" href="https://wigglypaint.com/ms/">
-    <link rel="alternate" hreflang="id" href="https://wigglypaint.com/id/">
-    <link rel="alternate" hreflang="vi" href="https://wigglypaint.com/vi/">
-    <link rel="alternate" hreflang="es" href="https://wigglypaint.com/es/">
-    <link rel="alternate" hreflang="th" href="https://wigglypaint.com/th/">
-    <link rel="alternate" hreflang="pt" href="https://wigglypaint.com/pt/">
-    <link rel="alternate" hreflang="pl" href="https://wigglypaint.com/pl/">
-    <link rel="alternate" hreflang="de" href="https://wigglypaint.com/de/">
-    <link rel="alternate" hreflang="fr" href="https://wigglypaint.com/fr/">
-    <link rel="alternate" hreflang="x-default" href="https://wigglypaint.com/">
+    <!-- 多语言版本 - 动态生成当前页面所有语言版本的链接 -->
+    {supportedLanguages.map(language => (
+        <link rel="alternate" hreflang={language.hreflang} href={generateLocalizedUrl(language.code)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={generateLocalizedUrl('en')} />
 
     <!-- 预连接优化 -->
     <link rel="preconnect" href="https://unpkg.com">
